@@ -12,7 +12,7 @@ Reference for generating interactive walkthrough HTML files using React (UMD) + 
 
 ## Design Principles
 
-1. **Always dark mode** — Black bg, white text, purple accents. Set `<html color-scheme: dark>`, `<body bg-wt-bg>`
+1. **Always dark mode** — Black bg, white text, purple accents. Set `<html style="color-scheme: dark">`, `<body class="bg-wt-bg">`. The `color-scheme: dark` on `<html>` is **mandatory** — scrollbars, form controls, and system UI all depend on it.
 2. **Quick mental model** — Readable in <2 min, not a code reference
 3. **TL;DR first** — Summary card above diagram
 4. **Full-size diagram** — Mermaid at natural size, never squished
@@ -193,7 +193,7 @@ const NODES = {
 
 - `description`: plain text, rendered as `<p>` (not `dangerouslySetInnerHTML`)
 - `code`: **required** — every node must have a useful snippet (1-5 lines). Pick the most representative piece: a key function call, type definition, config, or core algorithm. Use template literals for multi-line.
-- `lang`: required for every node (default `"typescript"`). Set explicitly for vue, json, css, etc.
+- `lang`: **required on EVERY node** — always set explicitly (e.g., `"typescript"`, `"javascript"`, `"vue"`, `"json"`). Never omit. If unsure, use `"typescript"`.
 - `files`: array of `"path"` or `"path:lines"` strings
 
 ### LEGEND

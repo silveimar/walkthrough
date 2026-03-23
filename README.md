@@ -9,9 +9,9 @@ Inspired by [Amp's Shareable Walkthroughs](https://ampcode.com/news/walkthrough)
 Ask your agent to walk you through any part of your codebase and it produces a self-contained HTML file with:
 
 - A **clickable Mermaid diagram** (flowchart or ER diagram) showing the key concepts and their connections
-- A **detail panel** for each node with a plain-English description, file paths, and optional code snippets
+- A **detail panel** for each node with a plain-English description, file paths, and code snippets
 - **Pan and zoom** — scroll to zoom, drag to pan, auto-fit on load
-- **Syntax highlighting** via Shiki for the rare nodes that include code
+- **Syntax highlighting** via Shiki for every node's code snippet
 - **Dark mode** — pure black background, white text, purple accents
 
 The goal is fast onboarding: give a new developer a mental model of how something works in under 2 minutes. Not a code reference — a map.
@@ -97,3 +97,61 @@ The output HTML files are fully self-contained with CDN dependencies:
 - **Shiki** (ESM) — syntax highlighting with `vitesse-dark` theme
 
 No build step. Just open the HTML file in a browser.
+
+## Testing
+
+The `evals/` directory contains an eval harness that runs the skill against a set of test prompts and grades the output.
+
+### Prerequisites
+
+- `claude` CLI installed and authenticated
+- Node.js >= 18
+
+### Running evals
+
+```bash
+# Run all 16 test prompts
+bash evals/run.sh
+
+# Run only the 4 critical prompts (faster feedback loop)
+bash evals/run.sh --subset
+
+# Run a single prompt by ID
+bash evals/run.sh --id explicit-01
+
+# Skip the LLM rubric grader (deterministic checks only)
+bash evals/run.sh --skip-llm
+
+# Use a specific model (default: sonnet)
+bash evals/run.sh --model opus
+```
+
+You can also set defaults via environment variables:
+
+```bash
+EVAL_MODEL=opus EVAL_MAX_BUDGET=3.00 bash evals/run.sh
+```
+
+### How it works
+
+Each eval run:
+
+1. Copies the project into a temp directory with the skill installed
+2. Runs `claude -p` with each prompt from `evals/prompts.csv`
+3. Collects any generated `walkthrough-*.html` files
+4. Runs two graders:
+   - **Deterministic** (`graders/deterministic.mjs`) — checks file existence, HTML structure, CDN deps, node count, diagram type
+   - **LLM rubric** (`graders/llm-rubric.mjs`) — uses Claude to score readability, descriptions, code snippets, and diagram accuracy against `graders/rubric.md`
+5. Generates a summary report in `evals/results/<timestamp>/summary.json`
+
+Results are saved to `evals/results/` (gitignored). A `latest` symlink always points to the most recent run.
+
+### Test prompts
+
+The prompts in `evals/prompts.csv` cover:
+
+- **Explicit triggers** — `$walkthrough how does X work`
+- **Implicit triggers** — `walk me through X`, `explain the flow`
+- **Diagram types** — flowchart and ER diagram cases
+- **Negative cases** — prompts that should *not* trigger the skill
+- **Edge cases** — vague prompts, broad scope
