@@ -109,6 +109,8 @@ Authoritative hardening behavior is defined only in [`security/security-policy.j
 
 Eval entrypoints (`evals/run.sh`, graders, `evals/report.mjs`) load this policy before running.
 
+- **CI on pull requests:** `.github/workflows/ci.yml` runs the same verification commands (`scripts/verify-policy`, artifact integrity and publish-scope scans, `bash -n evals/run.sh`, and `node --check` on gated eval/security modules). Configure it as a required check in repo settings so merges stay aligned with local runs.
+
 ## Testing
 
 The `evals/` directory contains an eval harness that runs the skill against a set of test prompts and grades the output.

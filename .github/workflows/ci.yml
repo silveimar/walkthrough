@@ -1,0 +1,50 @@
+# Pull-request and main-branch verification (POL-03, GOV-01).
+# Same deterministic checks as local workflows; no Claude/network eval by default.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify security policy
+        run: bash scripts/verify-policy
+
+      - name: Verify walkthrough artifact integrity (hashes vs sidecars)
+        run: node scripts/verify-artifact-integrity.mjs examples
+
+      - name: Scan publish scope for secret-like patterns
+        run: node scripts/scan-publish-scope.mjs examples
+
+      - name: Shell syntax (evals/run.sh)
+        run: bash -n evals/run.sh
+
+      - name: Node syntax check (evals + security)
+        run: |
+          set -e
+          for f in \
+            evals/report.mjs \
+            evals/graders/deterministic.mjs \
+            evals/graders/llm-rubric.mjs \
+            security/validate-policy.mjs \
+            security/redaction.mjs \
+            security/verify-policy.mjs \
+            security/policy-runtime.mjs
+          do
+            echo "node --check $f"
+            node --check "$f"
+          done
