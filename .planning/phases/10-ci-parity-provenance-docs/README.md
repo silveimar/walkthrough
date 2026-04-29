@@ -1,5 +1,5 @@
 # Phase 10 — CI parity & provenance documentation
 
-Gap closure for **PLT-04**, **ATT-05** per `.planning/v2.0-MILESTONE-AUDIT.md`.
+Gap closure for **PLT-04**, **ATT-05** per `v2.0-MILESTONE-AUDIT.md`.
 
-Planning: `/gsd-plan-phase 10`.
+Artifacts: `10-CONTEXT.md`, `10-01-PLAN.md`, `10-01-SUMMARY.md`.

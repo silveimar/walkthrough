@@ -18,8 +18,8 @@ Close gaps raised by the v2.0 milestone audit: vendor reproducibility (**OFF-03*
 
 ### Phase 10 — CI parity & provenance documentation
 
-- [ ] **PLT-04**: CI or docs give credible signal on path/shell expectations (e.g. clarify Ubuntu-only automation vs manual Windows smoke, or extend matrix if in scope).
-- [ ] **ATT-05**: Provenance verification story in docs matches **`.github/workflows/ci.yml`** (optional vs always-on, required checks).
+- [x] **PLT-04**: CI or docs give credible signal on path/shell expectations (e.g. clarify Ubuntu-only automation vs manual Windows smoke, or extend matrix if in scope).
+- [x] **ATT-05**: Provenance verification story in docs matches **`.github/workflows/ci.yml`** (optional vs always-on, required checks).
 
 ### Phase 11 — Verification artifacts
 
@@ -38,8 +38,8 @@ _(Phases 9–10 REQ rows above close actionable gaps; Phase 11 closes documentat
 | OFF-01 | Phase 9 | Done |
 | OFF-03 | Phase 9 | Done |
 | OFF-06 | Phase 9 | Done |
-| PLT-04 | Phase 10 | Pending |
-| ATT-05 | Phase 10 | Pending |
+| PLT-04 | Phase 10 | Done |
+| ATT-05 | Phase 10 | Done |
 | OFF-02 | Phase 11 | Pending |
 | OFF-04 | Phase 11 | Pending |
 | OFF-05 | Phase 11 | Pending |

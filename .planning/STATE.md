@@ -21,12 +21,12 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-**Current focus:** v2.1 — Phase 9 plan 09-01 complete; next **Phase 10** (`/gsd-discuss-phase 10` or `/gsd-plan-phase 10`)
+**Current focus:** v2.1 — Phases 9–10 complete; next **Phase 11** verification backfill (`/gsd-discuss-phase 11` or `/gsd-plan-phase 11`)
 
 ## Current Position
 
 **Milestone:** v2.1 Audit gap closure (opened 2026-04-29)
-**Phase / plan:** Phase 9 — `09-01` delivered (docs); Phases 10–11 open
+**Phase / plan:** Phase 11 — retroactive **VERIFICATION.md** / evidence mapping (Phases 9–10 closed)
 **Status:** Active — gap remediation from `v2.0-MILESTONE-AUDIT.md`
 **Last activity:** 2026-04-29
 
@@ -63,7 +63,7 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 ### Pending Todos
 
-- `/gsd-discuss-phase 10` (or plan) for PLT-04 / ATT-05 doc alignment; Phase 11 verification backfill after Phase 10.
+- `/gsd-discuss-phase 11` or `/gsd-plan-phase 11` — retroactive VERIFICATION artifacts for remaining REQ-IDs.
 
 ### Blockers/Concerns
 
