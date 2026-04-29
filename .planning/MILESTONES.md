@@ -1,5 +1,30 @@
 # Milestones
 
+## v2.0 — Advanced Local Hardening
+
+**Shipped:** 2026-04-29  
+**Scope:** 3 phases, 9 plans
+
+**Documentation:**
+
+- [Archived roadmap](milestones/v2.0-ROADMAP.md)
+- [Archived requirements](milestones/v2.0-REQUIREMENTS.md)
+
+**Key accomplishments:**
+
+- Maintainers now have a written supported-platform matrix, parity definition, and Git Bash/WSL smoke commands alongside README discovery.
+- RUN-02 workspace rules are now exercised by an automated Node smoke test; eval harness documents Windows bash expectations.
+- CI now runs strict cwd + RUN-02 smoke + policy-aware deterministic sanity on example HTML; Docker remains optional.
+- Maintainers have a manifest-first spec and JSON Schema for provenance digests (policy + vendor manifest), with explicit exclusions for eval results and sensitive outputs.
+- Build and verify scripts emit and check digest manifests; Minisign integration documented; secret keys gitignored.
+- CI verifies provenance digests on each run and can verify Minisign when sig/pub exist; CONTRIBUTING explains required-check workflow.
+
+**Stats (from planning closure):** 3 phases · 9 plans · tooling-tracked tasks as recorded by `milestone.complete`.
+
+**Pre-close audit:** Open artifact audit reported all clear (`audit-open`).
+
+---
+
 ## v1.0 — Walkthrough Skill Local Security Hardening
 
 **Shipped:** 2026-04-29  

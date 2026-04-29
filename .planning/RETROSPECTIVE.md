@@ -1,5 +1,26 @@
 # Retrospective
 
+## Milestone: v2.0 — Advanced Local Hardening
+
+**Shipped:** 2026-04-29  
+**Phases:** 3 · **Plans:** 9
+
+### What shipped
+
+Reproducible offline-capable vendor layout and policy-driven dual-mode HTML; documented platform matrix with Node smoke tests and CI path/cwd checks; manifest-first provenance (`provenance/`), build/verify scripts, Minisign-ready workflow, and CI digest verification aligned with data protection.
+
+### What worked
+
+- Research-driven phase order (ADV-01 → ADV-03 → ADV-02) reduced rework between offline assets, parity, and signing.
+- Policy + schema stayed the single contract for runtime, graders, and provenance scope.
+
+### What to improve next
+
+- Run `/gsd-audit-milestone` before close when formal E2E sign-off is required.
+- Tighten `milestone.complete` accomplishment extraction so date-only lines do not surface as achievements.
+
+---
+
 ## Milestone: v1.0 — Walkthrough Skill Local Security Hardening
 
 **Shipped:** 2026-04-29  
@@ -20,12 +41,13 @@ Policy-first controls across eval harness, graders, GitHub Actions (Pages + PR C
 - Run `/gsd-audit-milestone` before future closes for explicit E2E / coverage sign-off.
 - v2 candidate themes: offline/vendor mode, provenance, sandbox parity (see archived requirements “v2 / Advanced Hardening”).
 
-### Cross-milestone trends
+## Cross-milestone trends
 
 | Milestone | Theme | Outcome |
 |-----------|--------|---------|
+| v2.0 | Advanced local hardening (vendor, parity, provenance) | Shipped |
 | v1.0 | Local security hardening | Shipped |
 
 ---
 
-*Created: 2026-04-29 after v1.0 milestone completion.*
+*Updated: 2026-04-29 — v2.0 milestone section added.*

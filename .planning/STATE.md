@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: completed
-last_updated: "2026-04-29T19:50:40.209Z"
+last_updated: "2026-04-29T21:50:57.600Z"
 last_activity: 2026-04-29
 progress:
   total_phases: 3
@@ -21,15 +21,13 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-**Current focus:** v2.0 milestone complete — maintenance / next milestone planning
+**Current focus:** v2.0 shipped and archived — maintenance or `/gsd-new-milestone` when extending scope
 
 ## Current Position
 
-Phase: 8 (signed-provenance) — COMPLETE
-Plan: 08-01, 08-02, 08-03 — executed
-**Phase:** v2.0 all phases delivered (6–8)
-**Plan:** —
-**Status:** Milestone complete
+**Milestone:** v2.0 closed (archived 2026-04-29)
+**Phase / plan:** —
+**Status:** Between milestones — no active phase
 **Last activity:** 2026-04-29
 
 ## Performance Metrics
@@ -65,7 +63,7 @@ Plan: 08-01, 08-02, 08-03 — executed
 
 ### Pending Todos
 
-- Optional: `/gsd-complete-milestone` or archive v2.0 per team process; define next milestone if extending scope beyond v2.0.
+- Optional: `/gsd-new-milestone` when there is a concrete next version (requirements + roadmap).
 
 ### Blockers/Concerns
 
