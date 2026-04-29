@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
-**Current focus:** Phase 4 — Artifact Integrity and Safe Publishing (next)
+**Current focus:** Phase 4 — Artifact Integrity and Safe Publishing (planned)
 
 ## Current Position
 
-Phase: 4 of 5 (Artifact Integrity and Safe Publishing) — ready for discuss/plan when scheduled
-Plan: 0 of TBD in current phase
-Status: Phase 3 complete (all summaries)
-Last activity: 2026-04-29 — `/gsd-execute-phase 3 --chain`; redaction, retention cleanup, DATA docs shipped
+Phase: 4 of 5 (Artifact Integrity and Safe Publishing)
+Plan: 0 of 3 executed (04-CONTEXT + 04-01..03 PLANS ready)
+Status: Phase 4 discussed and planned (`/gsd-discuss-phase 4 --chain`)
+Last activity: 2026-04-29 — Phase 4 CONTEXT, RESEARCH, plans recorded for INTG-01..03
 
 Progress: [██████░░░░] 60%
 

@@ -63,7 +63,7 @@ Plans:
   1. Generated artifacts include deterministic metadata sidecars that are reproducible across equivalent runs.
   2. Maintainer can produce and verify integrity signals (hash/SBOM/vulnerability status) before release.
   3. Publish operations fail unless files are within explicitly approved scopes and pass secret-leak gates.
-**Plans**: TBD
+**Plans**: 3 plans (`04-01`..`04-03`)
 
 ### Phase 5: Continuous Governance and Drift Detection
 **Goal**: Maintainers can continuously verify security posture and trace requirement progress without manual reconciliation.
