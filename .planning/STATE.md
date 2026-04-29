@@ -1,14 +1,14 @@
 ---
 gsd_state_version: 1.0
 milestone: v2.0
-milestone_name: milestone
+milestone_name: Advanced Local Hardening
 status: planning
 last_updated: "2026-04-29T17:35:09.594Z"
 last_activity: 2026-04-29 — ROADMAP.md v2.0 written (Phases 6–8), requirements traceability filled
 progress:
   total_phases: 3
   completed_phases: 0
-  total_plans: 0
+  total_plans: 3
   completed_plans: 0
 ---
 
@@ -25,9 +25,9 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 ## Current Position
 
 **Phase:** 6 — Offline vendoring & dual-mode HTML  
-**Plan:** —  
-**Status:** Not started (roadmap / planning complete for v2.0)  
-**Last activity:** 2026-04-29 — ROADMAP.md v2.0 written (Phases 6–8), requirements traceability filled
+**Plan:** 06-01, 06-02, 06-03 (3 executable plans)  
+**Status:** Planned — discuss-phase + RESEARCH + PLANs committed; execution not started  
+**Last activity:** 2026-04-29 — `/gsd-discuss-phase 6 --chain`: CONTEXT/DISCUSSION-LOG; phased RESEARCH + three PLAN waves
 
 ## Performance Metrics
 
