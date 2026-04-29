@@ -53,7 +53,7 @@ Plans:
   1. Sensitive tokens, paths, and protected content are automatically redacted from logs and persisted outputs.
   2. Generated artifacts follow configurable retention TTL rules and are cleaned up automatically when expired.
   3. Sensitive outputs are stored only in protected local locations with documented access boundaries.
-**Plans**: TBD
+**Plans**: 3 plans (`03-01`..`03-03`)
 
 ### Phase 4: Artifact Integrity and Safe Publishing
 **Goal**: Maintainers can prove artifact integrity and publish only explicitly approved outputs.
