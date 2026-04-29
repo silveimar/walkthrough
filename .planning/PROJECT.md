@@ -1,71 +1,69 @@
 # Walkthrough Skill Local Security Hardening
 
-## What This Is
+## What this is
 
 This project hardens the existing walkthrough-skill repository for secure, local-first use while preserving its current authoring and evaluation workflow. It keeps skill generation and evaluation practical for local development, but adds stronger guardrails to protect analyzed code/content and reduce leakage risk. The primary users are maintainers running the skill and eval harness on their own machines.
 
-## Core Value
+## Core value
 
 Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
+## Current state (v1.0 shipped)
+
+- **Milestone v1.0** is **complete** and archived under `.planning/milestones/v1.0-*.md` (2026-04-29).
+- Hardening is **policy-driven** (`security/security-policy.json`), **verified** locally and in CI, with **governed** eval outputs (redaction, retention, integrity sidecars, PR checks).
+- **Next step:** define **v2** via `/gsd-new-milestone` (requirements, research, roadmap).
+
 ## Requirements
 
-### Validated
+### Validated (v1.0)
 
 - ✓ Skill-driven walkthrough generation from prompt triggers — existing
 - ✓ Local eval pipeline with deterministic and rubric grading — existing
 - ✓ Static example artifact and published documentation workflow — existing
-- ✓ Local-only protection model is explicit and enforceable across skill/eval docs and scripts (Phases 1–2; policy + runtime gates)
-- ✓ Analyzed content handling is hardened — retention, redaction, access boundaries (Phase 3)
-- ✓ Publish surfaces integrity-gated and scoped (Phase 4)
-- ✓ CI governance: deterministic checks on PRs, requirement traceability, policy drift detection (Phase 5)
+- ✓ Local-only protection model is explicit and enforceable (policy + policy-runtime + eval gates)
+- ✓ Analyzed content handling: redaction, retention, protected eval results paths
+- ✓ Publish integrity and scoped static deploy; governance CI and traceability
 
-### Active
+### Active (v2 — to be defined)
 
-- _(none — v1.0 milestone scope complete)_
+- [ ] _None until `/gsd-new-milestone` — see candidate themes below_
 
-### Out of Scope
+### Candidate themes (from prior “v2 / Advanced Hardening” ideas)
+
+- Offline / vendored dependencies for reproducible isolated operation (ADV-01)
+- Signed provenance attestations (ADV-02)
+- Cross-platform sandbox parity (ADV-03)
+
+### Out of scope
 
 - Cloud multi-tenant deployment of walkthrough generation — conflicts with local-security focus
 - Building a separate SaaS product around this repository — outside current project goal
 
 ## Context
 
-- Current architecture is specification-driven (`skills/walkthrough/*`) with a local eval harness (`evals/run.sh`, `evals/graders/*`).
-- The repository already contains a fresh codebase map under `.planning/codebase/` that documents stack, architecture, testing posture, and concerns.
-- Existing capabilities are mostly local/CLI-oriented, which makes local-first hardening feasible without large architectural rewrites.
+- Architecture is specification-driven (`skills/walkthrough/*`) with a local eval harness (`evals/run.sh`, `evals/graders/*`).
+- Codebase documentation lives in `.planning/codebase/`.
+- **Milestone record:** `.planning/MILESTONES.md` and `.planning/RETROSPECTIVE.md`.
 
 ## Constraints
 
-- **Security**: Protect analyzed code/content at rest and in generated artifacts/logs — prevents accidental disclosure.
-- **Local-first**: Prefer execution and storage paths that stay on developer machines — minimize external data exposure.
-- **Compatibility**: Preserve current skill and eval behavior where possible — avoid breaking maintainers' workflow.
-- **Scope**: Focus on security/privacy hardening and project-quality improvements, not net-new product domains.
+- **Security:** Protect analyzed code/content at rest and in generated artifacts/logs.
+- **Local-first:** Prefer execution and storage on developer machines.
+- **Compatibility:** Preserve skill and eval behavior where possible.
+- **Scope:** Hardening and project quality, not unrelated product domains.
 
-## Key Decisions
+## Key decisions
 
-| Decision | Rationale | Outcome |
-|----------|-----------|---------|
-| Prioritize secure local usage over broader deployment concerns | User goal explicitly emphasizes local-only safety and protecting analyzed content | — Pending |
-| Keep `.planning` tracked in git for this repository | User selected git tracking despite local-first focus to preserve planning history | — Pending |
-| Use balanced planning profile with research/plan-check/verifier enabled | Improves planning rigor for security-sensitive work | — Pending |
+| Decision | Rationale | Outcome (v1.0) |
+|----------|-----------|----------------|
+| Prioritize secure local usage | User goal: local-only safety, protect analyzed content | ✓ Policy + runtime + data protection delivered |
+| Keep `.planning` in git | Preserve planning and audit history | ✓ Tracked through v1.0 close |
+| Balanced planning profile (research, plan-check, verifier) | Rigor for security-sensitive work | ✓ Used across phases |
 
 ## Evolution
 
-This document evolves at phase transitions and milestone boundaries.
-
-**After each phase transition** (via `/gsd-transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-5. "What This Is" still accurate? → Update if drifted
-
-**After each milestone** (via `/gsd-complete-milestone`):
-1. Full review of all sections
-2. Core Value check — still the right priority?
-3. Audit Out of Scope — reasons still valid?
-4. Update Context with current state
+This document evolves at phase and milestone boundaries. **v1.0** is closed; the next update should follow `/gsd-new-milestone`.
 
 ---
-*Last updated: 2026-04-29 after Phase 5 / milestone v1.0 completion*
+*Last updated: 2026-04-29 after v1.0 milestone completion*

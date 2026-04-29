@@ -2,9 +2,9 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: milestone_complete
-last_updated: "2026-04-29T17:00:00.000Z"
-last_activity: 2026-04-29 — Phase 5 executed; v1.0 milestone complete
+status: between_milestones
+last_updated: "2026-04-29T17:08:26.861Z"
+last_activity: 2026-04-29
 progress:
   total_phases: 5
   completed_phases: 5
@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
-**Current focus:** Milestone v1.0 complete — all planned hardening phases delivered
+**Current focus:** v1.0 shipped — plan next milestone (`/gsd-new-milestone`)
 
 ## Current Position
 
 Phase: all roadmap phases complete (1–5)
 Plan: —
-Status: Milestone complete
-Last activity: 2026-04-29 — Phase 5 governance CI, traceability, and policy drift checks merged
+Status: Between milestones (v1.0 archived)
+Last activity: 2026-04-29 — milestone v1.0 closed and tagged
 
 Progress: [██████████] 100%
 

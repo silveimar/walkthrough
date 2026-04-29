@@ -1,61 +1,14 @@
-# Requirements: Walkthrough Skill Local Security Hardening
+---
+requirements_generation: v2-pending
+---
 
-**Defined:** 2026-04-29
-**Core Value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
+# Requirements
 
-## v1 Requirements
+**v1.0** requirements are **shipped** and archived at [.planning/milestones/v1.0-REQUIREMENTS.md](milestones/v1.0-REQUIREMENTS.md).
 
-Requirements for the initial hardening release.
+Until `/gsd-new-milestone` defines **v2**, the traceability table below stays aligned with [.planning/requirements-phase-map.json](requirements-phase-map.json) for CI (GOV-02). Replace both when authoring the next requirement set.
 
-### Policy & Local-Only Enforcement
-
-- [x] **POL-01**: Maintainer can run generation/eval in a local-only mode that blocks unintended network egress by default.
-- [x] **POL-02**: Maintainer can enforce hardening policy from one machine-readable source used by scripts and docs.
-- [x] **POL-03**: Maintainer can validate policy compliance in CI before merges.
-
-### Runtime Hardening & Safe Execution
-
-- [x] **RUN-01**: Maintainer can execute eval commands without shell-string interpolation for untrusted inputs.
-- [x] **RUN-02**: Maintainer can run generation/eval in constrained execution contexts with explicit allowlists for file/process access.
-- [x] **RUN-03**: Maintainer can detect and fail on insecure runtime configuration during startup checks.
-
-### Data Protection (Redaction, Retention, Access)
-
-- [x] **DATA-01**: Maintainer can automatically redact sensitive tokens/paths/content from logs and persisted artifacts.
-- [x] **DATA-02**: Maintainer can configure retention TTL for generated artifacts and enforce cleanup.
-- [x] **DATA-03**: Maintainer can keep sensitive outputs in protected local storage with documented access boundaries.
-
-### Artifact Integrity & Controlled Publishing
-
-- [x] **INTG-01**: Maintainer can generate deterministic metadata sidecars for produced artifacts.
-- [x] **INTG-02**: Maintainer can produce and verify integrity signals (hash/SBOM/vulnerability status) for release artifacts.
-- [x] **INTG-03**: Maintainer can publish only explicitly approved files/scopes, with secret-leak checks as a hard gate.
-
-### Verification, CI Gates, and Operational Controls
-
-- [x] **GOV-01**: Maintainer can run deterministic security checks locally and in CI with consistent pass/fail criteria.
-- [x] **GOV-02**: Maintainer can track requirement-to-phase completion status through automated traceability updates.
-- [x] **GOV-03**: Maintainer can run recurring hardening checks to detect drift between policy, docs, and graders.
-
-## v2 Requirements
-
-Deferred to future release.
-
-### Advanced Hardening
-
-- **ADV-01**: Maintainer can run fully offline dependency/vendor mode for reproducible isolated operation.
-- **ADV-02**: Maintainer can generate signed provenance attestations with managed local key lifecycle.
-- **ADV-03**: Maintainer can enforce cross-platform sandbox parity with OS-specific adapters.
-
-## Out of Scope
-
-| Feature | Reason |
-|---------|--------|
-| Hosted/cloud analysis pipeline | Conflicts with local-first security objective |
-| Multi-tenant user management | Not required for maintainer-focused local workflow |
-| Real-time collaboration features | Not part of hardening core value |
-
-## Traceability
+## Traceability (v1.0 — complete)
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
@@ -75,11 +28,6 @@ Deferred to future release.
 | GOV-02 | Phase 5 | Done |
 | GOV-03 | Phase 5 | Done |
 
-**Coverage:**
-- v1 requirements: 15 total
-- Mapped to phases: 15
-- Unmapped: 0 ✓
-
 ---
-*Requirements defined: 2026-04-29*
-*Last updated: 2026-04-29 after Phase 5 completion*
+
+*Last updated: 2026-04-29 — milestone v1.0 closed; awaiting v2 definition.*
