@@ -28,7 +28,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. Maintainer can enable a local-only mode that blocks unintended network egress by default.
   2. Maintainer can point scripts and documentation to one machine-readable policy source for hardening behavior.
   3. Policy-driven hardening behavior can be verified locally with consistent results.
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] `01-01-PLAN.md` — Canonical policy JSON, schema, verify-policy CLI (`scripts/verify-policy`)
+- [ ] `01-02-PLAN.md` — Gate `evals/run.sh`, graders, and report via `security/policy-runtime.mjs`
+- [ ] `01-03-PLAN.md` — CI policy gate in `.github/workflows/static.yml`, README and skill references
 
 ### Phase 2: Runtime Enforcement Hardening
 **Goal**: Maintainers can run generation/eval through secure execution paths that reject unsafe runtime behavior.
@@ -77,7 +82,7 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Policy Contract Foundation | 0/TBD | Not started | - |
+| 1. Policy Contract Foundation | 0/3 | Not started | - |
 | 2. Runtime Enforcement Hardening | 0/TBD | Not started | - |
 | 3. Data Redaction and Retention Controls | 0/TBD | Not started | - |
 | 4. Artifact Integrity and Safe Publishing | 0/TBD | Not started | - |
