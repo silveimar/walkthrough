@@ -22,6 +22,10 @@ metadata:
   version: "1.1"
 ---
 
+## Security contract
+
+Machine-readable local-only and egress rules for this repository live at `security/security-policy.json`. Maintainers should run `bash scripts/verify-policy` from the repo root before eval or publish workflows; eval tooling references policy keys such as `egress.exceptionAllowlist`, `llmRubric.optInEnvVar`, and `entrypoints.gatedRelPaths` — see that file for authoritative names (D-11).
+
 # Codebase Walkthrough Generator
 
 Generate interactive HTML files with clickable Mermaid diagrams that give new developers a **quick mental model** of how a feature or system works. The goal is fast onboarding — a rough map of concepts and connections, not a code reference. Each walkthrough should be readable in under 2 minutes.
