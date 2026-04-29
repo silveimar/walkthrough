@@ -48,7 +48,7 @@
 3. Subprocess and workspace rules derived from policy are **enforced or validated** without requiring a **single non-default container runtime**—Docker remains optional, not required for core maintainer flows.
 4. **CI or documented smoke steps** provide signal on path/shell failure modes (including a **Windows-appropriate** job or equivalent) **before** attestations and signing workflows harden on still-moving scripts.
 
-**Plans**: TBD
+**Plans**: 07-01 (docs + manual smoke), 07-02 (path/temp + Node tests), 07-03 (CI strict cwd + path smoke)
 
 ---
 
