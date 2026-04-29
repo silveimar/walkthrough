@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: ready_to_execute
-stopped_at: Phase 1 plans created (3 plans, 3 waves)
-last_updated: "2026-04-29T12:00:00.000Z"
-last_activity: 2026-04-29 — Phase 1 executable plans added (01-01 through 01-03)
+status: phase_1_complete
+stopped_at: Completed Phase 1 plans 01-01 through 01-03
+last_updated: "2026-04-29T18:00:00.000Z"
+last_activity: 2026-04-29 — Phase 1 Policy Contract Foundation executed (all 3 plans)
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 0
-  percent: 0
+  completed_plans: 3
+  percent: 20
 ---
 
 # Project State
@@ -21,34 +21,34 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
-**Current focus:** Phase 1 - Policy Contract Foundation
+**Current focus:** Phase 2 — Runtime Enforcement Hardening (next)
 
 ## Current Position
 
-Phase: 1 of 5 (Policy Contract Foundation)
-Plan: 0 of 3 in current phase (not yet executed)
-Status: Ready to execute
-Last activity: 2026-04-29 — Phase 1 plans created: 01-01, 01-02, 01-03
+Phase: 2 of 5 (Runtime Enforcement Hardening) — ready to plan/execute when scheduled
+Plan: 0 of TBD in current phase
+Status: Phase 1 complete
+Last activity: 2026-04-29 — Executed 01-01, 01-02, 01-03; SUMMARYs written; POL-01/POL-02 marked done
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 0
-- Average duration: - min
-- Total execution time: 0.0 hours
+- Total plans completed: 3
+- Average duration: -
+- Total execution time: -
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 1 | 3 | - | - |
 
 **Recent Trend:**
 
-- Last 5 plans: -
+- Last plans: 01-03 Policy CI/docs alignment
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -57,30 +57,23 @@ Progress: [░░░░░░░░░░] 0%
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
-
-- [Phase 1]: Use one machine-readable policy source as hardening contract baseline.
-- [Phase 5]: Keep deterministic local/CI governance checks as hard gates for drift prevention.
+- Canonical policy path `security/security-policy.json`; verification via `scripts/verify-policy` locally and in CI.
+- Eval egress requires explicit `--allow-egress` matching policy exception ids; LLM rubric requires `WALKTHROUGH_LLM_RUBRIC=1` and matching egress exception for `llm_rubric_claude` when enabled.
 
 ### Pending Todos
 
-None yet.
+Plan Phase 2 when ready.
 
 ### Blockers/Concerns
 
-None yet.
+None.
 
 ## Deferred Items
 
-Items acknowledged and carried forward from previous milestone close:
-
 | Category | Item | Status | Deferred At |
 |----------|------|--------|-------------|
-| *(none)* | | | |
+| Requirement | POL-03 (CI validation before merges) — tracked under Phase 5 in roadmap | Open | — |
 
-## Session Continuity
+---
 
-Last session: 2026-04-29T15:54:07.997Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-policy-contract-foundation/01-CONTEXT.md
+*State updated: 2026-04-29*

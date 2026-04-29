@@ -9,8 +9,8 @@ Requirements for the initial hardening release.
 
 ### Policy & Local-Only Enforcement
 
-- [ ] **POL-01**: Maintainer can run generation/eval in a local-only mode that blocks unintended network egress by default.
-- [ ] **POL-02**: Maintainer can enforce hardening policy from one machine-readable source used by scripts and docs.
+- [x] **POL-01**: Maintainer can run generation/eval in a local-only mode that blocks unintended network egress by default.
+- [x] **POL-02**: Maintainer can enforce hardening policy from one machine-readable source used by scripts and docs.
 - [ ] **POL-03**: Maintainer can validate policy compliance in CI before merges.
 
 ### Runtime Hardening & Safe Execution
@@ -59,8 +59,8 @@ Deferred to future release.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| POL-01 | Phase 1 | Pending |
-| POL-02 | Phase 1 | Pending |
+| POL-01 | Phase 1 | Done |
+| POL-02 | Phase 1 | Done |
 | RUN-01 | Phase 2 | Pending |
 | RUN-02 | Phase 2 | Pending |
 | RUN-03 | Phase 2 | Pending |
@@ -82,4 +82,4 @@ Deferred to future release.
 
 ---
 *Requirements defined: 2026-04-29*
-*Last updated: 2026-04-29 after roadmap mapping*
+*Last updated: 2026-04-29 after Phase 1 completion*
