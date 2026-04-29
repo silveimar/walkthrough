@@ -21,9 +21,9 @@ Requirements for the initial hardening release.
 
 ### Data Protection (Redaction, Retention, Access)
 
-- [ ] **DATA-01**: Maintainer can automatically redact sensitive tokens/paths/content from logs and persisted artifacts.
-- [ ] **DATA-02**: Maintainer can configure retention TTL for generated artifacts and enforce cleanup.
-- [ ] **DATA-03**: Maintainer can keep sensitive outputs in protected local storage with documented access boundaries.
+- [x] **DATA-01**: Maintainer can automatically redact sensitive tokens/paths/content from logs and persisted artifacts.
+- [x] **DATA-02**: Maintainer can configure retention TTL for generated artifacts and enforce cleanup.
+- [x] **DATA-03**: Maintainer can keep sensitive outputs in protected local storage with documented access boundaries.
 
 ### Artifact Integrity & Controlled Publishing
 
@@ -64,9 +64,9 @@ Deferred to future release.
 | RUN-01 | Phase 2 | Done |
 | RUN-02 | Phase 2 | Done |
 | RUN-03 | Phase 2 | Done |
-| DATA-01 | Phase 3 | Pending |
-| DATA-02 | Phase 3 | Pending |
-| DATA-03 | Phase 3 | Pending |
+| DATA-01 | Phase 3 | Done |
+| DATA-02 | Phase 3 | Done |
+| DATA-03 | Phase 3 | Done |
 | INTG-01 | Phase 4 | Pending |
 | INTG-02 | Phase 4 | Pending |
 | INTG-03 | Phase 4 | Pending |
