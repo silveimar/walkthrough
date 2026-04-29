@@ -39,6 +39,13 @@ jobs:
       - name: Shell syntax (evals/run.sh)
         run: bash -n evals/run.sh
 
+      - name: Path workspace + strict cwd smoke (RUN-02 / RUN-03)
+        env:
+          WALKTHROUGH_STRICT_CWD: "1"
+        run: |
+          node scripts/test-path-workspace.mjs
+          node evals/graders/deterministic.mjs examples/walkthrough-how-it-works.html
+
       - name: Node syntax check (evals + security)
         run: |
           set -e
@@ -46,6 +53,7 @@ jobs:
             evals/report.mjs \
             evals/graders/deterministic.mjs \
             evals/graders/llm-rubric.mjs \
+            scripts/test-path-workspace.mjs \
             scripts/verify-requirements-trace.mjs \
             scripts/verify-policy-drift.mjs \
             security/validate-policy.mjs \

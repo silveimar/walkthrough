@@ -13,6 +13,7 @@
 
 set -uo pipefail
 
+# PROJECT_DIR must resolve via POSIX bash — use Git Bash or WSL on Windows (see CONTRIBUTING.md).
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 PROMPTS_CSV="$SCRIPT_DIR/prompts.csv"

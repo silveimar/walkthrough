@@ -8,7 +8,7 @@
 ## Phases (v2.0)
 
 - [x] **Phase 6: Offline vendoring & dual-mode HTML** — Reproducible vendor layout, policy-driven CDN vs vendor mode, eval temp workspace includes frozen assets with fail-closed checks. (completed 2026-04-29)
-- [ ] **Phase 7: Cross-platform sandbox & path parity** — Documented platform matrix, normalized paths and temp workspace across macOS/Linux/Windows, CI smoke for shell/path failure modes.
+- [x] **Phase 7: Cross-platform sandbox & path parity** — Documented platform matrix, normalized paths and temp workspace across macOS/Linux/Windows, CI smoke for shell/path failure modes. (completed 2026-04-29)
 - [ ] **Phase 8: Signed provenance** — Manifest-first scope, local sign/verify, data-protection–aligned attestations, optional CI verification.
 
 ## Phase Details (v2.0)
@@ -48,7 +48,7 @@
 3. Subprocess and workspace rules derived from policy are **enforced or validated** without requiring a **single non-default container runtime**—Docker remains optional, not required for core maintainer flows.
 4. **CI or documented smoke steps** provide signal on path/shell failure modes (including a **Windows-appropriate** job or equivalent) **before** attestations and signing workflows harden on still-moving scripts.
 
-**Plans**: 07-01 (docs + manual smoke), 07-02 (path/temp + Node tests), 07-03 (CI strict cwd + path smoke)
+**Plans**: 07-01 (docs + manual smoke), 07-02 (path/temp + Node tests), 07-03 (CI strict cwd + path smoke) — **complete**
 
 ---
 
@@ -76,7 +76,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 6. Offline vendoring & dual-mode HTML | 3/3 | Complete    | 2026-04-29 |
-| 7. Cross-platform sandbox & path parity | 0/3 | Planned (context + plans) | - |
+| 7. Cross-platform sandbox & path parity | 3/3 | Complete    | 2026-04-29 |
 | 8. Signed provenance | 0/TBD | Not started | - |
 
 ## Phase artifact paths (v2.0)

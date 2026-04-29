@@ -111,6 +111,10 @@ Eval entrypoints (`evals/run.sh`, graders, `evals/report.mjs`) load this policy 
 
 - **CI on pull requests:** `.github/workflows/ci.yml` runs the same verification commands (`scripts/verify-policy`, `scripts/verify-requirements-trace.mjs`, `scripts/verify-policy-drift.mjs`, artifact integrity and publish-scope scans, `bash -n evals/run.sh`, and `node --check` on gated eval/security modules). Configure it as a required check in repo settings so merges stay aligned with local runs.
 
+### Platforms / parity
+
+Supported shells and manual smoke steps for **Git Bash**, **WSL2**, macOS, and Linux are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md). **Parity** here means consistent policy + harness behavior across those setups—not identical OS sandboxes.
+
 ## Testing
 
 The `evals/` directory contains an eval harness that runs the skill against a set of test prompts and grades the output.

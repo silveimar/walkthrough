@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "artifactBasename": "walkthrough-how-it-works.html",
-  "artifactSha256": "618d704f4daf339eb2cd04e5b67d34d154917decaeaeb8b6ba90453290519f91",
-  "policyVersion": 3,
+  "artifactSha256": "e0c603a87ec7653cd2752701377281e9f6501817f9b804eb6b5ace642f11da5e",
+  "policyVersion": 4,
   "generatorId": "walkthrough-skill-reference",
   "createdAt": "2026-04-29T12:00:00.000Z"
 }
