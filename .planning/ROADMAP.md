@@ -14,7 +14,7 @@
 
 ## Active work
 
-**Milestone:** v2.1 Audit gap closure — start with **Phase 9** (`/gsd-plan-phase 9`).
+**Milestone:** v2.1 Audit gap closure — **Phase 9** complete; next **Phase 10** (`/gsd-discuss-phase 10` or `/gsd-plan-phase 10`).
 
 ## Historical references
 
