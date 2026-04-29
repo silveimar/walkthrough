@@ -76,7 +76,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 6. Offline vendoring & dual-mode HTML | 3/3 | Complete    | 2026-04-29 |
-| 7. Cross-platform sandbox & path parity | 0/TBD | Not started | - |
+| 7. Cross-platform sandbox & path parity | 0/3 | Planned (context + plans) | - |
 | 8. Signed provenance | 0/TBD | Not started | - |
 
 ## Phase artifact paths (v2.0)
