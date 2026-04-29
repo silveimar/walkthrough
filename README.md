@@ -98,6 +98,16 @@ The output HTML files are fully self-contained with CDN dependencies:
 
 No build step. Just open the HTML file in a browser.
 
+## Security / local-only policy
+
+Authoritative hardening behavior is defined only in [`security/security-policy.json`](security/security-policy.json) (POL-02). Do not duplicate default egress or LLM rules elsewhere — reference keys there.
+
+- **Verify policy:** `bash scripts/verify-policy` (runs the same checks as CI before publish).
+- **Eval egress:** `evals/run.sh` requires `--allow-egress` values that match `egress.exceptionAllowlist[].id` for the channels you use (see policy). Example: `--allow-egress claude_eval_prompt`.
+- **LLM rubric network:** policy uses `llmRubric.optInEnvVar` (currently `WALKTHROUGH_LLM_RUBRIC`). Set it to `1` only when you intend to run the LLM rubric; include the matching egress exception id via `--allow-egress` (exported as `WALKTHROUGH_ALLOW_EGRESS`) for `llm_rubric_claude` when needed.
+
+Eval entrypoints (`evals/run.sh`, graders, `evals/report.mjs`) load this policy before running.
+
 ## Testing
 
 The `evals/` directory contains an eval harness that runs the skill against a set of test prompts and grades the output.
@@ -110,20 +120,23 @@ The `evals/` directory contains an eval harness that runs the skill against a se
 ### Running evals
 
 ```bash
-# Run all 16 test prompts
-bash evals/run.sh
+# Run all 16 test prompts (requires egress exception ids from policy — example below)
+bash evals/run.sh --allow-egress claude_eval_prompt
 
 # Run only the 4 critical prompts (faster feedback loop)
-bash evals/run.sh --subset
+bash evals/run.sh --subset --allow-egress claude_eval_prompt
 
 # Run a single prompt by ID
-bash evals/run.sh --id explicit-01
+bash evals/run.sh --id explicit-01 --allow-egress claude_eval_prompt
 
 # Skip the LLM rubric grader (deterministic checks only)
-bash evals/run.sh --skip-llm
+bash evals/run.sh --skip-llm --allow-egress claude_eval_prompt
 
 # Use a specific model (default: sonnet)
-bash evals/run.sh --model opus
+bash evals/run.sh --model opus --allow-egress claude_eval_prompt
+
+# Optional: enable LLM rubric network path (see security/security-policy.json llmRubric.*)
+WALKTHROUGH_LLM_RUBRIC=1 bash evals/run.sh --allow-egress claude_eval_prompt,claude_llm_rubric
 ```
 
 You can also set defaults via environment variables:
