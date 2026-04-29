@@ -27,6 +27,9 @@ jobs:
       - name: Verify requirements traceability (REQ ↔ phase map)
         run: node scripts/verify-requirements-trace.mjs
 
+      - name: Verify policy drift (gated entrypoints exist)
+        run: node scripts/verify-policy-drift.mjs
+
       - name: Verify walkthrough artifact integrity (hashes vs sidecars)
         run: node scripts/verify-artifact-integrity.mjs examples
 
@@ -44,6 +47,7 @@ jobs:
             evals/graders/deterministic.mjs \
             evals/graders/llm-rubric.mjs \
             scripts/verify-requirements-trace.mjs \
+            scripts/verify-policy-drift.mjs \
             security/validate-policy.mjs \
             security/redaction.mjs \
             security/verify-policy.mjs \
