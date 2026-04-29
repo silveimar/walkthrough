@@ -1,0 +1,58 @@
+# Requirements: v2.1 Audit gap closure
+
+**Defined:** 2026-04-29  
+**Milestone:** v2.1 — remediation from `v2.0-MILESTONE-AUDIT.md`  
+**Core value:** (unchanged) Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
+
+## Scope
+
+Close gaps raised by the v2.0 milestone audit: vendor reproducibility (**OFF-03**), offline/vendor path clarity (**OFF-01**, **OFF-06**), CI vs documented parity (**PLT-04**), provenance doc vs CI (**ATT-05**), and missing phase **VERIFICATION.md** coverage for all v2.0 REQ-IDs.
+
+## Requirements by gap-closure phase
+
+### Phase 9 — Vendor reproducibility & offline path
+
+- [ ] **OFF-01**: Documented offline-capable / vendor-mode path matches what maintainers run (default CDN vs explicit vendor policy called out).
+- [ ] **OFF-03**: Reproducible vendor install path — **`npm ci`** must match a committed lockfile **or** docs/instructions must match the supported install (no broken clone→install flow).
+- [ ] **OFF-06**: Vendor-mode eval path documented end-to-end with policy + manifest + eval (`evals/run.sh`) expectations.
+
+### Phase 10 — CI parity & provenance documentation
+
+- [ ] **PLT-04**: CI or docs give credible signal on path/shell expectations (e.g. clarify Ubuntu-only automation vs manual Windows smoke, or extend matrix if in scope).
+- [ ] **ATT-05**: Provenance verification story in docs matches **`.github/workflows/ci.yml`** (optional vs always-on, required checks).
+
+### Phase 11 — Verification artifacts
+
+Retroactive verification records for shipped v2.0 work (see audit **process** gap):
+
+- [ ] **OFF-02**, **OFF-04**, **OFF-05** — Evidence mapped in phase or milestone **VERIFICATION.md**.
+- [ ] **PLT-01**, **PLT-02**, **PLT-03** — Evidence mapped.
+- [ ] **ATT-01**, **ATT-02**, **ATT-03**, **ATT-04** — Evidence mapped.
+
+_(Phases 9–10 REQ rows above close actionable gaps; Phase 11 closes documentation/evidence matrix for remaining REQ-IDs and satisfies audit process requirement.)_
+
+## Traceability
+
+| Requirement | Gap closure phase | Status |
+|---------------|-------------------|--------|
+| OFF-01 | Phase 9 | Pending |
+| OFF-03 | Phase 9 | Pending |
+| OFF-06 | Phase 9 | Pending |
+| PLT-04 | Phase 10 | Pending |
+| ATT-05 | Phase 10 | Pending |
+| OFF-02 | Phase 11 | Pending |
+| OFF-04 | Phase 11 | Pending |
+| OFF-05 | Phase 11 | Pending |
+| PLT-01 | Phase 11 | Pending |
+| PLT-02 | Phase 11 | Pending |
+| PLT-03 | Phase 11 | Pending |
+| ATT-01 | Phase 11 | Pending |
+| ATT-02 | Phase 11 | Pending |
+| ATT-03 | Phase 11 | Pending |
+| ATT-04 | Phase 11 | Pending |
+
+**Coverage:** 15 rows — all v2.0 REQ-IDs assigned to gap closure phases until verified.
+
+---
+
+*Requirements defined: 2026-04-29 — v2.1 audit remediation*

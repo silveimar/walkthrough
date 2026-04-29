@@ -1,16 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v2.0
-milestone_name: milestone
-status: completed
-last_updated: "2026-04-29T21:50:57.600Z"
+milestone: v2.1
+milestone_name: Audit gap closure
+status: active
+last_updated: "2026-04-29T22:00:00.000Z"
 last_activity: 2026-04-29
 progress:
   total_phases: 3
-  completed_phases: 3
-  total_plans: 9
-  completed_plans: 9
-  percent: 100
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -21,13 +21,13 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-**Current focus:** v2.0 shipped and archived — maintenance or `/gsd-new-milestone` when extending scope
+**Current focus:** v2.1 Audit gap closure — Phase 9 next (`/gsd-plan-phase 9`)
 
 ## Current Position
 
-**Milestone:** v2.0 closed (archived 2026-04-29)
-**Phase / plan:** —
-**Status:** Between milestones — no active phase
+**Milestone:** v2.1 Audit gap closure (opened 2026-04-29)
+**Phase / plan:** Phase 9 — vendor reproducibility & offline path (not planned yet)
+**Status:** Active — gap remediation from `v2.0-MILESTONE-AUDIT.md`
 **Last activity:** 2026-04-29
 
 ## Performance Metrics
@@ -63,7 +63,7 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 ### Pending Todos
 
-- Optional: `/gsd-new-milestone` when there is a concrete next version (requirements + roadmap).
+- `/gsd-plan-phase 9` → execute gap closure for OFF-01 / OFF-03 / OFF-06.
 
 ### Blockers/Concerns
 
