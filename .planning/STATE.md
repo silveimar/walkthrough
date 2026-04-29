@@ -20,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
-**Current focus:** Phase 5 — Continuous Governance and Drift Detection (next)
+**Current focus:** Phase 5 — Continuous Governance and Drift Detection (planned)
 
 ## Current Position
 
-Phase: 5 of 5 (Continuous Governance and Drift Detection) — ready for discuss/plan when scheduled
-Plan: 0 of TBD in current phase
-Status: Phase 4 complete (all summaries)
-Last activity: 2026-04-29 — `/gsd-execute-phase 4 --chain`; sidecars, integrity verify, scoped Pages publish
+Phase: 5 of 5 (Continuous Governance and Drift Detection)
+Plan: 0 of 3 executed (05-CONTEXT + 05-01..03 PLANS ready)
+Status: Phase 5 discussed and planned (`/gsd-discuss-phase 5 --chain`)
+Last activity: 2026-04-29 — CONTEXT, RESEARCH, plans for POL-03 / GOV-01..03
 
 Progress: [████████░░] 80%
 

@@ -73,7 +73,7 @@ Plans:
   1. Deterministic security checks run the same way locally and in CI with consistent pass/fail outcomes.
   2. Requirement-to-phase status is trackable through an updated traceability table without manual guessing.
   3. Recurring hardening checks detect drift between policy, documentation, and graders and fail on mismatch.
-**Plans**: TBD
+**Plans**: 3 plans (`05-01`..`05-03`)
 
 ## Progress
 
