@@ -1,16 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: between_milestones
-last_updated: "2026-04-29T17:08:26.861Z"
+milestone: v2.0
+milestone_name: Advanced Local Hardening
+status: planning
+last_updated: "2026-04-29T17:16:55.362Z"
 last_activity: 2026-04-29
 progress:
-  total_phases: 5
-  completed_phases: 5
-  total_plans: 15
-  completed_plans: 15
-  percent: 100
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -20,22 +20,20 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
-**Current focus:** v1.0 shipped — plan next milestone (`/gsd-new-milestone`)
+**Current focus:** Milestone v2.0 Advanced Local Hardening — defining requirements and roadmap
 
 ## Current Position
 
-Phase: all roadmap phases complete (1–5)
+Phase: Not started (defining requirements)
 Plan: —
-Status: Between milestones (v1.0 archived)
-Last activity: 2026-04-29 — milestone v1.0 closed and tagged
-
-Progress: [██████████] 100%
+Status: Defining requirements
+Last activity: 2026-04-29 — Milestone v2.0 started
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 15
+- Total plans completed: 0 (v2.0)
 - Average duration: -
 - Total execution time: -
 
@@ -43,12 +41,11 @@ Progress: [██████████] 100%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1–5 | 15 | - | - |
+| — | — | — | — |
 
 **Recent Trend:**
 
-- Last phase: Phase 5 — CI parity, REQ trace verifier, policy drift script
-- Trend: Milestone closed
+- Milestone v2.0 initialized — requirements and roadmap in progress
 
 *Updated after each plan completion*
 
@@ -62,7 +59,7 @@ Progress: [██████████] 100%
 
 ### Pending Todos
 
-None for v1.0 milestone scope.
+None for v2.0 milestone scope yet.
 
 ### Blockers/Concerns
 

@@ -8,11 +8,21 @@ This project hardens the existing walkthrough-skill repository for secure, local
 
 Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-## Current state (v1.0 shipped)
+## Current Milestone: v2.0 Advanced Local Hardening
+
+**Goal:** Extend v1.0’s policy- and CI-governed local model with reproducible offline operation, verifiable provenance for generated artifacts, and consistent sandboxing across host platforms.
+
+**Target features:**
+
+- **ADV-01** — Offline / vendored dependencies for reproducible, isolated operation (eval and skill workflows without mandatory CDN fetches where feasible).
+- **ADV-02** — Signed provenance attestations (integrity and origin signals for walkthrough outputs and/or policy-relevant metadata, aligned with local trust model).
+- **ADV-03** — Cross-platform sandbox parity (predictable constraints for subprocess / workspace behavior on macOS, Linux, and Windows dev machines).
+
+## Current state
 
 - **Milestone v1.0** is **complete** and archived under `.planning/milestones/v1.0-*.md` (2026-04-29).
-- Hardening is **policy-driven** (`security/security-policy.json`), **verified** locally and in CI, with **governed** eval outputs (redaction, retention, integrity sidecars, PR checks).
-- **Next step:** define **v2** via `/gsd-new-milestone` (requirements, research, roadmap).
+- **Milestone v2.0** is **active** — requirements and roadmap are produced by `/gsd-new-milestone` (this cycle).
+- Hardening remains **policy-driven** (`security/security-policy.json`), **verified** locally and in CI, with **governed** eval outputs from v1.0.
 
 ## Requirements
 
@@ -25,15 +35,11 @@ Generate and evaluate walkthrough artifacts locally with strong protections for 
 - ✓ Analyzed content handling: redaction, retention, protected eval results paths
 - ✓ Publish integrity and scoped static deploy; governance CI and traceability
 
-### Active (v2 — to be defined)
+### Active (v2.0)
 
-- [ ] _None until `/gsd-new-milestone` — see candidate themes below_
-
-### Candidate themes (from prior “v2 / Advanced Hardening” ideas)
-
-- Offline / vendored dependencies for reproducible isolated operation (ADV-01)
-- Signed provenance attestations (ADV-02)
-- Cross-platform sandbox parity (ADV-03)
+- [ ] **ADV-01** — Offline / vendored dependencies for reproducible isolated operation
+- [ ] **ADV-02** — Signed provenance attestations
+- [ ] **ADV-03** — Cross-platform sandbox parity
 
 ### Out of scope
 
@@ -63,7 +69,22 @@ Generate and evaluate walkthrough artifacts locally with strong protections for 
 
 ## Evolution
 
-This document evolves at phase and milestone boundaries. **v1.0** is closed; the next update should follow `/gsd-new-milestone`.
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd-transition`):
+
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd-complete-milestone`):
+
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
 
 ---
-*Last updated: 2026-04-29 after v1.0 milestone completion*
+*Last updated: 2026-04-29 — milestone v2.0 started (Advanced Local Hardening)*
