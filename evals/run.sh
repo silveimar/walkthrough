@@ -6,6 +6,7 @@
 #   bash evals/run.sh --subset         # Run 4 critical prompts only
 #   bash evals/run.sh --id explicit-01 # Run a single prompt
 #   bash evals/run.sh --skip-llm       # Skip LLM rubric grading
+#   bash evals/run.sh --allow-egress claude_eval_prompt[,...]  # Required for claude_cli (see security/security-policy.json)
 #   bash evals/run.sh --tmux           # Run each eval in a tmux window (watch live)
 #
 # Requires: claude CLI, node >= 18
@@ -24,6 +25,7 @@ SUBSET=false
 SINGLE_ID=""
 SKIP_LLM=false
 USE_TMUX=false
+ALLOW_EGRESS=""
 MODEL="${EVAL_MODEL:-sonnet}"
 MAX_BUDGET="${EVAL_MAX_BUDGET:-2.00}"
 
@@ -34,9 +36,33 @@ while [[ $# -gt 0 ]]; do
     --skip-llm) SKIP_LLM=true; shift ;;
     --tmux) USE_TMUX=true; shift ;;
     --model) MODEL="$2"; shift 2 ;;
+    --allow-egress) ALLOW_EGRESS="$2"; shift 2 ;;
     *) echo "Unknown flag: $1"; exit 1 ;;
   esac
 done
+
+# Policy preflight and egress (D-09, D-14, D-16)
+if ! bash "$PROJECT_DIR/scripts/verify-policy" >&2; then
+  echo "Policy verification failed."
+  exit 1
+fi
+
+export WALKTHROUGH_ALLOW_EGRESS="${ALLOW_EGRESS:-}"
+(
+  cd "$PROJECT_DIR" &&
+    node --input-type=module -e "
+import { assertClaudeCliEgressAllowed } from './security/policy-runtime.mjs';
+const v = process.env.WALKTHROUGH_ALLOW_EGRESS || '';
+const argv = v ? ['--allow-egress', v] : [];
+assertClaudeCliEgressAllowed(process.env, argv);
+"
+) || exit 1
+
+# D-08: LLM rubric network is off by default; skip unless opt-in env is set
+if [[ "$SKIP_LLM" != "true" && -z "${WALKTHROUGH_LLM_RUBRIC:-}" ]]; then
+  SKIP_LLM=true
+  echo "Note: skipping LLM rubric (export WALKTHROUGH_LLM_RUBRIC=1 to enable; see security/security-policy.json)."
+fi
 
 SUBSET_IDS="explicit-01 implicit-01 negative-01 diagram-er"
 TMUX_SESSION="eval-$TIMESTAMP"
