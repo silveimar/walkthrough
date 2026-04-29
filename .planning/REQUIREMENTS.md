@@ -51,24 +51,24 @@ Not in v2.0 scope; candidates from research for later milestones.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| OFF-01 | TBD | Pending |
-| OFF-02 | TBD | Pending |
-| OFF-03 | TBD | Pending |
-| OFF-04 | TBD | Pending |
-| OFF-05 | TBD | Pending |
-| OFF-06 | TBD | Pending |
-| PLT-01 | TBD | Pending |
-| PLT-02 | TBD | Pending |
-| PLT-03 | TBD | Pending |
-| PLT-04 | TBD | Pending |
-| ATT-01 | TBD | Pending |
-| ATT-02 | TBD | Pending |
-| ATT-03 | TBD | Pending |
-| ATT-04 | TBD | Pending |
-| ATT-05 | TBD | Pending |
+| OFF-01 | Phase 6 | Pending |
+| OFF-02 | Phase 6 | Pending |
+| OFF-03 | Phase 6 | Pending |
+| OFF-04 | Phase 6 | Pending |
+| OFF-05 | Phase 6 | Pending |
+| OFF-06 | Phase 6 | Pending |
+| PLT-01 | Phase 7 | Pending |
+| PLT-02 | Phase 7 | Pending |
+| PLT-03 | Phase 7 | Pending |
+| PLT-04 | Phase 7 | Pending |
+| ATT-01 | Phase 8 | Pending |
+| ATT-02 | Phase 8 | Pending |
+| ATT-03 | Phase 8 | Pending |
+| ATT-04 | Phase 8 | Pending |
+| ATT-05 | Phase 8 | Pending |
 
-**Coverage:** 15 v2.0 requirements — to be mapped 1:1 to phases in ROADMAP.md.
+**Coverage:** 15/15 v2.0 requirements mapped 1:1 to phases in ROADMAP.md (Phase 6–8).
 
 ---
 *Requirements defined: 2026-04-29*  
-*Last updated: 2026-04-29 — v2.0 research-informed draft*
+*Last updated: 2026-04-29 — v2.0 traceability mapped to Phases 6–8 (ROADMAP.md)*
