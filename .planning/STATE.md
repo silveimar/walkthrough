@@ -1,16 +1,16 @@
 ---
 gsd_state_version: 1.0
 milestone: v2.1
-milestone_name: Audit gap closure
-status: active
-last_updated: "2026-04-29T22:00:00.000Z"
+milestone_name: milestone
+status: Active — gap remediation from `v2.0-MILESTONE-AUDIT.md`
+last_updated: "2026-04-29T23:26:28.501Z"
 last_activity: 2026-04-29
 progress:
-  total_phases: 3
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  total_phases: 6
+  completed_phases: 3
+  total_plans: 10
+  completed_plans: 9
+  percent: 90
 ---
 
 # Project State
@@ -21,12 +21,12 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-**Current focus:** v2.1 Audit gap closure — Phase 9 next (`/gsd-plan-phase 9`)
+**Current focus:** v2.1 — Phase 9 plan 09-01 complete; next **Phase 10** (`/gsd-discuss-phase 10` or `/gsd-plan-phase 10`)
 
 ## Current Position
 
 **Milestone:** v2.1 Audit gap closure (opened 2026-04-29)
-**Phase / plan:** Phase 9 — vendor reproducibility & offline path (not planned yet)
+**Phase / plan:** Phase 9 — `09-01` delivered (docs); Phases 10–11 open
 **Status:** Active — gap remediation from `v2.0-MILESTONE-AUDIT.md`
 **Last activity:** 2026-04-29
 
@@ -63,7 +63,7 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 ### Pending Todos
 
-- `/gsd-plan-phase 9` → execute gap closure for OFF-01 / OFF-03 / OFF-06.
+- `/gsd-discuss-phase 10` (or plan) for PLT-04 / ATT-05 doc alignment; Phase 11 verification backfill after Phase 10.
 
 ### Blockers/Concerns
 

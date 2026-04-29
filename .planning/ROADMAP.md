@@ -8,7 +8,7 @@
 
 ## Phases (v2.1)
 
-- [ ] **Phase 9: Vendor reproducibility & offline path** — Align lockfile or install docs with **`npm ci`**, clarify default CDN vs vendor-mode eval and provenance rebuild steps (**OFF-01**, **OFF-03**, **OFF-06**). **Gap closure:** audit integration flows + unsatisfied OFF-03.
+- [x] **Phase 9: Vendor reproducibility & offline path** — Align lockfile or install docs with **`npm ci`**, clarify default CDN vs vendor-mode eval and provenance rebuild steps (**OFF-01**, **OFF-03**, **OFF-06**). **Gap closure:** docs + stack blurbs (completed 2026-04-29).
 - [ ] **Phase 10: CI parity & provenance documentation** — Strengthen automated vs documented platform signal (**PLT-04**), align provenance README with CI provenance job (**ATT-05**).
 - [ ] **Phase 11: Phase verification backfill** — Author retroactive **VERIFICATION.md** (or milestone-equivalent) mapping **OFF-02**, **OFF-04**, **OFF-05**, **PLT-01**–**PLT-03**, **ATT-01**–**ATT-04** to evidence; optional Nyquist **VALIDATION** stubs per config. **Gap closure:** process gap (no phase VERIFICATION.md).
 

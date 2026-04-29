@@ -12,9 +12,9 @@ Close gaps raised by the v2.0 milestone audit: vendor reproducibility (**OFF-03*
 
 ### Phase 9 — Vendor reproducibility & offline path
 
-- [ ] **OFF-01**: Documented offline-capable / vendor-mode path matches what maintainers run (default CDN vs explicit vendor policy called out).
-- [ ] **OFF-03**: Reproducible vendor install path — **`npm ci`** must match a committed lockfile **or** docs/instructions must match the supported install (no broken clone→install flow).
-- [ ] **OFF-06**: Vendor-mode eval path documented end-to-end with policy + manifest + eval (`evals/run.sh`) expectations.
+- [x] **OFF-01**: Documented offline-capable / vendor-mode path matches what maintainers run (default CDN vs explicit vendor policy called out).
+- [x] **OFF-03**: Reproducible vendor install path — **`npm ci`** must match a committed lockfile **or** docs/instructions must match the supported install (no broken clone→install flow).
+- [x] **OFF-06**: Vendor-mode eval path documented end-to-end with policy + manifest + eval (`evals/run.sh`) expectations.
 
 ### Phase 10 — CI parity & provenance documentation
 
@@ -35,9 +35,9 @@ _(Phases 9–10 REQ rows above close actionable gaps; Phase 11 closes documentat
 
 | Requirement | Gap closure phase | Status |
 |---------------|-------------------|--------|
-| OFF-01 | Phase 9 | Pending |
-| OFF-03 | Phase 9 | Pending |
-| OFF-06 | Phase 9 | Pending |
+| OFF-01 | Phase 9 | Done |
+| OFF-03 | Phase 9 | Done |
+| OFF-06 | Phase 9 | Done |
 | PLT-04 | Phase 10 | Pending |
 | ATT-05 | Phase 10 | Pending |
 | OFF-02 | Phase 11 | Pending |
