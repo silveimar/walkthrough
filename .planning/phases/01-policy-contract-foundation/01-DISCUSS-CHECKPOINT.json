@@ -1,0 +1,174 @@
+{
+  "phase": "1",
+  "phase_name": "Policy Contract Foundation",
+  "timestamp": "2026-04-29T15:36:00Z",
+  "areas_completed": [
+    "Policy contract format and location",
+    "Local-only egress model",
+    "Initial enforcement scope",
+    "Local verification flow"
+  ],
+  "areas_remaining": [],
+  "decisions": {
+    "Policy contract format and location": [
+      {
+        "question": "Preferred policy file format for the hardening contract?",
+        "answer": "JSON",
+        "options_presented": [
+          "JSON",
+          "YAML",
+          "You decide"
+        ]
+      },
+      {
+        "question": "Where should the canonical policy live?",
+        "answer": "security/security-policy.json",
+        "options_presented": [
+          ".planning/policy/security-policy.json",
+          "security/security-policy.json",
+          "security-policy.json"
+        ]
+      },
+      {
+        "question": "How strict should schema validation be in Phase 1?",
+        "answer": "Strict fail-closed",
+        "options_presented": [
+          "Strict fail-closed",
+          "Warn on unknown keys",
+          "Minimal checks"
+        ]
+      },
+      {
+        "question": "How should docs reference policy behavior in this phase?",
+        "answer": "Single-source references only",
+        "options_presented": [
+          "Single-source references only",
+          "Hybrid references",
+          "Docs-first narrative"
+        ]
+      }
+    ],
+    "Local-only egress model": [
+      {
+        "question": "Default network behavior in local-only mode?",
+        "answer": "Default deny-all egress",
+        "options_presented": [
+          "Default deny-all egress",
+          "Deny external egress but allow localhost/system",
+          "Monitor and log only"
+        ]
+      },
+      {
+        "question": "How should allowlist exceptions be handled?",
+        "answer": "Explicit per-run allowlist flags plus policy entries",
+        "options_presented": [
+          "Explicit per-run allowlist flags + policy entries",
+          "Policy-file allowlist only",
+          "Environment-variable overrides"
+        ]
+      },
+      {
+        "question": "What should happen when a blocked egress attempt occurs?",
+        "answer": "Hard fail with actionable error and blocked target details",
+        "options_presented": [
+          "Hard fail with actionable error",
+          "Warn and continue",
+          "Silently block and proceed"
+        ]
+      },
+      {
+        "question": "Should LLM/rubric network usage have a deliberate escape hatch in Phase 1?",
+        "answer": "Off by default, explicit opt-in mode required",
+        "options_presented": [
+          "Off by default, explicit opt-in mode required",
+          "Always allow LLM endpoints",
+          "Disallow all LLM calls when local-only is enabled"
+        ]
+      }
+    ],
+    "Initial enforcement scope": [
+      {
+        "question": "Which entrypoints must be policy-gated in Phase 1?",
+        "answer": "evals/run.sh, evals/graders/llm-rubric.mjs, evals/graders/deterministic.mjs, evals/report.mjs, and .github/workflows/static.yml checks",
+        "options_presented": [
+          "evals/run.sh",
+          "evals/graders/llm-rubric.mjs",
+          "evals/graders/deterministic.mjs",
+          "evals/report.mjs",
+          ".github/workflows/static.yml publish gate checks"
+        ]
+      },
+      {
+        "question": "How strict should enforcement be for non-gated entrypoints in Phase 1?",
+        "answer": "Block execution if entrypoint is not policy-gated",
+        "options_presented": [
+          "Block execution if entrypoint is not policy-gated",
+          "Warn but allow execution",
+          "Gate only critical entrypoints"
+        ]
+      },
+      {
+        "question": "How should docs/skill instructions be tied to policy scope?",
+        "answer": "Required references to policy contract in skill/docs",
+        "options_presented": [
+          "Required references to policy contract",
+          "Best-effort references",
+          "Defer doc alignment"
+        ]
+      },
+      {
+        "question": "How should publish-related policy checks behave in this phase?",
+        "answer": "Pre-publish hard gate on approved paths plus policy check",
+        "options_presented": [
+          "Pre-publish hard gate on approved paths + policy check",
+          "Report-only",
+          "Keep publish checks out of this phase"
+        ]
+      }
+    ],
+    "Local verification flow": [
+      {
+        "question": "What should be the primary local verification command surface in Phase 1?",
+        "answer": "Single verify-policy command wrapper",
+        "options_presented": [
+          "Single verify-policy command wrapper",
+          "Direct script checks in each tool",
+          "CI-only verification"
+        ]
+      },
+      {
+        "question": "When should policy verification run in developer workflow?",
+        "answer": "Before eval runs and in CI",
+        "options_presented": [
+          "Before eval runs and in CI",
+          "Before eval runs only",
+          "Only in CI on merge/PR"
+        ]
+      },
+      {
+        "question": "How should verification results be represented?",
+        "answer": "Machine-readable JSON plus human summary",
+        "options_presented": [
+          "Machine-readable JSON + human summary",
+          "Human-readable output only",
+          "Exit code only"
+        ]
+      },
+      {
+        "question": "If verification fails, what behavior do you want in Phase 1?",
+        "answer": "Hard stop; require explicit fix before proceeding",
+        "options_presented": [
+          "Hard stop",
+          "Allow --override bypass",
+          "Warn and continue"
+        ]
+      }
+    ]
+  },
+  "deferred_ideas": [],
+  "canonical_refs": [
+    ".planning/ROADMAP.md",
+    ".planning/REQUIREMENTS.md",
+    ".planning/PROJECT.md"
+  ]
+}
