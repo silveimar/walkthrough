@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "artifactBasename": "walkthrough-how-it-works.html",
   "artifactSha256": "e0c603a87ec7653cd2752701377281e9f6501817f9b804eb6b5ace642f11da5e",
-  "policyVersion": 4,
+  "policyVersion": 5,
   "generatorId": "walkthrough-skill-reference",
   "createdAt": "2026-04-29T12:00:00.000Z"
 }

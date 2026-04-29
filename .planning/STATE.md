@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
-status: planning
-last_updated: "2026-04-29T19:38:41.644Z"
+status: completed
+last_updated: "2026-04-29T19:50:40.209Z"
 last_activity: 2026-04-29
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 9
-  completed_plans: 6
-  percent: 67
+  completed_plans: 9
+  percent: 100
 ---
 
 # Project State
@@ -21,22 +21,22 @@ See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-**Current focus:** Phase 8 — Signed provenance
+**Current focus:** v2.0 milestone complete — maintenance / next milestone planning
 
 ## Current Position
 
-Phase: 8 (signed-provenance) — PLANS READY
-Plan: 08-01, 08-02, 08-03 (3 plans; not executed)
-**Phase:** 08 — Signed provenance
-**Plan:** 08-01, 08-02, 08-03
-**Status:** Plans ready — run execute-phase
+Phase: 8 (signed-provenance) — COMPLETE
+Plan: 08-01, 08-02, 08-03 — executed
+**Phase:** v2.0 all phases delivered (6–8)
+**Plan:** —
+**Status:** Milestone complete
 **Last activity:** 2026-04-29
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 6 (v2.0)
+- Total plans completed: 9 (v2.0)
 - Average duration: -
 - Total execution time: -
 
@@ -46,7 +46,7 @@ Plan: 08-01, 08-02, 08-03 (3 plans; not executed)
 |-------|-------|-------|----------|
 | 6 | 3 | - | - |
 | 7 | 3 | - | - |
-| 8 | — | — | — |
+| 8 | 3 | - | - |
 
 **Recent Trend:**
 
@@ -65,7 +65,7 @@ Plan: 08-01, 08-02, 08-03 (3 plans; not executed)
 
 ### Pending Todos
 
-- `/gsd-execute-phase 8 --auto` (or without `--auto` for interactive) to implement signed provenance plans.
+- Optional: `/gsd-complete-milestone` or archive v2.0 per team process; define next milestone if extending scope beyond v2.0.
 
 ### Blockers/Concerns
 

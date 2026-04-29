@@ -26,11 +26,11 @@ Scoped from `.planning/PROJECT.md` (ADV-01..03) and `.planning/research/SUMMARY.
 
 ### Signed provenance (ADV-02)
 
-- [ ] **ATT-01**: Repo defines a **manifest-first** model: what bytes are in scope (vendor layout, key generated artifacts, policy digest) before signing.
-- [ ] **ATT-02**: Maintainer can **sign** the v2.0 provenance manifest with a **documented local-first** tool choice (e.g. Minisign / Cosign / GPG) appropriate to this project’s trust model.
-- [ ] **ATT-03**: Maintainer can **verify** signatures locally; verification binds to **consumed** artifacts (not “CI-only theater”).
-- [ ] **ATT-04**: Attestation and verification respect **data protection** rules: no signing or persisting of redacted secret material; align with `evals/results/` handling from v1.0.
-- [ ] **ATT-05**: Optional **CI verify** path exists (job or documented step) so merges can require signature/manifest checks when enabled.
+- [x] **ATT-01**: Repo defines a **manifest-first** model: what bytes are in scope (vendor layout, key generated artifacts, policy digest) before signing.
+- [x] **ATT-02**: Maintainer can **sign** the v2.0 provenance manifest with a **documented local-first** tool choice (e.g. Minisign / Cosign / GPG) appropriate to this project’s trust model.
+- [x] **ATT-03**: Maintainer can **verify** signatures locally; verification binds to **consumed** artifacts (not “CI-only theater”).
+- [x] **ATT-04**: Attestation and verification respect **data protection** rules: no signing or persisting of redacted secret material; align with `evals/results/` handling from v1.0.
+- [x] **ATT-05**: Optional **CI verify** path exists (job or documented step) so merges can require signature/manifest checks when enabled.
 
 ## Future (post–v2.0)
 
@@ -61,11 +61,11 @@ Not in v2.0 scope; candidates from research for later milestones.
 | PLT-02 | Phase 7 | Done |
 | PLT-03 | Phase 7 | Done |
 | PLT-04 | Phase 7 | Done |
-| ATT-01 | Phase 8 | Pending |
-| ATT-02 | Phase 8 | Pending |
-| ATT-03 | Phase 8 | Pending |
-| ATT-04 | Phase 8 | Pending |
-| ATT-05 | Phase 8 | Pending |
+| ATT-01 | Phase 8 | Done |
+| ATT-02 | Phase 8 | Done |
+| ATT-03 | Phase 8 | Done |
+| ATT-04 | Phase 8 | Done |
+| ATT-05 | Phase 8 | Done |
 
 **Coverage:** 15/15 v2.0 requirements mapped 1:1 to phases in ROADMAP.md (Phase 6–8).
 

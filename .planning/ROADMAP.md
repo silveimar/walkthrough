@@ -9,7 +9,7 @@
 
 - [x] **Phase 6: Offline vendoring & dual-mode HTML** — Reproducible vendor layout, policy-driven CDN vs vendor mode, eval temp workspace includes frozen assets with fail-closed checks. (completed 2026-04-29)
 - [x] **Phase 7: Cross-platform sandbox & path parity** — Documented platform matrix, normalized paths and temp workspace across macOS/Linux/Windows, CI smoke for shell/path failure modes. (completed 2026-04-29)
-- [ ] **Phase 8: Signed provenance** — Manifest-first scope, local sign/verify, data-protection–aligned attestations, optional CI verification.
+- [x] **Phase 8: Signed provenance** — Manifest-first scope, local sign/verify, data-protection–aligned attestations, optional CI verification. (completed 2026-04-29)
 
 ## Phase Details (v2.0)
 
@@ -67,7 +67,7 @@
 4. Attestation and verification **respect data protection**: no signing or persisting of redacted secret material; behavior **aligns** with `evals/results/` handling from v1.0.
 5. An **optional CI verify** path exists (workflow job or documented required step) so teams can **require** manifest/signature checks on merge when the policy flag is enabled.
 
-**Plans**: 08-01 (manifest docs + schema), 08-02 (build/verify scripts + gitignore), 08-03 (optional CI / docs)
+**Plans**: 08-01 (manifest docs + schema), 08-02 (build/verify scripts + gitignore), 08-03 (optional CI / docs) — **complete**
 
 ---
 
@@ -77,7 +77,7 @@
 |-------|----------------|--------|-----------|
 | 6. Offline vendoring & dual-mode HTML | 3/3 | Complete    | 2026-04-29 |
 | 7. Cross-platform sandbox & path parity | 3/3 | Complete    | 2026-04-29 |
-| 8. Signed provenance | 0/3 | Planned (context + plans) | - |
+| 8. Signed provenance | 3/3 | Complete    | 2026-04-29 |
 
 ## Phase artifact paths (v2.0)
 

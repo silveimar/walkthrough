@@ -115,6 +115,10 @@ Eval entrypoints (`evals/run.sh`, graders, `evals/report.mjs`) load this policy 
 
 Supported shells and manual smoke steps for **Git Bash**, **WSL2**, macOS, and Linux are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md). **Parity** here means consistent policy + harness behavior across those setups—not identical OS sandboxes.
 
+### Provenance (signing)
+
+**Manifest-first** signing for policy + vendor digests is documented in [`provenance/README.md`](provenance/README.md). Build: `node scripts/build-provenance-manifest.mjs`. Verify: `node scripts/verify-provenance.mjs` (optionally with Minisign; see that doc).
+
 ## Testing
 
 The `evals/` directory contains an eval harness that runs the skill against a set of test prompts and grades the output.

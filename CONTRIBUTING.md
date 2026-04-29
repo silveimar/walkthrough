@@ -45,3 +45,15 @@ WALKTHROUGH_STRICT_CWD=1 node evals/graders/deterministic.mjs examples/walkthrou
 
 - **Temp workspace (RUN-02):** When `runtime.evalWorkspaceMustBeUnderSystemTemp` is `true` in policy, the eval harness expects workspaces under the OS temp directory (`os.tmpdir()` on Node; `mktemp -d` in bash). Avoid pointing eval workspaces at arbitrary non-temp paths.
 - **Strict cwd (RUN-03):** Setting **`WALKTHROUGH_STRICT_CWD=1`** makes Node entrypoints require `cwd` to be the repository root—useful in CI. Locally this can fail if you run scripts from a subdirectory without `cd` to root first.
+
+## Provenance verify in CI (ATT-05)
+
+The default **`CI`** workflow runs **`node scripts/verify-provenance.mjs`** on every PR/push: it checks that **`provenance/manifest.json`** matches **`security/security-policy.json`** and **`vendor/walkthrough-viewer/manifest.json`** on disk. Regenerate before merging when you change policy or vendor files:
+
+```bash
+node scripts/build-provenance-manifest.mjs
+```
+
+Minisign is **installed in CI** so if you commit **`provenance/manifest.json.sig`** and **`provenance/minisign.pub`**, signature verification runs too; otherwise digest-only verification passes.
+
+Use branch protection **required checks** on the `CI / verify` workflow if you want merges blocked when provenance drifts.

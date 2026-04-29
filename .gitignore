@@ -1,2 +1,7 @@
 evals/results/
 node_modules/
+
+# Minisign secret keys (never commit)
+*.minisig.key
+provenance/*.sec.key
+minisign.key

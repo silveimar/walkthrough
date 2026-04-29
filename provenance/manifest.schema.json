@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/alexanderop/walkthrough/provenance/manifest.schema.json",
+  "title": "Walkthrough provenance manifest",
+  "description": "Compact digest manifest for signing — policy + vendor integrity surface only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifestVersion", "policySha256", "vendorManifestSha256"],
+  "properties": {
+    "manifestVersion": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Schema version for this manifest JSON."
+    },
+    "policySha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex of security/security-policy.json bytes."
+    },
+    "vendorManifestSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex of vendor/walkthrough-viewer/manifest.json bytes."
+    },
+    "policyVersion": {
+      "type": ["integer", "null"],
+      "description": "Optional copy of policy JSON version field."
+    }
+  }
+}

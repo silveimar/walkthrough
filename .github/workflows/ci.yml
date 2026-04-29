@@ -46,6 +46,12 @@ jobs:
           node scripts/test-path-workspace.mjs
           node evals/graders/deterministic.mjs examples/walkthrough-how-it-works.html
 
+      - name: Install Minisign (for provenance signature verify when present)
+        run: sudo apt-get update && sudo apt-get install -y minisign
+
+      - name: Provenance manifest (digests + optional Minisign)
+        run: node scripts/verify-provenance.mjs
+
       - name: Node syntax check (evals + security)
         run: |
           set -e
@@ -54,6 +60,8 @@ jobs:
             evals/graders/deterministic.mjs \
             evals/graders/llm-rubric.mjs \
             scripts/test-path-workspace.mjs \
+            scripts/build-provenance-manifest.mjs \
+            scripts/verify-provenance.mjs \
             scripts/verify-requirements-trace.mjs \
             scripts/verify-policy-drift.mjs \
             security/validate-policy.mjs \

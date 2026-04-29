@@ -12,10 +12,10 @@
     { "id": "PLT-02", "phase": "Phase 7", "status": "Done" },
     { "id": "PLT-03", "phase": "Phase 7", "status": "Done" },
     { "id": "PLT-04", "phase": "Phase 7", "status": "Done" },
-    { "id": "ATT-01", "phase": "Phase 8", "status": "Pending" },
-    { "id": "ATT-02", "phase": "Phase 8", "status": "Pending" },
-    { "id": "ATT-03", "phase": "Phase 8", "status": "Pending" },
-    { "id": "ATT-04", "phase": "Phase 8", "status": "Pending" },
-    { "id": "ATT-05", "phase": "Phase 8", "status": "Pending" }
+    { "id": "ATT-01", "phase": "Phase 8", "status": "Done" },
+    { "id": "ATT-02", "phase": "Phase 8", "status": "Done" },
+    { "id": "ATT-03", "phase": "Phase 8", "status": "Done" },
+    { "id": "ATT-04", "phase": "Phase 8", "status": "Done" },
+    { "id": "ATT-05", "phase": "Phase 8", "status": "Done" }
   ]
 }
