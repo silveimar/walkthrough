@@ -43,7 +43,7 @@ Plans:
   1. Maintainer can execute eval flows without shell-string interpolation for untrusted inputs.
   2. Maintainer can run commands only within constrained contexts using explicit file/process allowlists.
   3. Insecure runtime configuration is detected at startup and execution fails fast with clear errors.
-**Plans**: TBD
+**Plans**: 3 plans (`02-01`..`02-03`)
 
 ### Phase 3: Data Redaction and Retention Controls
 **Goal**: Maintainers can prevent sensitive data leakage in logs/artifacts while enforcing bounded retention and protected local storage.
