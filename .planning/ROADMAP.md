@@ -28,7 +28,7 @@
 4. `security/security-policy.json` (and schema) express **asset mode** and **vendor root(s)** so `policy-runtime.mjs` and deterministic graders **share one source of truth**—no divergent “CDN in skill, vendor in grader” drift.
 5. `evals/run.sh` and temp-workspace copy behavior **include vendored assets** in isolated runs when policy requires vendor mode, with **fail-closed** behavior when vendor content is missing or the manifest does not match.
 
-**Plans**: TBD
+**Plans**: 06-01 (policy + runtime), 06-02 (html-patterns + deterministic), 06-03 (vendor sync + run.sh) — **complete**
 
 **UI hint**: yes
 
@@ -75,7 +75,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 6. Offline vendoring & dual-mode HTML | 0/TBD | Not started | - |
+| 6. Offline vendoring & dual-mode HTML | 3/3 | Complete | 2026-04-29 |
 | 7. Cross-platform sandbox & path parity | 0/TBD | Not started | - |
 | 8. Signed provenance | 0/TBD | Not started | - |
 

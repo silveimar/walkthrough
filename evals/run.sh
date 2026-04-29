@@ -47,6 +47,26 @@ if ! bash "$PROJECT_DIR/scripts/verify-policy" >&2; then
   exit 1
 fi
 
+# Vendor manifest (OFF-06, D-04): fail-closed when policy requires vendor-sourced viewer assets
+if ! (
+  cd "$PROJECT_DIR" &&
+    node --input-type=module -e "
+import { walkthroughPolicyRequiresAnyVendor, verifyVendorManifest } from './security/policy-runtime.mjs';
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('.', import.meta.url));
+if (!walkthroughPolicyRequiresAnyVendor()) process.exit(0);
+const r = verifyVendorManifest(root);
+if (!r.ok) {
+  console.error(r.errors.join('\n'));
+  process.exit(1);
+}
+process.exit(0);
+"
+); then
+  echo "Vendor manifest verification failed. When walkthroughViewerAssets uses vendor mode, vendor/walkthrough-viewer must exist and match manifest.json (run: npm ci && node scripts/sync-walkthrough-vendor.mjs)."
+  exit 1
+fi
+
 # RUN-03: required tools
 if ! command -v node >/dev/null 2>&1; then
   echo "Error: node is required (Node.js >= 18). See README.md."
@@ -148,6 +168,11 @@ assertEvalWorkspaceDirAllowed(process.env.VERIFY_WORK_DIR || '');
   # Install the walkthrough skill where Claude Code can discover it
   mkdir -p "$WORK_DIR/.claude/skills"
   cp -R "$PROJECT_DIR/skills/walkthrough" "$WORK_DIR/.claude/skills/walkthrough"
+  NEEDS_VENDOR="$(cd "$PROJECT_DIR" && node --input-type=module -e "import { walkthroughPolicyRequiresAnyVendor } from './security/policy-runtime.mjs'; process.stdout.write(walkthroughPolicyRequiresAnyVendor() ? 'yes' : 'no');")"
+  if [[ "$NEEDS_VENDOR" == "yes" ]]; then
+    mkdir -p "$WORK_DIR/vendor"
+    cp -R "$PROJECT_DIR/vendor/walkthrough-viewer" "$WORK_DIR/vendor/"
+  fi
   # Create a marker file to detect newly created files
   touch "$WORK_DIR/.eval-start-marker"
 

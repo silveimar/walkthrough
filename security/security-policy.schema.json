@@ -4,7 +4,7 @@
   "title": "Walkthrough skill security policy",
   "type": "object",
   "additionalProperties": false,
-  "required": ["version", "localOnly", "egress", "llmRubric", "entrypoints", "publish"],
+  "required": ["version", "localOnly", "egress", "llmRubric", "entrypoints", "publish", "walkthroughViewerAssets"],
   "properties": {
     "version": {
       "type": "integer",
@@ -151,6 +151,78 @@
               "type": "string",
               "minLength": 1,
               "description": "Repo-relative root for bulk eval artifacts (DATA-03)."
+            }
+          }
+        }
+      }
+    },
+    "walkthroughViewerAssets": {
+      "type": "object",
+      "description": "Walkthrough HTML viewer script sources: per-package override → defaults (D-03, OFF-04).",
+      "additionalProperties": false,
+      "required": ["defaults", "packages"],
+      "properties": {
+        "defaults": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["assetSource", "vendorRootRel"],
+          "properties": {
+            "assetSource": {
+              "type": "string",
+              "enum": ["cdn", "vendor"],
+              "description": "Default for all listed packages when not overridden. Precedence: packages.<id>.assetSource → defaults.assetSource."
+            },
+            "vendorRootRel": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Repo-relative root for vendored UMD/ESM/CSS (e.g. vendor/walkthrough-viewer)."
+            }
+          }
+        },
+        "packages": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Per-asset class overrides. Keys: react, reactDom, mermaid, tailwind, shiki.",
+          "properties": {
+            "react": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["assetSource"],
+              "properties": {
+                "assetSource": { "type": "string", "enum": ["cdn", "vendor"] }
+              }
+            },
+            "reactDom": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["assetSource"],
+              "properties": {
+                "assetSource": { "type": "string", "enum": ["cdn", "vendor"] }
+              }
+            },
+            "mermaid": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["assetSource"],
+              "properties": {
+                "assetSource": { "type": "string", "enum": ["cdn", "vendor"] }
+              }
+            },
+            "tailwind": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["assetSource"],
+              "properties": {
+                "assetSource": { "type": "string", "enum": ["cdn", "vendor"] }
+              }
+            },
+            "shiki": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["assetSource"],
+              "properties": {
+                "assetSource": { "type": "string", "enum": ["cdn", "vendor"] }
+              }
             }
           }
         }

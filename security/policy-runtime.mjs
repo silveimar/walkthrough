@@ -2,6 +2,7 @@
  * Shared policy load and guards for eval entrypoints (POL-02, D-05–D-10).
  */
 
+import { createHash } from "node:crypto";
 import { readFileSync, existsSync, realpathSync } from "node:fs";
 import os from "node:os";
 import { dirname, join, normalize, relative, sep } from "node:path";
@@ -299,4 +300,147 @@ export function assertPathUnderCanonicalEvalResults(absPath) {
   if (!ok) {
     throw new Error(`DATA-03: path must be under canonical eval results dir (${base}): ${resolved}`);
   }
+}
+
+/** @type {readonly string[]} Per D-03 — must match security-policy.schema.json packages.* keys. */
+export const WALKTHROUGH_ASSET_PACKAGE_IDS = /** @type {const} */ ([
+  "react",
+  "reactDom",
+  "mermaid",
+  "tailwind",
+  "shiki",
+]);
+
+/**
+ * @param {Record<string, unknown>} policy loaded policy document
+ */
+export function loadWalkthroughViewerAssets(policy) {
+  const w = policy.walkthroughViewerAssets;
+  if (!w || typeof w !== "object") {
+    throw new Error("walkthroughViewerAssets missing from policy (OFF-04)");
+  }
+  return /** @type {{ defaults: { assetSource: string, vendorRootRel: string }, packages: Record<string, { assetSource: string }> }} */ (
+    w
+  );
+}
+
+/**
+ * Effective CDN vs vendor for a package id. Precedence: packages[packageId].assetSource → defaults.assetSource (D-03).
+ * @param {string} packageId e.g. react, reactDom
+ * @param {Record<string, unknown>} [policy] optional pre-loaded policy
+ * @returns {"cdn" | "vendor"}
+ */
+export function resolveAssetSource(packageId, policy = loadRepoPolicy()) {
+  const w = loadWalkthroughViewerAssets(policy);
+  const ov = w.packages?.[packageId]?.assetSource;
+  if (ov === "cdn" || ov === "vendor") return ov;
+  const d = w.defaults?.assetSource;
+  if (d === "cdn" || d === "vendor") return d;
+  throw new Error(`walkthroughViewerAssets: invalid assetSource for ${packageId}`);
+}
+
+/**
+ * True if any package (or defaults) requires vendor-sourced viewer assets.
+ * @param {Record<string, unknown>} [policy]
+ */
+export function walkthroughPolicyRequiresAnyVendor(policy = loadRepoPolicy()) {
+  const w = loadWalkthroughViewerAssets(policy);
+  if (w.defaults?.assetSource === "vendor") return true;
+  for (const id of WALKTHROUGH_ASSET_PACKAGE_IDS) {
+    if (w.packages?.[id]?.assetSource === "vendor") return true;
+  }
+  return false;
+}
+
+/**
+ * Absolute path to vendored walkthrough viewer root (from policy defaults.vendorRootRel).
+ * @param {string} repoRoot
+ * @param {Record<string, unknown>} [policy]
+ */
+export function getWalkthroughVendorRootAbs(repoRoot, policy = loadRepoPolicy()) {
+  const w = loadWalkthroughViewerAssets(policy);
+  const rel = w.defaults.vendorRootRel.replace(/^\/+/, "").split("/").filter(Boolean);
+  return join(repoRoot, ...rel);
+}
+
+function sha256FileSync(absPath) {
+  const buf = readFileSync(absPath);
+  return createHash("sha256").update(buf).digest("hex");
+}
+
+/**
+ * Verify vendor/walkthrough-viewer/manifest.json against files on disk (OFF-02).
+ * @param {string} repoRoot repository root (absolute)
+ * @returns {{ ok: boolean, errors: string[] }}
+ */
+export function verifyVendorManifest(repoRoot) {
+  const errors = [];
+  let policy;
+  try {
+    policy = loadRepoPolicy();
+  } catch (e) {
+    return {
+      ok: false,
+      errors: [e instanceof Error ? e.message : String(e)],
+    };
+  }
+
+  const vendorAbs = getWalkthroughVendorRootAbs(repoRoot, policy);
+  const manifestPath = join(vendorAbs, "manifest.json");
+
+  if (!existsSync(manifestPath)) {
+    return {
+      ok: false,
+      errors: [`Vendor manifest missing (fail-closed, D-04): ${manifestPath}`],
+    };
+  }
+
+  /** @type {{ manifestVersion?: number, algorithm?: string, entries?: { path: string, sha256: string }[] }} */
+  let manifest;
+  try {
+    manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  } catch (e) {
+    return {
+      ok: false,
+      errors: [`Invalid vendor manifest JSON: ${e instanceof Error ? e.message : String(e)}`],
+    };
+  }
+
+  if (manifest.manifestVersion !== 1) {
+    errors.push(`manifest.manifestVersion must be 1, got ${manifest.manifestVersion}`);
+  }
+  if (manifest.algorithm !== "sha256") {
+    errors.push(`manifest.algorithm must be sha256, got ${manifest.algorithm}`);
+  }
+  const entries = manifest.entries;
+  if (!Array.isArray(entries) || entries.length === 0) {
+    errors.push("manifest.entries must be a non-empty array");
+  }
+
+  if (errors.length) return { ok: false, errors };
+
+  for (const ent of /** @type {{ path: string, sha256: string }[]} */ (entries)) {
+    if (!ent.path || !ent.sha256) {
+      errors.push(`manifest entry missing path or sha256: ${JSON.stringify(ent)}`);
+      continue;
+    }
+    const rel = ent.path.replace(/^\/+/, "").split("/").filter(Boolean);
+    const abs = join(vendorAbs, ...rel);
+    if (!existsSync(abs)) {
+      errors.push(`Vendor file missing: ${ent.path}`);
+      continue;
+    }
+    let hex;
+    try {
+      hex = sha256FileSync(abs);
+    } catch (e) {
+      errors.push(`Cannot hash ${ent.path}: ${e instanceof Error ? e.message : String(e)}`);
+      continue;
+    }
+    if (hex !== ent.sha256) {
+      errors.push(`SHA-256 mismatch for ${ent.path}: expected ${ent.sha256}, got ${hex}`);
+    }
+  }
+
+  return { ok: errors.length === 0, errors };
 }

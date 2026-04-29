@@ -51,12 +51,12 @@ Not in v2.0 scope; candidates from research for later milestones.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| OFF-01 | Phase 6 | Pending |
-| OFF-02 | Phase 6 | Pending |
-| OFF-03 | Phase 6 | Pending |
-| OFF-04 | Phase 6 | Pending |
-| OFF-05 | Phase 6 | Pending |
-| OFF-06 | Phase 6 | Pending |
+| OFF-01 | Phase 6 | Done |
+| OFF-02 | Phase 6 | Done |
+| OFF-03 | Phase 6 | Done |
+| OFF-04 | Phase 6 | Done |
+| OFF-05 | Phase 6 | Done |
+| OFF-06 | Phase 6 | Done |
 | PLT-01 | Phase 7 | Pending |
 | PLT-02 | Phase 7 | Pending |
 | PLT-03 | Phase 7 | Pending |

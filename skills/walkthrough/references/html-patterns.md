@@ -88,6 +88,24 @@ classDef data fill:#9333ea,stroke:#a855f7,color:#fff
 
 No Babel. Shiki loaded via ESM `import` inside `<script type="module">`.
 
+## Dual mode: CDN vs vendor (policy `walkthroughViewerAssets`)
+
+Walkthrough HTML must be internally consistent: **one** source for viewer scripts per asset class as resolved from `security/security-policy.json` → `walkthroughViewerAssets` (per-package override → `defaults`, OFF-04). Do **not** mix CDN and vendor paths for the same kind of asset in one file.
+
+### CDN mode (default in repo policy)
+
+Use the **CDN Dependencies** block above: Tailwind Play CDN, unpkg React/ReactDOM UMD, jsDelivr Mermaid, and Shiki from the ESM CDN URL in the complete script example.
+
+### Vendor mode (offline-capable)
+
+When policy selects `assetSource: "vendor"` for a package, reference **repo-relative** files under `./vendor/walkthrough-viewer/` (must match `defaults.vendorRootRel` in policy). Typical layout after `node scripts/sync-walkthrough-vendor.mjs`:
+
+- **UMD scripts** — `./vendor/walkthrough-viewer/umd/react.production.min.js`, `react-dom.production.min.js`, `mermaid.min.js`
+- **Styles** — `<link rel="stylesheet" href="./vendor/walkthrough-viewer/css/walkthrough-viewer.css" />` (prebuilt Tailwind + tokens; **do not** use `cdn.tailwindcss.com` in vendor mode)
+- **Shiki** — ESM `import` from the vendored package path under `./vendor/walkthrough-viewer/shiki-pkg/` (copy of the `shiki` npm package; include wasm/onig as shipped by the sync script)
+
+Replicate the same React/Mermaid/Shiki setup as CDN mode, swapping URLs for the relative paths above. The deterministic grader branches on `resolveAssetSource()` — vendor HTML must include `vendor/walkthrough-viewer` and the expected filenames for each asset class.
+
 ## Minimal CSS
 
 ```css

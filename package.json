@@ -1,0 +1,15 @@
+{
+  "name": "walkthrough-skill-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vendor:sync": "node scripts/sync-walkthrough-vendor.mjs"
+  },
+  "dependencies": {
+    "mermaid": "11.12.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "shiki": "3.22.0",
+    "tailwindcss": "3.4.17"
+  }
+}

@@ -1,0 +1,3390 @@
+{
+  "manifestVersion": 1,
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "css/walkthrough-viewer.css",
+      "sha256": "a510be5e242309bb1d4bf31e43f01cec28cc607161f50c8ba37f764c7ff6ad45"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c190111a08091bcffd8de7b8c5156d88f6ee150b2ec64ea0b7763c5de8837c41"
+    },
+    {
+      "path": "shiki-pkg/dist/bundle-full.d.mts",
+      "sha256": "4056a596190daaaa7268f5465b972915facc5eca90ee6432e90afa130ba2e4ee"
+    },
+    {
+      "path": "shiki-pkg/dist/bundle-full.mjs",
+      "sha256": "6310ab78fd9d00113c2f83ab562e902bce9c95fdff647c848b606fab02e14f7c"
+    },
+    {
+      "path": "shiki-pkg/dist/bundle-web.d.mts",
+      "sha256": "b4596d033c7905b33fa58d3813d29bf6ff73d07b0ef2f09abdae42887be395cd"
+    },
+    {
+      "path": "shiki-pkg/dist/bundle-web.mjs",
+      "sha256": "5f18ecce4d136d25bf5010ee478b87183221a3bf03218a57d90373287623ab92"
+    },
+    {
+      "path": "shiki-pkg/dist/core-unwasm.d.mts",
+      "sha256": "0205d2faeddb68c95963134847efee51af1cb32bf987d80a7476f67aaeafa007"
+    },
+    {
+      "path": "shiki-pkg/dist/core-unwasm.mjs",
+      "sha256": "4508aa4dc9347ae0e419e8ce12e398fe26ca3e61670c96c4eecdb25496015bc4"
+    },
+    {
+      "path": "shiki-pkg/dist/core.d.mts",
+      "sha256": "5b32812412ae791f453555cb163798144f4cd9003934d9424a1ca8cac5c9f191"
+    },
+    {
+      "path": "shiki-pkg/dist/core.mjs",
+      "sha256": "0205d2faeddb68c95963134847efee51af1cb32bf987d80a7476f67aaeafa007"
+    },
+    {
+      "path": "shiki-pkg/dist/engine-javascript.d.mts",
+      "sha256": "c0ed4bc6877f345d12a8c002762ebc4482fd921e82c61ba3a81d2ac3a3069451"
+    },
+    {
+      "path": "shiki-pkg/dist/engine-javascript.mjs",
+      "sha256": "c0ed4bc6877f345d12a8c002762ebc4482fd921e82c61ba3a81d2ac3a3069451"
+    },
+    {
+      "path": "shiki-pkg/dist/engine-oniguruma.d.mts",
+      "sha256": "4ff839460f7ca28683d010c14d4ce3f0cccdbe47a4566762aede8b4fd10642c4"
+    },
+    {
+      "path": "shiki-pkg/dist/engine-oniguruma.mjs",
+      "sha256": "4ff839460f7ca28683d010c14d4ce3f0cccdbe47a4566762aede8b4fd10642c4"
+    },
+    {
+      "path": "shiki-pkg/dist/index.d.mts",
+      "sha256": "055ad004f230e10cf1099d08c6f5774c564782bd76fbefbda669ab1ad132c175"
+    },
+    {
+      "path": "shiki-pkg/dist/index.mjs",
+      "sha256": "2174bbc28c92f1b830a96a72f2a3e8ed8505b222482380c8993898d5021cd9e2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs.d.mts",
+      "sha256": "16f4b05d144b4689870a3b12b4fae5e256d5b8108f360b4ac5add01956d5a86e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs.mjs",
+      "sha256": "e2b2d50420abba184e911782ae35042771861cc24baf0f896782b07072865468"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/1c-query.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/1c-query.mjs",
+      "sha256": "7fe2f316fc035521e7216e655ba4385adf8ed6a1e31f6123947c1cce54e21d81"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/1c.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/1c.mjs",
+      "sha256": "26758438d9c756a2d0289809a204ae9873ff6105ac1d27c08662141298c729a5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/abap.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/abap.mjs",
+      "sha256": "f75a965654dc5b55caab1df2b07d76f3097eac5f1f80f75bde32bdf43ac94d22"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/actionscript-3.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/actionscript-3.mjs",
+      "sha256": "455414c4441824246527cbcc55b99bec36edfb6ad2dbd6580c6d568da3703221"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ada.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ada.mjs",
+      "sha256": "48f910c3e78cdc339c8bc5ddf3f4b80aa3532966147f9d3aebf6c5f16b03e7a7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/adoc.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/adoc.mjs",
+      "sha256": "8a6a7741f2428baba44dad7ebe375c6da702e609cc4ed5589af664b254d41eb4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-expression.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-expression.mjs",
+      "sha256": "5d8719fd5b38fdec5aef1cf5f3351d7a50689fcd912a45a3a00b62758a8d0db8"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-html.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-html.mjs",
+      "sha256": "ceb8fdc4c7507d386c6ec59a285432de6b96b7a98ecf8179dcb2106ba7d23c9a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-inline-style.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-inline-style.mjs",
+      "sha256": "30903dc5d60279a937c19c96c4d1f4078b60e93d01c4bd4fab5f62e48d41539f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-inline-template.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-inline-template.mjs",
+      "sha256": "562d3f467f714c5babe5fffd9d3a891462a393135f8445b5df324f81a671fdf8"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-let-declaration.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-let-declaration.mjs",
+      "sha256": "17a64ad34e46da39a9fc0ae644fb8e18ae2102031e4ced10fa1dae72682f9f4a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-template-blocks.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-template-blocks.mjs",
+      "sha256": "704e922e0c2fca57fcf3e9afc4cb88ae848f18fa9d0ded0a62986b2bdd1f850f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-template.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-template.mjs",
+      "sha256": "9bd5fdaa13b93ee9ca36d30c88fefde34c507bf499c54463f3d12b7989e0d51b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-ts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/angular-ts.mjs",
+      "sha256": "0d4b583b29145507cf37b9face4f93e40c0c5b652d4a95ce24ec9f11d4692e54"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/apache.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/apache.mjs",
+      "sha256": "9c84263fd1c4e96db709eab68266395d017d2304c1d5ee72197d9da9de28c7dd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/apex.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/apex.mjs",
+      "sha256": "f1b1e962eac112fe810485bac35e6b275ba9f83481c6fa3ac1112a8d69f9bf55"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/apl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/apl.mjs",
+      "sha256": "0710073328eb75ad6357c4d0459f2866e14d3fcee87cc6578a08368ca8352f8b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/applescript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/applescript.mjs",
+      "sha256": "217bcb71a6e60eca70d9d2df1d1329fb1e89dc5d6dbe424346a82882dd9bb7f1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ara.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ara.mjs",
+      "sha256": "64c112f64516eb01be98ad9a47a954f5ead0bb3a0d5a7bbeda5e2e07d87e9c8d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/asciidoc.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/asciidoc.mjs",
+      "sha256": "60c85dae208b99df8e85d7b902ac044054a4cebfe3955d729e04479c35a9cb6d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/asm.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/asm.mjs",
+      "sha256": "45e186f6e34c3d48235c1564eaa72c7ba8b93435585a11f63cacecf00305c152"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/astro.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/astro.mjs",
+      "sha256": "b37441e7cb990d395f8ce7e90c8d4eee7b386fff90c121a9f06070f79f53894a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/awk.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/awk.mjs",
+      "sha256": "0ea415c6360e5bd69d0b3c9b50457918c620f1a7d0534f217eb9f55a7c35fd06"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ballerina.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ballerina.mjs",
+      "sha256": "211dfc56d3345b7af40b8f48e3cd0bad09d762a7fabf710b97e47c9a11d7b0fa"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bash.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bash.mjs",
+      "sha256": "15a3d7fa45017bcec4a95065194e06632b7ed39c8f041ee8c960ae03e1424fa4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bat.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bat.mjs",
+      "sha256": "54a06df563a386b049880e08d30a8163f58154bcbc2ebf03b0ce1fafd9a2f33a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/batch.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/batch.mjs",
+      "sha256": "fbff8c98da48a6dcbe24520a7e932f275648165fceb936a6779fe925691f6d8d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/be.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/be.mjs",
+      "sha256": "3f810de974a4897d50c076a936611106be754bf3d5598b5141a749222b8f032e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/beancount.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/beancount.mjs",
+      "sha256": "96dd507f8361b8fb12436d29ef4bccbc5dc1d0d246007541ced08986ff84d7cf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/berry.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/berry.mjs",
+      "sha256": "d06f4f29d43814cc302a84e3dda3ce195958b3306a3ea5a4436a89592e4a468b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bibtex.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bibtex.mjs",
+      "sha256": "f9d0a6b7af581a3d64a8b40e7f78ffe94a01ada5c907c489ad6dc93878a40d40"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bicep.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bicep.mjs",
+      "sha256": "2df319d29a7253b50e71db6b5507ddc44d2367ec7ff5da98b85e08925da765e9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/blade.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/blade.mjs",
+      "sha256": "661bacfb0985f70e56bb7aeaee8acef11342ea4e291170c247b89ccd230bddcd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/bsl.mjs",
+      "sha256": "29c7ad78a9cd4929a95c099f6b2288d24080e85f1e47656b80701cc0c145cec6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/c.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/c.mjs",
+      "sha256": "472200283197ecf883b563fefc2a31166bedcd1cbe5f2813d9d0a7338e21a7bf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/c3.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/c3.mjs",
+      "sha256": "35bbf3e3e76ab2718acb0c150dcd5707545984022717b6e0be6052e763cfd815"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cadence.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cadence.mjs",
+      "sha256": "f821df3a9fc9ab45584e05063dd082acb7f507e934223961faa9c60a0ab5db54"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cairo.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cairo.mjs",
+      "sha256": "850635db9c13ea5a4ed095a25a70384de8f9cd2e154c7ddc525e227d5151453e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cdc.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cdc.mjs",
+      "sha256": "8159813f7f22d19481329fb1da25b64c0e096ee286e232db72f9095b49cbd91b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cjs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cjs.mjs",
+      "sha256": "59ce94defe3e41e9389d302ee043a36174ab487aa79678e3e5e85a340b96270a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/clarity.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/clarity.mjs",
+      "sha256": "e89ae0a8ca1ec23b5d18668cff1f8204334043d12045c88b64509dc5e9c6715c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/clj.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/clj.mjs",
+      "sha256": "a25209a8ba20cdd8cc5ef4aab3cde463eb2445b87d52afc015973a93121bffa9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/clojure.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/clojure.mjs",
+      "sha256": "8c40dfaec6919b57a0660a55e5743f4aa0825dc6508217fd98cd9ebb674410a5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/closure-templates.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/closure-templates.mjs",
+      "sha256": "7709f9893396ece5bbf8489f6effbc61dd69c04ce1d1fa2c7e2dc2e2a173e471"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cmake.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cmake.mjs",
+      "sha256": "eef0018e465ad72e5e76b6f052f50a26caf67c0bf10f0cd72e1859895eba9f9a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cmd.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cmd.mjs",
+      "sha256": "73ee20571f0f4cc22916d69517f75bb5c94215cd87182fea12dd4f3c0e09cacf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cobol.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cobol.mjs",
+      "sha256": "11ee1d2337f1e226d386cd3c9eb2fbcbffe78209c5a64779d9ca27e81e014363"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/codeowners.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/codeowners.mjs",
+      "sha256": "5e4b64d92763f2ceb661554dca90cf52f760df567cc7f36f279a5bb6184f5c23"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/codeql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/codeql.mjs",
+      "sha256": "f659171fb228e151cbfd2e51a02a978eae2e184febb77d1e01cf0c4f0739b4bb"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/coffee.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/coffee.mjs",
+      "sha256": "2503034a082ebdf9350bf099442fe05019c9d6c521a11ea9e218b2385e7bf3d4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/coffeescript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/coffeescript.mjs",
+      "sha256": "33eb7bc2dd6cec02b560c5bd24fd00e6b8fd4fe3b0bac5357721681ac25da179"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/common-lisp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/common-lisp.mjs",
+      "sha256": "6b02f1c1bad8d5f1417d3955b35e1c53907a24c40a3ab0652dd4fe62e1cdc98b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/console.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/console.mjs",
+      "sha256": "a0b1c49657fc014f9aec50a0022d875ee939b58cfea2db840f73b4b63e1b0ca1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/coq.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/coq.mjs",
+      "sha256": "5801759f56096a8bf6477f0326c17661c43a081440d23cb66b20b3e4f960963d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cpp-macro.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cpp-macro.mjs",
+      "sha256": "22970cd22b549bd1fc5f3534fb02171750c44749d7c50cfe963d6ce0f81734fd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cpp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cpp.mjs",
+      "sha256": "c1199f738012b90584eb01a426e63953a73f185746b250d8cb76036b3e9f180a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cql.mjs",
+      "sha256": "57cebf3efa4cc5802c2bcc0fac4d8cf907deed04a5063605caad63dfaa0f42c5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/crystal.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/crystal.mjs",
+      "sha256": "80c3d995114a482591be6ffb85bb9b0164a426f3d1d4747d6619787496f05142"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cs.mjs",
+      "sha256": "e6c2a7ec6b74f436edab24f0ce1b53648a2cf2d79e1a5339b3dabdd13376ba6b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/csharp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/csharp.mjs",
+      "sha256": "684a569122b68c4ffa1c79f36800bf3bace5b55d3a573398bbaff30055645531"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/css.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/css.mjs",
+      "sha256": "a1bc499cfb32587a9b563d3d06edf1240daabf9a2f69a44e8f895439d7d7697a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/csv.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/csv.mjs",
+      "sha256": "b1b2c82dded5946da0b79186727803b8f82736153a53b87603ea658510862734"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cts.mjs",
+      "sha256": "e43262e201f1d7e66bcf7f47e766fd97a9cc95bd4742cca623743ea32f8b11b8"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cue.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cue.mjs",
+      "sha256": "5052e88466ad5bd7fb657485bb2de8fe0e7356f8b1e2f1ca9584a371fd9d2022"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cypher.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/cypher.mjs",
+      "sha256": "eb1e72c302f75c7102e6594994812be93f9e2326bb221e8e6946ffd89e1e6b32"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/d.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/d.mjs",
+      "sha256": "69f975f4dcafd9f1629e1e96f42339dc6719e2f0e6f5bebd7719e3c688557c4a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dart.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dart.mjs",
+      "sha256": "9a7b6ec0275cf6eac2f3e2e6e0c6a637ba37324fc6dccd639bc9e062f5cacadc"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dax.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dax.mjs",
+      "sha256": "d8ecafda27d2fbbd7b83453467678f96452515b93e3a0904305f7c2135b0deee"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/desktop.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/desktop.mjs",
+      "sha256": "7252b197641c9a94b5b1e3f96c617a91b2d98c2342d9f8180c6bbeb838046358"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/diff.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/diff.mjs",
+      "sha256": "89896d08e6c1d34a3436075159da02050b609b48d09cc99132712dbf47ef066c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/docker.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/docker.mjs",
+      "sha256": "c05bb79204191ff1ed20528f102b5c6ca76207364f2338a3a0b49d64f15cf0ba"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dockerfile.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dockerfile.mjs",
+      "sha256": "136cf6cf0b4df99cac1c426666ae8e6676e5272ae3220a4525be29cb9720fa66"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dotenv.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dotenv.mjs",
+      "sha256": "6a6060886220e1113c7598a8e688714f2961fbead07045df9c365f3ab1870455"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dream-maker.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/dream-maker.mjs",
+      "sha256": "7475a0c484f8a77a178f2f1ac4b19aadc05b20adeb243867cdd9aabf32795661"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/edge.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/edge.mjs",
+      "sha256": "e56a43654c695625e9cd0ee526af2c831504ecb92f93b96338334d65f23028b2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/elisp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/elisp.mjs",
+      "sha256": "7043d2451af490354153b693729e9143513edccfab45740a37699b802c4c2f72"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/elixir.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/elixir.mjs",
+      "sha256": "fba085f869d5b797c7ddd13c8011dfa32dda25adcdb0cd883b99b35defcff9c4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/elm.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/elm.mjs",
+      "sha256": "25a380fcbd5ed996dca0c325f9e71d805b0e696c904f72c5cae89cc5684d52be"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/emacs-lisp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/emacs-lisp.mjs",
+      "sha256": "854b2cedab113b05422bf3b8be66fd84b2e7ba79a5ab082ad8b70d35dae89dfb"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/erb.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/erb.mjs",
+      "sha256": "511337efd22d827de54764e7758fc6d6ffb5ce5ee90c5f4daf48d79ee6f3e2c3"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/erl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/erl.mjs",
+      "sha256": "a939bb7e1e2bc0f175477985e6590a411a86b630c788d4b2a6475a9464ac252a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/erlang.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/erlang.mjs",
+      "sha256": "df8239658b56b1d5d493522388ed5454014268f6a3c101d61fae71a439d0f86f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-css.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-css.mjs",
+      "sha256": "ff4a762cde9c540e1d8e341605441211493039f922aa6a53513c665d3c3bb61d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-glsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-glsl.mjs",
+      "sha256": "4ceab34f0d63c721fc035835e592a9feed7f9d7f6a4aa9c201364a187c02d48d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-html.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-html.mjs",
+      "sha256": "15caba8c5388df1d5e41fda239fb1d9ac863c94a94b56c6095086b7ffee4983a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-sql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-sql.mjs",
+      "sha256": "f504dab86ba7d03ea5989e8ad29faad5037a4806d975761c380b0092de66b261"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-xml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/es-tag-xml.mjs",
+      "sha256": "5232499d4b7c4c31456cd933250510b700cbe1e8ec97ff846b80b26b33c147ae"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f.mjs",
+      "sha256": "d24fe6d6d2718f35b2cc0e49da5fdb0657c3e29348b94452a82c43cbeec17dc2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f03.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f03.mjs",
+      "sha256": "64892350901fa6582081bfa2812c59a97435d62b6361126a9ff9b968b2fedc4b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f08.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f08.mjs",
+      "sha256": "b588bb8c684e401ee21618a6fd3545aa9bc4ec1bee8aac85a9a18bc72e12799a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f18.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f18.mjs",
+      "sha256": "873405175936f29e6fde8bfeddbb0d1e7d666e0a05618b57dbc6316fff5e2294"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f77.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f77.mjs",
+      "sha256": "f8cecedb3161bd1911fd2016f662eb5c7589fedb46b2f30ebe13a59d3f6d8211"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f90.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f90.mjs",
+      "sha256": "5faca278490bf0568bb713f62c1f25616bf69a71d27278632c37ed444e4d1f54"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f95.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/f95.mjs",
+      "sha256": "150d70f934dc8239ef9880c216feeb3804a8641050dedc5b64f446190b2c14d2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fennel.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fennel.mjs",
+      "sha256": "fb281c91696c079e22706e52fc43c2f9946e606e2b4afc0cf0c4838a5ac252bd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fish.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fish.mjs",
+      "sha256": "d58df47ccca5842e92ff461f4f9437518d8cc1cc49f62708ea68c4e5e5c205cd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fluent.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fluent.mjs",
+      "sha256": "94869ddf67d8e3b5a49dc1eaf9d99070b1eb47d9564a7035285b396600b13e1c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/for.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/for.mjs",
+      "sha256": "cc5269c2e3e6a337297753550eea29082403e0796029d39023b2ee193908504c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fortran-fixed-form.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fortran-fixed-form.mjs",
+      "sha256": "9fe5b77f398e504999e7a35b7c5578da6bfcc50c1f0aeacc4fc978e0db4d06e7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fortran-free-form.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fortran-free-form.mjs",
+      "sha256": "eaed1f002e9ea5b9b2b2752c1430a771e65a3b31494741bcf0ab416b3d5885e7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fs.mjs",
+      "sha256": "083457e7407498ba7980bc7fe283db04825c22ee243caa6c7cf8ad8345a95563"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fsharp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fsharp.mjs",
+      "sha256": "cccdeb18bd3d98cc4ffa79ba8bd13dd89f9190625e47027499b21920998847b3"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/fsl.mjs",
+      "sha256": "a8ec850dcbcd4a1c905a2c9bf892a06debb4a783e90556dcb9a5781b0fd6e121"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ftl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ftl.mjs",
+      "sha256": "2c33843768d701dbcd73cfdd0d7447624e48fd39becd2e5b16079af9f5ea6e09"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gd.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gd.mjs",
+      "sha256": "2d78a5e61a8f84782e7ce17be34a02121d984412c79a0c33f5357f5f0f7332b1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gdresource.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gdresource.mjs",
+      "sha256": "e1b2d6be4403dd15b39ef2b0006424f61a8759a52ec277c7f9fd24c4b0aad2c9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gdscript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gdscript.mjs",
+      "sha256": "06b175ab9178a68f4b85e5e67cc8ed7dbe792cd28da41ca473cb7c0dc03fc4b8"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gdshader.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gdshader.mjs",
+      "sha256": "914ae2c3854c054d61a0317fc5029aee55b91601b610d97bd173aa29e9f59cc7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/genie.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/genie.mjs",
+      "sha256": "b44e110d61901149c519f43a8e1d953ae97eb2f33a0e4ecd31fba24db474add7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gherkin.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gherkin.mjs",
+      "sha256": "5363383501f2cc9922ec4d25c607629cac7323eef936996a1085d615e530fcc8"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/git-commit.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/git-commit.mjs",
+      "sha256": "219a0c9ec73d7ac909396adbe4572ef9b1440e7a90c908b9f61c3043ed268c0b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/git-rebase.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/git-rebase.mjs",
+      "sha256": "421e979c906294bf3541f70f769a847270267307412279ad6633267835c4d2a0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gjs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gjs.mjs",
+      "sha256": "b491fd06f0fe5150909241df39b2e481061645a8e9fc69e5e6d53bdc23971b74"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gleam.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gleam.mjs",
+      "sha256": "197b5eda3ce5701e3bed96b2329c2731b561adb3a7c753f5e181b4ad0f24f109"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/glimmer-js.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/glimmer-js.mjs",
+      "sha256": "ac36fa2d21ca136278befeb03ddce51854e56a8ee035503de4590325c6ee6a5f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/glimmer-ts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/glimmer-ts.mjs",
+      "sha256": "704b2ffc1c4bb1908a03ed82bb2a12864c32bdab371635352eb18c759be719a9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/glsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/glsl.mjs",
+      "sha256": "47fd3017468bc2aac312f5c7cada9ced6b39a4c1501b1e7e050596c4d6f95b45"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gn.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gn.mjs",
+      "sha256": "eecd70ac3f4fc7bd91f6c87d8e1f26d4a402963073f57ad3f040fa0e789940db"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gnuplot.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gnuplot.mjs",
+      "sha256": "81d8732075237f817baecd03f217449b85429ed113684b431d227d9a76e5e4f1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/go.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/go.mjs",
+      "sha256": "49de2c1bcb76fe99c7cb132030d12a33b8ca58fd3cf0f6390b116e36404b7ed4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gql.mjs",
+      "sha256": "cac3a8124cf9baebc720bf5ac3ead894d6cb928cb2c483322ba71af5a875fb3a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/graphql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/graphql.mjs",
+      "sha256": "5553ac8fd779ba230be14c9c694f5f8316cd7710ee3ea4e043731d5be668ff06"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/groovy.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/groovy.mjs",
+      "sha256": "d91bac78bc49144ab328aaa3cc589c4cb8289dbd760a430eb8722ec2e658ae57"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/gts.mjs",
+      "sha256": "1bdd432f73eff5adf829356d7be277928df3c9687158484bd9baa4582b2298a9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hack.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hack.mjs",
+      "sha256": "14516fc83f2adf2bd86cba2305c81abc28670d5acd5d4ad8aaa08f14702d2e86"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/haml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/haml.mjs",
+      "sha256": "bd94126c464c95821f096af05c24580a8668e94bb6ef76d880f0865caae4a7f6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/handlebars.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/handlebars.mjs",
+      "sha256": "c1de8e8b9065d2b401d552c6a1efb11fe46b31b1e483472124aa6a0eb7aea38f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/haskell.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/haskell.mjs",
+      "sha256": "2eb7e3407d61232520c1764d09976e084ba459be10a4294fbcb23bee52aa64e9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/haxe.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/haxe.mjs",
+      "sha256": "3ace0015ab97a9ba10f147a26100e62065836e894b7ee78037f836e7155da93f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hbs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hbs.mjs",
+      "sha256": "515e7f60fa9e676f2dc3b3ce720980115ae9806f4753c9f2d8c9ab825b798bca"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hcl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hcl.mjs",
+      "sha256": "9d2da71242d8efcf1ab5c76bdb151cdb16efaa26a31c523bb9982ac1856b7fc3"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hjson.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hjson.mjs",
+      "sha256": "6ff10b49923533e811e758a8e9392c5b3687da63c70e535953307a90a2c88725"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hlsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hlsl.mjs",
+      "sha256": "108219be4bf784ca6216cc73a4b396b836db2387d4330367c740b6a358c9aa65"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hs.mjs",
+      "sha256": "98591fafc2eeb9a0b3a14a3df9674b67bf92540ed2605205848d163cae562825"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/html-derivative.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/html-derivative.mjs",
+      "sha256": "2dc97472b7012dbd1be59ecf8bb2b4daeaa79122dc12b3b6ddef0c5d3d489a0d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/html.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/html.mjs",
+      "sha256": "ccc6bf00db9f83a67c2fd13514b2894e3a7cac85af66e962419cdc32ed9270c6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/http.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/http.mjs",
+      "sha256": "add230a203045c7cf520aafb4ef9b4c24b4eec446193e2f3eaf9c5f3e6955f29"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hurl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hurl.mjs",
+      "sha256": "2f17dd55ee9ff176b6e7d5db39bfaaa6ff3c45778b4d2084c11b4502dfd4cce7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hxml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hxml.mjs",
+      "sha256": "1f69a0b33b66536843410712e59e3f2ce9ca50bc6406618872ccb0470ce2ad28"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hy.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/hy.mjs",
+      "sha256": "6f0787732166d8fdff55d1bbaca0dd4a2bc95d3f428adf0b5022278f2bf27979"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/imba.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/imba.mjs",
+      "sha256": "4f6554c37b4f94bb9ddc01240b780c47fbaf2df7851fafc893c2678135f3896f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ini.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ini.mjs",
+      "sha256": "a49362b5ce26b82d607110e5b197851f3d7d97ac49e1f8d5cebb2f4c4d9151f5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jade.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jade.mjs",
+      "sha256": "2f8603e441a66da65d831e3a29ca962f8751f1b16621bbfa7dbc8e05d8717069"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/java.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/java.mjs",
+      "sha256": "80bebbbcf251305cf25754b4037e8855a4a654f0374b8e237acafd274aefdd84"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/javascript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/javascript.mjs",
+      "sha256": "cac4b652491a82204748d998a45a83a7393d1936199f6012ab7f807d733bd850"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jinja-html.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jinja-html.mjs",
+      "sha256": "a5b4cc0cb07f71db3f57c87d270b729032583cd76296b12d3724e53fe9042143"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jinja.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jinja.mjs",
+      "sha256": "478a2e99346de76bc6654555d885325563f8496bebfa75134f4fc25a6bfea0c6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jison.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jison.mjs",
+      "sha256": "53f01993c8730165755d943a8840154e073c6629a0d4cacd5f5681d96e495ca5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jl.mjs",
+      "sha256": "2131804dba4609ad496fbf861d2259a9fe177c5c44896c030e20161dcb106490"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/js.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/js.mjs",
+      "sha256": "35804d07dd012dc460cd34228d3d2d1980006f08d8938b05a65303bc3ed0d886"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/json.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/json.mjs",
+      "sha256": "17fee9e16a91a8ed1feec1d60133e56763a1384873742b3c9d1be4187e679689"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/json5.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/json5.mjs",
+      "sha256": "1f9d63eb20049fb8e7c424b064111e47fd075eed0b572ee1cfc492e20c0262af"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsonc.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsonc.mjs",
+      "sha256": "0bb278614cad7e099fb6157b6ed3d648adf885aeb1c99ee8892dff2c0612f0c0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsonl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsonl.mjs",
+      "sha256": "56ee458326cd874116eada66be7fc7d599eea74d2263be0850433c11165b644f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsonnet.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsonnet.mjs",
+      "sha256": "5884b6207efcc78de8dbc616efc9cf8be0fb088770a8cad39b201a2e1e9e881b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jssm.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jssm.mjs",
+      "sha256": "89f017101a6219d7c6584c0867bbdf9b1479d33d25363d87ff6cd2e927cce1b7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsx.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/jsx.mjs",
+      "sha256": "2f0bc212e4696a5ffda682dc5b48b1ac6456712f24fb437060c31e2db1d13605"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/julia.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/julia.mjs",
+      "sha256": "5b4ef11174b0c21a12643b39940c470c2bca1e159e89464f036b98bd73d49fee"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kdl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kdl.mjs",
+      "sha256": "350b13cb576245c3ae5457ac8a2da9d784de3cb6387289f8a80ac878ccccfffc"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kotlin.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kotlin.mjs",
+      "sha256": "2de4fdf652cea84f7a55c8cb8418f2129b8a3afc946f6b3c29a6ae1548f2e8f4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kql.mjs",
+      "sha256": "57ad5fbfb96aa0f114374e63b4ffe1321687c65b2ccab148b62a42efd8bec4c9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kt.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kt.mjs",
+      "sha256": "157b8e330b6242073ec400cf9974f5291c66c1fcbb1fbf4e8578839529c508fe"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kts.mjs",
+      "sha256": "fa45e21eb2b6ac773d24aaa49fad1c2cff5253a177d3d73c6af2618f89e1e0ea"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kusto.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/kusto.mjs",
+      "sha256": "27e6cbf9bdba1dd670e7518b475b3ca3b27d26316f3fa0e36116deeb9eaa631c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/latex.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/latex.mjs",
+      "sha256": "7e969113d3519c44f8d9984b0f37ca652ed2518045b120e8cbe8da4e66c8d278"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lean.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lean.mjs",
+      "sha256": "ed3a435ddfe96305d79e35c1bd7f75d493f71fc9e14d58025d7ad93ace2883cc"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lean4.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lean4.mjs",
+      "sha256": "5be62e4eb9c027fb0ee40930e1f958a124fe5d61c8eaa71d9a2f4633a69929a2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/less.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/less.mjs",
+      "sha256": "33497e56b3b9c0515a31c39b26a03e3be6d556997dc8934aefbc0241b4a5801a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/liquid.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/liquid.mjs",
+      "sha256": "0e1bb9a434a70e86aa15f47528e5f8ced60de94d44e6ca6fc45a56acf02417a3"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lisp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lisp.mjs",
+      "sha256": "014655036f588f4ad3d573065504dca2c9b52616e8d0a7d8849371e70e42e18c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lit.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lit.mjs",
+      "sha256": "f94af1599dc70dd0ecec13e31dd31609f51d2cf0bcac182094ce6948fb77e898"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/llvm.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/llvm.mjs",
+      "sha256": "803f645865a16a60a9c5ddc6f4b704263ddbc2211ddeaa110151cfbbdf33f11c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/log.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/log.mjs",
+      "sha256": "5602077941be0b47ced72cbad5f5cb00f260afc55b4afaaad065451651097ec1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/logo.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/logo.mjs",
+      "sha256": "3e036dd16566a4138ba7c609fb1d74b5c86c1e017d63316dd40a367542720344"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lua.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/lua.mjs",
+      "sha256": "db6eb0b15a36140822ad241d25622e051f7be3e4554de7ced50c756e24ab463d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/luau.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/luau.mjs",
+      "sha256": "4d6398ee29d4ad4bd7bed5f087b0deeb4dafc9d3eeff4496edd6e4410d179ee7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/make.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/make.mjs",
+      "sha256": "c3402ec4192caa52edee94a6b0659a3606263f52142a49c69f14f2d72b90f380"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/makefile.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/makefile.mjs",
+      "sha256": "e7c19a7a85bf1a513b75596020c9f053b8c4d61bcf771f3376cfe77b86087d4e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/markdown-nix.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/markdown-nix.mjs",
+      "sha256": "449513b851989082bf5c2ebb442fb7a97ce62d283174860279231325daa841b7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/markdown-vue.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/markdown-vue.mjs",
+      "sha256": "5f1993430da1cff8a466741ab08970a5edc336c99a340002f6690122c3da85bd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/markdown.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/markdown.mjs",
+      "sha256": "8de97148ad1be23217eec32a610c543f9797631c751c6cdab964e990b9f534ff"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/marko.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/marko.mjs",
+      "sha256": "709a5951324e8ee6ae3faacebe896e92d3c96f0735e270eac2b383931878585a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/matlab.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/matlab.mjs",
+      "sha256": "3387aebfa26eaf3d2389fd3998539f41fd48f6c0dbc1740b40ac9a7ade6d91de"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mbt.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mbt.mjs",
+      "sha256": "4414320a74e417c247cdc0874e93fb059558bd61360eda5deb45dbd180c3af14"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mbti.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mbti.mjs",
+      "sha256": "1863ceb89b9f4074a43f50e5d82cad0804e74d7d570b0edb1ba8554d8cfa403f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/md.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/md.mjs",
+      "sha256": "5a7d3e6ab1c88e28886191825ebd896ed1062218fd7333a18368cf24b0c346cf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mdc.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mdc.mjs",
+      "sha256": "cc94d1ca863d30890f37682011f040d8b0169df368f091fb999b81e922aa0900"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mdx.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mdx.mjs",
+      "sha256": "0207c1cdcb439107a845a038f902fbd0336dfbebbe29cfe4c9db12e2999d8d1a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mediawiki.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mediawiki.mjs",
+      "sha256": "6d465f8b8abc886bb3cc3ac551c7e9a7ee92b01322be7851511a856b62369d85"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mermaid.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mermaid.mjs",
+      "sha256": "efa2c181ff8cce07bf2f94a051c2ff5ff1c3f83ac1889c6a5693a5c9fead042d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mips.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mips.mjs",
+      "sha256": "4e08887c13bfac1aeb8e3f3fd7eb07c85aad78fc30d035a6ead3585d4fa9cec0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mipsasm.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mipsasm.mjs",
+      "sha256": "d3f356551f2dba61549bca6198da44a8ecb73dcba7baea3792bcc68afd375cd4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mjs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mjs.mjs",
+      "sha256": "c617b0763c829373589f45d020277583ccc9a0f76b5a97aba06cc28190b90cc6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mmd.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mmd.mjs",
+      "sha256": "722c1b68f330936ced35ebe34c7ddcacca0049d638218f644eda7fbfa9401dff"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mojo.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mojo.mjs",
+      "sha256": "5a45132ecd5c4cbe9990336b37a1247a6faccc324e97db105be6138faab51349"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/moonbit.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/moonbit.mjs",
+      "sha256": "faae418b93fb4bb98f057347536a60e4392015dd75dd372754fbda124311880e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/move.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/move.mjs",
+      "sha256": "36f7a73bc77cee5308f4a7de61e60c0bbf071a7315b5bd1b329cb7689629e11b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/mts.mjs",
+      "sha256": "891c20aea1645ee1e80628c0f49e15434a161476ea4d85545c01847d5f14b9ee"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nar.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nar.mjs",
+      "sha256": "90f245648671698493b2949f51f0509f3039da1695ce2534b4c51aa7b4e6538c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/narrat.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/narrat.mjs",
+      "sha256": "2c278f57324d0163f1a62daadec10685364f991d1d0e0d74b3af48d6602002b1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nextflow.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nextflow.mjs",
+      "sha256": "8573a82b101db999f3c55269c21e8f6582de09b18f227938fd2cf8f1430093ee"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nf.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nf.mjs",
+      "sha256": "3acf385d2f5062aab2e6ac27f824702df4920672db56fdf7b1c2b1dd89b14b6e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nginx.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nginx.mjs",
+      "sha256": "4768c8f04a84f47bb440d8b809ff6e763a598214fdfe4752f6adf6b2e68cf914"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nim.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nim.mjs",
+      "sha256": "c200b5c72b24aef66a31320fe72ff0be6f64c5dadf242d258bf37e4e5c7204f0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nix.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nix.mjs",
+      "sha256": "62f85cc3d7261f7f2a00d330e1c52aee532b4ecc6d24f8877222c438c3f30028"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nu.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nu.mjs",
+      "sha256": "6956c769fb9650fdf60ee661b3f6ab6d2ef7c75e594a37bccc2c55c14adab61f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nushell.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/nushell.mjs",
+      "sha256": "5fa7768ee1fa2c9a4b5c9e2b1d01ec263a6f45a70956df01d1a9c9bc87623e8b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/objc.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/objc.mjs",
+      "sha256": "88a1b3e6bca3d2b595d2b5b0db77c76d135a0f564855309b1fa1032ab0e98aa0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/objective-c.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/objective-c.mjs",
+      "sha256": "37e816c24e3a283419699699b237af9f45b715c9771cd7e8ed1d16596efe0336"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/objective-cpp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/objective-cpp.mjs",
+      "sha256": "0770082c4489bd5cd2d29e427b6dea5076d96d2fb3dc77d993e75815418e3e18"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ocaml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ocaml.mjs",
+      "sha256": "db4f5a970bd7eda30744812e10049ac19d7ad3dadecc7276cc1e6623b8234a6c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/odin.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/odin.mjs",
+      "sha256": "2bd793e548b2b0d9521806ac28ae574b6a854779cac779a195dde32e66444f37"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/openscad.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/openscad.mjs",
+      "sha256": "6ec02405dbc7d781743cae04b0b538b6fb2df8b31af1328b48c691b1f06e20b6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pascal.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pascal.mjs",
+      "sha256": "6ce5427dd95cbd0131451c7a6360ca03b4353b76af40ea11f42e387c791bcb90"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/perl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/perl.mjs",
+      "sha256": "0a7fb83f63f7fc29031f16ce9836b3686d83a1c21385a99d1123cd7ee6ce4e4c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/perl6.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/perl6.mjs",
+      "sha256": "49f0ed78d352651a8b4a1043f888e08b6f44684146ea192a460e1a49ebe35f94"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/php.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/php.mjs",
+      "sha256": "f997189237e5e3524021f32f577a39fd70c78002a6b662cbd7a3972a81647a27"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pkl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pkl.mjs",
+      "sha256": "7dc92d84b2bb5b70a782525e005979f662233a43275e561169269c55988126d0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/plsql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/plsql.mjs",
+      "sha256": "f865111dbc13abd1f7d421e9e446d0227bcc45ef2fbc1a743f29c9e06361addf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/po.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/po.mjs",
+      "sha256": "b64d61a3e559e768184f9e740fba052c8c57714a35bfa4ae8ad04ca1bd7ea4d6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/polar.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/polar.mjs",
+      "sha256": "4172adda5688cab5f2c096e8b306e306271fb5becbdd37556fe3267ee919b452"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/postcss.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/postcss.mjs",
+      "sha256": "14238fb658881851623b1236f2d7857a66110c2a267cb603a7fe1a1503232820"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pot.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pot.mjs",
+      "sha256": "3cb81aca99e5d96c41b8f1652aabeb526e14801da9a0f5c971d666ed5c99ee1c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/potx.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/potx.mjs",
+      "sha256": "e51daca48364ede011fd64a2a24e44c52c753a734df00a57791a27e8655a6b9f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/powerquery.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/powerquery.mjs",
+      "sha256": "2fb50434810c0abe74d73160f4c6f1e92cead011bf70bde693462c59a4369e1b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/powershell.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/powershell.mjs",
+      "sha256": "11ec7df8725a97d04b4773a875e8c1df52b074eec9ce3a6fc4b02a8164f45f6f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/prisma.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/prisma.mjs",
+      "sha256": "614335c0a0ac959cdfbece19d3d18d932a558db4dca41d880c4baa835f66ce0e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/prolog.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/prolog.mjs",
+      "sha256": "838ea1e166a50942f6b70d04558e5976668516ca2facccf7c1818c3a5590fb91"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/properties.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/properties.mjs",
+      "sha256": "302185fa97d6c9a485ad04eb5cee4422fabb5008e1a7e68da6fe1084f2f46c83"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/proto.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/proto.mjs",
+      "sha256": "6b617fdc4487e0e8231dfe059fa27582e50a4bf4b445458c290f3cb6ee3758f5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/protobuf.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/protobuf.mjs",
+      "sha256": "adb0c59d0ea385a22d22bab22a677683357e5c1725abf3bfdaa36cb0c50c1fee"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ps.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ps.mjs",
+      "sha256": "ea7980b796425fe10721b42dd9a99a53ce43f359b796307e5b7b6f82df3a3d3d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ps1.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ps1.mjs",
+      "sha256": "4096b467e758be9a505205f1c87425c4ef3034fc8381daa0be617390515175d1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pug.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/pug.mjs",
+      "sha256": "843e9a4e78b8f5027ebd3bb2147cc57bb66c0e03bcbaa28b365c461c597ff187"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/puppet.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/puppet.mjs",
+      "sha256": "9387ada23ab73d2e866aa032f975f7c502f7c51d3b947926e4b94658821ae754"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/purescript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/purescript.mjs",
+      "sha256": "9d88c9790d852e96e754c073435f87e3c133b001dbfb44c27c4051c8aa4f29f7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/py.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/py.mjs",
+      "sha256": "f88d7055278a549d3764ab388a416c1677fa1bfcaed1014c8066bef162297d12"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/python.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/python.mjs",
+      "sha256": "a4cecca829a138f3077b3ebfe4f1644cc505dec14ab0f78b49fc5995475f6cf0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ql.mjs",
+      "sha256": "3e3bbe9d36742cb46fcf51540a039f1faa41186891c0c01495d5be796aae8ddb"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/qml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/qml.mjs",
+      "sha256": "b726e69b18be428251b9ce2663c0dd16188695762a75baee2b46d37d74af4bc5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/qmldir.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/qmldir.mjs",
+      "sha256": "bff1cd0909eb31c95ba831003cdba4b64cc0b4fad9d3db635fc1387707f4db69"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/qss.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/qss.mjs",
+      "sha256": "58b1b81f74f6968fb325f577f7207ffe1f5e10eaad68f05a6d3b0b08e0155471"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/r.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/r.mjs",
+      "sha256": "d8346ee5539bddc49b88af7a82789b153b76f900ede979eb0a191df353bc2fa9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/racket.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/racket.mjs",
+      "sha256": "3df7735e959ad98429ec8e9afaf3284f0027174cc7934d0030524aea29462cc9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/raku.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/raku.mjs",
+      "sha256": "b4f2ce07cccae97d7880e4063a209d2ad5c7ff7a260e7376463e58a13f894df6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/razor.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/razor.mjs",
+      "sha256": "1fa4f7059fd4383b42d1e23b48fff6857d541e79b369b19d35c320817ad3379b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rb.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rb.mjs",
+      "sha256": "0c96a2e005fc595696760cc4f08526fbd9c526b41795789ea2d02ac980dd5641"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/reg.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/reg.mjs",
+      "sha256": "e9a4613b9072cd1e05180f97fb1881c23c150d815c38b952bfe955c53800074d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/regex.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/regex.mjs",
+      "sha256": "ffd89814ecfa64adaed5cdff4a7d14681eac652875ace681c5bb2c2a124e5a34"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/regexp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/regexp.mjs",
+      "sha256": "8220c3504c5282325f969ed47adfcecc15df60b65606b46add645d59bb824f47"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rel.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rel.mjs",
+      "sha256": "acc3547d6a42229ec92456ed23b9d4a8c9e03404da36bd1f1632f1e8e9f0be99"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/riscv.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/riscv.mjs",
+      "sha256": "56b7a4fd9f048502a1a1ec830dd1e5db175f8493853ca9cc5f379cb737996d22"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ron.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ron.mjs",
+      "sha256": "7a4b73f397af21c60809ab51993ac7272f03b0579aaaa9c9e7e181eda7b26ff7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rosmsg.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rosmsg.mjs",
+      "sha256": "17ddbd75ab4dfd678b4998cac650b4f145ce0ff8ecf432430273dbd8fa2641f7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rs.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rs.mjs",
+      "sha256": "c2ec8e3e5f9ad1b628a0cd07df42a1a5dfd90d5419eb886c528dfd7efe787499"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rst.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rst.mjs",
+      "sha256": "735cd3d415ff297b1c3fb1385048cdbe639646621fef452653caccb6fe5ae50e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ruby.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ruby.mjs",
+      "sha256": "a8a67f38cf4c6b1cd241ec52eb2b3e9154b57b59822fe2991c150318c8abf8f5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rust.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/rust.mjs",
+      "sha256": "f0e6c9e81a92d77a13d0926bba2092a80290b157a5c7e80e1da3479ae24fedcf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sas.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sas.mjs",
+      "sha256": "cbac5a701314f10a924dabaea43bba515899b07392169ae9284a205c00a41301"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sass.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sass.mjs",
+      "sha256": "8bc875c9ea334fd556efa9eaf448cace18c4c8f3ebe9f24da955ae4698b0594c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scad.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scad.mjs",
+      "sha256": "c90db8d85857ce36f22ffd8815ee2f8db3a79cbf6a81d48c17af4a290b198e23"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scala.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scala.mjs",
+      "sha256": "530ac28273d94f154ebffedb01b66bb0409f3d8c42e83876228cbe04ad5805f1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scheme.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scheme.mjs",
+      "sha256": "34b0d5a3ce85ba2c32a720ce9786eeac0ef9384387b26de1809efee87bf028d2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scss.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/scss.mjs",
+      "sha256": "e29f84f7182ad054d3bfe4958a230731947cde9f03a8c3731531812acc34199f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sdbl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sdbl.mjs",
+      "sha256": "3f8ae61b4b00c2adb7052ed0463b45aec911b1237e94e8d77e856280a914f3ff"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sh.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sh.mjs",
+      "sha256": "9da2109d079e8ea727b33ebdd3e08a1ab4a9a10e408cf167883381ebee40ceaa"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shader.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shader.mjs",
+      "sha256": "a855c8a46401fa01e95d25dbe80c857d8059f13b37e1637049857cb8c3535115"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shaderlab.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shaderlab.mjs",
+      "sha256": "12a1410de12d27da5e51bae66ef7d30581452ea063247d9ca0c5404f71350bef"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shell.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shell.mjs",
+      "sha256": "51467e3b050e5febd9c72ce8d5b54a17eb21996ab9cfbf518c8d2384ea75f00a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shellscript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shellscript.mjs",
+      "sha256": "555a26099102b3c23ef168c5e35a668813365101dfa0cc87c83386f9dd7f2cb6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shellsession.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/shellsession.mjs",
+      "sha256": "ffa18495189e18d1f5eebf09ff143be9e60d7726a458b0e996e16308510d74e0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/smalltalk.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/smalltalk.mjs",
+      "sha256": "bf552ef3263a8caf5c939f4d38f96538843e25b2127961d3447373aea0b3f593"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/solidity.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/solidity.mjs",
+      "sha256": "b44d912eac97e84b2d4d8a45aaad88ccd3d39a1223c2181fa6507b0cfa801505"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/soy.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/soy.mjs",
+      "sha256": "32b3d4706e3a7d2277a9d17e98f67bd11cee4c8e53495b6da963e9c120814004"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sparql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sparql.mjs",
+      "sha256": "dc24870daf9d7882e10804c78927c2850a94007aca9ff950c5e95de33490ebd2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/spl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/spl.mjs",
+      "sha256": "557041dd5330cae597beaa671c63ff5a3b7d365de02ff0992863433cdbe7231c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/splunk.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/splunk.mjs",
+      "sha256": "62a6eaca8d48df60b2f4ab9f008b9c56605e5d590a6f34a3fdcc2079d423f1dc"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/sql.mjs",
+      "sha256": "000580f84fb958fa7ad49ee91479304b1f82ddace9cdc4147fc7fcb78c3a1d63"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ssh-config.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ssh-config.mjs",
+      "sha256": "d0db2112b5470d5d74204fca4be4141bbe64db43fa83254e3ab4a81b1693915f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/stata.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/stata.mjs",
+      "sha256": "fd4e667395568ce1da2efb0b696aa30d7dab65818dee043bc8f1629783beac9b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/styl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/styl.mjs",
+      "sha256": "51342c1119a8543fe0846b1b77f961cbd31140349081040fd8db778bf08bb899"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/stylus.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/stylus.mjs",
+      "sha256": "361495136a635a6676557ea7d66b8f8f788aa39b399e5a08277c711d05a0a429"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/surql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/surql.mjs",
+      "sha256": "442d690f98c1578e6d4ba9fe97c2d3d7954da4977b8c7665e996b830e9f1a996"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/surrealql.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/surrealql.mjs",
+      "sha256": "e79e17254b424500cf6ebb330482f572f8f3a32878b2bee6ee0f64704794bf14"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/svelte.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/svelte.mjs",
+      "sha256": "de264aff9eea4411035f8d2af1354ef319bfa2dc272230088edb78c32902a992"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/swift.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/swift.mjs",
+      "sha256": "7797b6a6bc55b73099d29496bd78093e99ce13e0070965890e3764a06f11096c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/system-verilog.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/system-verilog.mjs",
+      "sha256": "dad10117d5b2d7dd5272be2aa84e179746ebdbac91cb1dff0125c527d68d80d3"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/systemd.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/systemd.mjs",
+      "sha256": "da00a84fcecc30fddaf304a434e363d4e78f0b8aa753108417919d536f50480d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/talon.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/talon.mjs",
+      "sha256": "56ca270cc7007ab3ba8375cd935edd7151d2f6b3dd62ae02cf830a8b0b4b14e2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/talonscript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/talonscript.mjs",
+      "sha256": "5cbb95cc9c593a27ba7faf855881c4d4c1bda876fc5dc1f5b190f53fcebdb347"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tasl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tasl.mjs",
+      "sha256": "2b6e28efc2e5ea6f31085e3c9210850fda13ea2ff74009a6c23f0642d628ae1a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tcl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tcl.mjs",
+      "sha256": "1dcc946e41ab49ab5b33ad243e3b95cf5aeede7ba2dbcce5ffb6f04ebbfc4869"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/templ.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/templ.mjs",
+      "sha256": "1da304543a7c6ebd28cd9d962284d071bcde5c3864c0029a41aec9e6b9be0bc7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/terraform.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/terraform.mjs",
+      "sha256": "513fc35859320fddacf23eb9bf010851136d9bbe3e6304eb6a76d7a16c1072fe"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tex.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tex.mjs",
+      "sha256": "39eaffbe427cef5d9ba73d587ff2fc20d2d8140262438b96a8f5b1c09dcca3e4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tf.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tf.mjs",
+      "sha256": "3b96737453f31260501b44dd6181bea89ce41ec524346b8452e2f05a033b7dc7"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tfvars.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tfvars.mjs",
+      "sha256": "c9a5afdf0d7caa16532de69ff21d0775ab851f8916413e1c3cd39a948662eacd"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/toml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/toml.mjs",
+      "sha256": "9b05fd81f2911117e0f5d1bc81b56eed69c6aa52285a35fc532899070fcb5572"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tres.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tres.mjs",
+      "sha256": "2487a2e6495a7eb09b6aeea8456f61333f2731737a31d1f05aecb83c8c14fe68"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ts-tags.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ts-tags.mjs",
+      "sha256": "ddc1f41dbe63406a6a410c7676e20faa8a819b0e318324b5d73328c67024791c"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ts.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/ts.mjs",
+      "sha256": "b4342b5b8c7c175e1380b12e0dc577e41e74c7de985ea4f49e1044abbb5133a1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tscn.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tscn.mjs",
+      "sha256": "6c0341fd91b48331061541d21332a1485731397176abd2a596e83c7d2aea626b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tsp.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tsp.mjs",
+      "sha256": "77934eccc7c8b2a87b56f530e8d2e553730486833177f4f84967ec7ee2a04a0e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tsv.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tsv.mjs",
+      "sha256": "0d6906cd79e0119ab973d01a8b38dc3b2900f85f04a0863d132e26423a35d372"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tsx.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/tsx.mjs",
+      "sha256": "02d00e8a2357bc5286237faa7b98f3559d1b28d146c0a8fef3bfccef76cbba3a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/turtle.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/turtle.mjs",
+      "sha256": "6bb9826d49ef32f5c7dd125b1fca03bf7287dc678afc5b12ae872b375bf70f20"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/twig.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/twig.mjs",
+      "sha256": "d432f9da6ad693d4ac05bf3c2bb001ac51093759d00168e5b8256a871c762753"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typ.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typ.mjs",
+      "sha256": "c5aa22f2e801560e11370ac4bb44be5cc97bc6f6becbee3d42918543de58b79e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typescript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typescript.mjs",
+      "sha256": "5f7dfdb4ac2ec9b07118cd78cbd5d0a88968b5f8cefcb991c6aa56f5586f2d32"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typespec.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typespec.mjs",
+      "sha256": "79c420f0d5d8607687565999241b987a6144ded024d9f193613d9c2f70419246"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typst.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/typst.mjs",
+      "sha256": "d9968d67b555e80bc7534f36ce34151c51d04754f09793b8a427f40e7ffac009"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/v.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/v.mjs",
+      "sha256": "304de66369c8b6f37e7f5d43a8b1b6ed8497251bcf8125a0a95c2d35679f5807"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vala.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vala.mjs",
+      "sha256": "f32cf91a53c84eb607dc32b4d7c335d4e7796b9af34359593e903d1ba6b4b681"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vb.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vb.mjs",
+      "sha256": "b45dc1c72a10f9cc194d34c03778f27b929da0980b3b89a1ffb928d8948eec2b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/verilog.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/verilog.mjs",
+      "sha256": "f95881cbefd4530fd073af8a4817061b704bb844a6c758635ff2c4d489385623"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vhdl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vhdl.mjs",
+      "sha256": "544eca0ce86de44c3cdb3b94fb1dbec4287172844e43ad2760a3dc0bbb2e2500"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vim.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vim.mjs",
+      "sha256": "037257e5e5879ab65a5bb41edf03ec1fdd63bb632aea0470e7f813d9fe8d9ec0"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/viml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/viml.mjs",
+      "sha256": "b1b7691b762b9f96b8bc8179bae0278b111d2fd1e36edf576266aa947b91a799"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vimscript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vimscript.mjs",
+      "sha256": "b755778ce7040ad407fe51caa7abc772a21959e1ac93bf1cad207291c6faa95f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-directives.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-directives.mjs",
+      "sha256": "5e286aabbac687c2d964dc8c92e5b0019000a8b227728f4d754b95b4e290c62a"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-html.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-html.mjs",
+      "sha256": "5590e838b6351948b9aa1cff8abe35e39af93c88622a87ffd63d08f4250416cf"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-interpolations.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-interpolations.mjs",
+      "sha256": "f176ba3bf3be374ebbcbafd7b385faeaaddd1e8997aae0d701294669ffa1f1e1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-sfc-style-variable-injection.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-sfc-style-variable-injection.mjs",
+      "sha256": "3fc6b05c1f0b7bc056fa90da2023f946cadb2808f4b2003074aa184fc10ce43d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-vine.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue-vine.mjs",
+      "sha256": "f29dfb7246edebdbcce93bf58b746bf9ed31c22a253b2d904c2960f076bfebb9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vue.mjs",
+      "sha256": "80c1993d68453cee719f45e3541c03ad26293d5f6446f2ff70174d60b61e09a9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vy.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vy.mjs",
+      "sha256": "e122eb52eefda054de35206262b886b66c6e4cf11b30a6eaf23f406a249e3da4"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vyper.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/vyper.mjs",
+      "sha256": "6261496f0b44bc08a410b4ca7c4ccf0587d8133bff792ef75631a65082383e3f"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wasm.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wasm.mjs",
+      "sha256": "45c6dd0b45872f614f1230df6d1498eab05223ba138f6b4549ab3b24ae33ab51"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wenyan.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wenyan.mjs",
+      "sha256": "61cbfcb6db92250138fd063659f1fea0608fcf4833575e078a5a447407e304ff"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wgsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wgsl.mjs",
+      "sha256": "8c31192f399f715798e80a4d71a67c7de2d53be6359e49a3224779fdcca779b1"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wiki.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wiki.mjs",
+      "sha256": "9f677fd54e36deb92bd9427e087aa89d3fbdc3e708c7e1a2cc8a800c90fad18b"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wikitext.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wikitext.mjs",
+      "sha256": "c021443d8ccfb7fdc4f2e1ad8282258aac51b3ca8ecef24935155490053eb136"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wit.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wit.mjs",
+      "sha256": "f9aa8fa5b6abf842e9ef74bc9803343cb169d031332fda760017134341ebb1e2"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wl.mjs",
+      "sha256": "fc5b4706e5fa926a9baf9a4ab457291e913026814ca372e5581c11556029984d"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wolfram.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/wolfram.mjs",
+      "sha256": "12ec4f5de93a5807d9e52a2c76c8572301aa3e1e1569da05542bd1486b5d09f8"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/xml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/xml.mjs",
+      "sha256": "d49f3870ccf6d5ddc60a814b543a8a5a3037314e7eb9ecf616b06daf970ce017"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/xsl.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/xsl.mjs",
+      "sha256": "6d1d90c6db5f0f2c7de2e2dafbc99a7ba4ee894699bac7afca5eabef227b3d62"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/yaml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/yaml.mjs",
+      "sha256": "4ad2e6fe35c61e362ba7124bd82f9c4fbe0146e998b941423342fd9eb379edf6"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/yml.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/yml.mjs",
+      "sha256": "e24869cfa6b207e0e70be3953401717906fe0611df9088d45e34a5afd63cddb9"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/zenscript.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/zenscript.mjs",
+      "sha256": "17c8941d1390f9b36e98b5b304fbbf6d04262970928e99d998af5a1147f2d90e"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/zig.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/zig.mjs",
+      "sha256": "65c67c6a26e5468f760488510f133e9f8c9d6e580997aa3709bf5f94bcb99cc5"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/zsh.d.mts",
+      "sha256": "a80f64ba5b6588f1469856ff8a02e6ef049328da151b0209bea34f16fd8ff516"
+    },
+    {
+      "path": "shiki-pkg/dist/langs/zsh.mjs",
+      "sha256": "8c2cbf0f5401e1ee641480aa8c3cc1bb563e4357594077a8af91cfaba9a44ee9"
+    },
+    {
+      "path": "shiki-pkg/dist/onig.d.mts",
+      "sha256": "17bb51e5590ff54a4615611c0cd6f7017f720c4d33dbc468f031a5293c0c3a35"
+    },
+    {
+      "path": "shiki-pkg/dist/onig.wasm",
+      "sha256": "fd885c2d12e5951e59d761ebd4a006e06254b1491fd6f530c92b69fb4d8d77d9"
+    },
+    {
+      "path": "shiki-pkg/dist/textmate.d.mts",
+      "sha256": "a6c65ff8f675328c2967e4e715343bcddeb959b1b88d84d40a5fac497d254c19"
+    },
+    {
+      "path": "shiki-pkg/dist/textmate.mjs",
+      "sha256": "a6c65ff8f675328c2967e4e715343bcddeb959b1b88d84d40a5fac497d254c19"
+    },
+    {
+      "path": "shiki-pkg/dist/themes.d.mts",
+      "sha256": "842a0374c3dc4eac1c6f6cefeab3f1a7bc46f1ebaee6d13ddede169bce76367e"
+    },
+    {
+      "path": "shiki-pkg/dist/themes.mjs",
+      "sha256": "a45aa874d9ccc10c172672f452308a87c169b415786496828579662465bb444c"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/andromeeda.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/andromeeda.mjs",
+      "sha256": "99f43fa8a62eab80f360586ed23c413acee867d2915cb5fda808e72e047f1b0c"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/aurora-x.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/aurora-x.mjs",
+      "sha256": "c14aedd2c2a17bbe092dd146c874587e5c8b2ce849f99908ecbadcf20c83bf87"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/ayu-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/ayu-dark.mjs",
+      "sha256": "12b649fe6eaa1d46db082b86f6ba6be9b9db28c92ac61ced7d697dc87f240eea"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/ayu-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/ayu-light.mjs",
+      "sha256": "7f2e04743486f0ac46e7db0fda632b53ab860b45d596ca9a853013adc343d704"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/ayu-mirage.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/ayu-mirage.mjs",
+      "sha256": "e156869614352e37774fd025102e38b71a593578240da0251c323e58071f6a86"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-frappe.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-frappe.mjs",
+      "sha256": "e2c933160780ec07a2f070d23248efbfa9726061f16030efcdbd410a3b38f656"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-latte.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-latte.mjs",
+      "sha256": "e0cf1775fc40319e77e67522642d84fa5be41399f964c28fd5fb7dce827fd8b4"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-macchiato.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-macchiato.mjs",
+      "sha256": "68d1b6b39c99a8613a38ddb239daa6b1bd641d04a05c470ec04a8de5c02b15e2"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-mocha.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/catppuccin-mocha.mjs",
+      "sha256": "b0656de4cd6800d811d4836d38cef6d17af01461aff799a5ad5d4bf23721af5a"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/dark-plus.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/dark-plus.mjs",
+      "sha256": "4fcf71f5a6527b1d83e3f9d8df69b67ab910f22b902f6563fb4fbff780453c14"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/dracula-soft.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/dracula-soft.mjs",
+      "sha256": "91aa0c9b96dfbf75fd11b053ba79a322987e08eec4b6dfdb2ea447928f82ae9e"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/dracula.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/dracula.mjs",
+      "sha256": "31cc23616a7f5d3ea7fae9a03f851318860f785696a37526a65a2f3b3c291946"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/everforest-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/everforest-dark.mjs",
+      "sha256": "b380f78152ef435f377c13cea26e714114c3dd919e4156cc18c2bd27a83a8bc3"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/everforest-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/everforest-light.mjs",
+      "sha256": "9b974442ecaff70be6cd348b04cddf79775bc2603af941b794c00794ac2b4534"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark-default.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark-default.mjs",
+      "sha256": "011e9237cf9268b09d7975b13e71882be824920a5a4a547cbb46043d07a5594e"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark-dimmed.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark-dimmed.mjs",
+      "sha256": "aabec8a7be9bb46344ee57de9374586a42b196d91a0b8e14c33fd0589b17dd30"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark-high-contrast.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark-high-contrast.mjs",
+      "sha256": "e4c8cf1ab4bfa44061f72ce3ae4c95f36dbac41691206b2170cfc5e2903c6e84"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-dark.mjs",
+      "sha256": "8912cbb97a8268b09c15cfbeeb49043fe78a2ebe1621a60320f2a383c9c12ae4"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-light-default.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-light-default.mjs",
+      "sha256": "a1b863b1ab478606809e063089bf7ee46ceccad226fe119873c3a824d1c9bbd2"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-light-high-contrast.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-light-high-contrast.mjs",
+      "sha256": "c879bbec49e63bf73f2ef7ce787e37d0b1c5248994bc1e0424177ae9333ac7c9"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/github-light.mjs",
+      "sha256": "026f56f5be72a19fc24c67fc9fa65b1a65e875dff2f092f29fb1b74b03e22ca1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-dark-hard.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-dark-hard.mjs",
+      "sha256": "c8161539f928cd96593bcef689bd649038d72242654e14247b7ab3c152032945"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-dark-medium.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-dark-medium.mjs",
+      "sha256": "575c695b0225859ca907f56e8ce6af27b1c8e5c99ec103c139fbf4eaa5fd4758"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-dark-soft.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-dark-soft.mjs",
+      "sha256": "3213d48b997592b96b6f394c4c3e9c83ee417adafad86596285668bf861d7aa3"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-light-hard.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-light-hard.mjs",
+      "sha256": "f395224b2601a89ab2561304f8e82625a19a877a16724969fe93d743bb4280ed"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-light-medium.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-light-medium.mjs",
+      "sha256": "d1d04c2516c7aaa33948aa4810da4d66aff57bfa36bd5578d942a8c8ee5b5841"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-light-soft.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/gruvbox-light-soft.mjs",
+      "sha256": "6c5420a2df86428ab08b7020675854b6af9bcec1055ef93dc912918f3cc84a17"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/horizon.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/horizon.mjs",
+      "sha256": "8e5efb14f5ad6b7bcf572ede28b87833d6d23f89d5714d18e2f4c54fae0ed740"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/houston.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/houston.mjs",
+      "sha256": "065abae10e11cfde1ef292dd2ac7057e8f896f257751793fad46c254a9014bf3"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/kanagawa-dragon.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/kanagawa-dragon.mjs",
+      "sha256": "822c12f83d3b80364f07af34cbf526b66f7575e005b4eee6497e74455c9c919c"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/kanagawa-lotus.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/kanagawa-lotus.mjs",
+      "sha256": "48dfbd4a98444f4f21b74b5c8643b5770ee87be4a406a5d2e358b9e20a2cb646"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/kanagawa-wave.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/kanagawa-wave.mjs",
+      "sha256": "c6d916df15d155068b61209118cd58b6c6a8602305d5e4e0adf3852f49fddcf9"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/laserwave.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/laserwave.mjs",
+      "sha256": "61b4cf7acff07d8b681dd7fb88c58978dc3cdeac13323a639a037acc144d1102"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/light-plus.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/light-plus.mjs",
+      "sha256": "ef043e837b044b7deb2a2d7ede73ec5eb5668ee31b529c81acc993d9d61e0638"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-darker.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-darker.mjs",
+      "sha256": "67a2ab325dadd1869479f197233455a883b5ec227566369c1fa287db8fb7a7e0"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-lighter.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-lighter.mjs",
+      "sha256": "17709935b701ba78885d83067165bd522dfc9deaab459958ae85521043ecbe9a"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-ocean.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-ocean.mjs",
+      "sha256": "5990835909f16fde1f82532b1b5c34fa31ddb4fe6a93e88df736da6860778a7d"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-palenight.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme-palenight.mjs",
+      "sha256": "51c4bb19884b2a3016b5f5d5e33bcc1d3b7d152bc5de9391a6fa498fd04da257"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/material-theme.mjs",
+      "sha256": "59f592a46ec6b9ee948b544e61a2ba3b6c614b310a65ebdd260e8698110d9507"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/min-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/min-dark.mjs",
+      "sha256": "1a300843c22f3a5d4252f6d1c08059be362e998269fd6de3308516be0b8345f3"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/min-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/min-light.mjs",
+      "sha256": "959dc784a76c36f10d50edc541f1aa742c8622f1c3b8671fcae2025db3088b1f"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/monokai.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/monokai.mjs",
+      "sha256": "e59e31a87b62a8dd812384d93b83a0dce05523ea173d80f6c5d24866533e47cd"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/night-owl-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/night-owl-light.mjs",
+      "sha256": "865ef85db02638325bd63bf8fe4149a819eb0283ff4a7388ba508af29ff3c757"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/night-owl.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/night-owl.mjs",
+      "sha256": "7e1e4353c2683bca8009a7d6e4162108efad013d9ba62e8edf3eeb8009acd9aa"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/nord.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/nord.mjs",
+      "sha256": "2ad1d2092b3d9c77ad45c4025d29fe5d445c26266be063a425cfae9e2e008c45"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/one-dark-pro.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/one-dark-pro.mjs",
+      "sha256": "8348f82200d796269db8a4ce57fc623cabc0f6aa27ef4df2ed8e85901bf67e3d"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/one-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/one-light.mjs",
+      "sha256": "3846d06939fe07e9d494c20811dd4ff3b40a20fc24bcb975d127677225d08be9"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/plastic.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/plastic.mjs",
+      "sha256": "925502cb3d2ba7040161625d627b93814c4ccf32651407e013cf5fa26a711bdd"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/poimandres.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/poimandres.mjs",
+      "sha256": "bdbfc77bc0889c6713f4828c965bd78f268c94ae464352347013faa1274a9beb"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/red.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/red.mjs",
+      "sha256": "87acd16e3a62e90039abf84682f47572750c297f3d3afc9b3b0ce049c6dbb7e1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/rose-pine-dawn.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/rose-pine-dawn.mjs",
+      "sha256": "6b528bdcf8ceec8bb2d56dcaa1a844a9b5dfb8a9c379f3b9aad624f426797a11"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/rose-pine-moon.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/rose-pine-moon.mjs",
+      "sha256": "c8dec6d091f13653216902918dc551bb845e24a99c1cf54bf8af3a8b2a79a42f"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/rose-pine.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/rose-pine.mjs",
+      "sha256": "912fc8b8c7798144a2aa4231f800c02e37da44a09a33ed45bac735778f250317"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/slack-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/slack-dark.mjs",
+      "sha256": "aba351ba56a4aed10ec5f4a6d4466864c4aa8fe817eb48f13acda42a24e454c5"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/slack-ochin.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/slack-ochin.mjs",
+      "sha256": "9cdf77874aebe59c4257ec63b943374a2e203165f80627ce21ca2ef241adfe4f"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/snazzy-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/snazzy-light.mjs",
+      "sha256": "06ae9c79a977e1cd5685a7d98d729524ff32a728f443f03ada541f8021134e8d"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/solarized-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/solarized-dark.mjs",
+      "sha256": "8b157d677c8e60335c7a4bc952d924cb16c76b8252995a042099fa9b1639c066"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/solarized-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/solarized-light.mjs",
+      "sha256": "e436201b39838e7519c5079ffed472f9e5212ff153b0eef52b4d01afda94c558"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/synthwave-84.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/synthwave-84.mjs",
+      "sha256": "e061033f90e97ac870c9c44a8a11c6f4cecb90ab5bf3b3f07a35a22bda539df1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/tokyo-night.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/tokyo-night.mjs",
+      "sha256": "d823fa7d086ee48d19bda3b439080b2ea228abbecc772bbb2af8a24ef25a692e"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vesper.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vesper.mjs",
+      "sha256": "17645ff1d752910088141c0c008cd29006e4b3c96d0a46a097a7d3718c90cc79"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vitesse-black.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vitesse-black.mjs",
+      "sha256": "17cce454792fcc03fdfdec74e637a1d728bb029742bd4e7818e688a9ca5c3fc6"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vitesse-dark.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vitesse-dark.mjs",
+      "sha256": "2c31468f13a71bdd04cda6a4b2d005c340f6036bb59ace7c440c631c3ed30c7a"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vitesse-light.d.mts",
+      "sha256": "116b5b05a91caed953b2fddbe293e1bb9614bfa5613445550d82a8d430f6afa1"
+    },
+    {
+      "path": "shiki-pkg/dist/themes/vitesse-light.mjs",
+      "sha256": "f3fc82f0c031d45045e18b7f71a84a55cd2e81b944b79348250286cda5e39c72"
+    },
+    {
+      "path": "shiki-pkg/dist/types.d.mts",
+      "sha256": "5322c3686d3797d415f8570eec54e898f328e59f8271b38516b1366074b499aa"
+    },
+    {
+      "path": "shiki-pkg/dist/types.mjs",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "shiki-pkg/dist/wasm.d.mts",
+      "sha256": "d122b75aeb4744bfd8cd62ad5846acac0cc77875774be49aa10127bc4e682a2b"
+    },
+    {
+      "path": "shiki-pkg/dist/wasm.mjs",
+      "sha256": "d122b75aeb4744bfd8cd62ad5846acac0cc77875774be49aa10127bc4e682a2b"
+    },
+    {
+      "path": "shiki-pkg/LICENSE",
+      "sha256": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+    },
+    {
+      "path": "shiki-pkg/package.json",
+      "sha256": "8082297b15f20caff814b780f2deb6d8fa558b5b7771664e8a02be21fa7d08e6"
+    },
+    {
+      "path": "shiki-pkg/README.md",
+      "sha256": "bbc41a59177e51e1521ef0197e6d4c3867c877c13df2a55b3fe360f48c2b4bd8"
+    },
+    {
+      "path": "umd/mermaid.min.js",
+      "sha256": "07e37dfa97b337ccc85365d57eddf99b9706f09db3b59b260d0333b23b343c4b"
+    },
+    {
+      "path": "umd/react-dom.production.min.js",
+      "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d"
+    },
+    {
+      "path": "umd/react.production.min.js",
+      "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd"
+    }
+  ]
+}

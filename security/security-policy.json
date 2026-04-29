@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "localOnly": {
     "default": true
   },
@@ -45,6 +45,19 @@
     },
     "sensitiveOutputs": {
       "canonicalEvalResultsRelPath": "evals/results"
+    }
+  },
+  "walkthroughViewerAssets": {
+    "defaults": {
+      "assetSource": "cdn",
+      "vendorRootRel": "vendor/walkthrough-viewer"
+    },
+    "packages": {
+      "react": { "assetSource": "cdn" },
+      "reactDom": { "assetSource": "cdn" },
+      "mermaid": { "assetSource": "cdn" },
+      "tailwind": { "assetSource": "cdn" },
+      "shiki": { "assetSource": "cdn" }
     }
   }
 }

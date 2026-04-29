@@ -17,17 +17,112 @@ import { join } from "node:path";
 import {
   assertEntrypointForCurrentModule,
   assertStrictRepoWorkingDirectory,
+  loadRepoPolicy,
+  resolveAssetSource,
 } from "../../security/policy-runtime.mjs";
 import { redactDeep } from "../../security/redaction.mjs";
 
 assertEntrypointForCurrentModule(import.meta.url);
 assertStrictRepoWorkingDirectory();
 
-const [, , resultDir, expectTriggerStr, expectedDiagram] = process.argv;
+const [, , arg1, expectTriggerStr, expectedDiagram] = process.argv;
+
+/** Policy-aware Tier 2 structural checks (CDN vs vendor). */
+function applyTier2ViewerAssetChecks(html, check, policy) {
+  const vendorPrefix = "vendor/walkthrough-viewer";
+
+  function modeFor(id) {
+    try {
+      return resolveAssetSource(id, policy);
+    } catch (e) {
+      throw new Error(`deterministic Tier 2: policy resolution failed: ${e instanceof Error ? e.message : String(e)}`);
+    }
+  }
+
+  // react
+  const reactMode = modeFor("react");
+  check(
+    "viewer_react",
+    reactMode === "cdn"
+      ? html.includes("unpkg.com/react@18") || html.includes("react@18")
+      : html.includes(vendorPrefix) &&
+          (html.includes("react.production.min") || html.includes("/umd/react") || html.includes("react@18")),
+    `react: ${reactMode}`
+  );
+
+  const rdMode = modeFor("reactDom");
+  check(
+    "viewer_reactdom",
+    rdMode === "cdn"
+      ? html.includes("unpkg.com/react-dom@18") || html.includes("react-dom@18")
+      : html.includes(vendorPrefix) &&
+          (html.includes("react-dom.production.min") || html.includes("/umd/react-dom") || html.includes("react-dom@18")),
+    `reactDom: ${rdMode}`
+  );
+
+  const twMode = modeFor("tailwind");
+  check(
+    "viewer_tailwind",
+    twMode === "cdn"
+      ? html.includes("tailwindcss.com") || html.includes("tailwindcss")
+      : html.includes(vendorPrefix) &&
+          (html.includes("walkthrough-viewer.css") || html.includes("/css/") || html.includes("tailwind")),
+    `tailwind: ${twMode}`
+  );
+
+  const merMode = modeFor("mermaid");
+  check(
+    "viewer_mermaid",
+    merMode === "cdn"
+      ? html.includes("mermaid@11") || html.includes("mermaid@1")
+      : html.includes(vendorPrefix) && (html.includes("mermaid") || html.includes("mermaid.min")),
+    `mermaid: ${merMode}`
+  );
+
+  const shMode = modeFor("shiki");
+  check(
+    "viewer_shiki",
+    shMode === "cdn"
+      ? html.includes("createHighlighter") && html.includes("shiki")
+      : html.includes(vendorPrefix) && html.includes("createHighlighter") && html.includes("shiki"),
+    `shiki: ${shMode}`
+  );
+}
+
+// Maintainer sanity: grade a single HTML file against current policy (Tier 1–2 subset).
+if (arg1 && arg1.endsWith(".html") && !expectTriggerStr) {
+  let policy;
+  try {
+    policy = loadRepoPolicy();
+  } catch (e) {
+    console.error(e instanceof Error ? e.message : String(e));
+    process.exit(1);
+  }
+  const html = readFileSync(arg1, "utf8");
+  const checks = {};
+  function check(id, pass, detail) {
+    checks[id] = { pass, ...(detail !== undefined ? { detail } : {}) };
+  }
+  check(
+    "file_self_contained",
+    html.trimStart().startsWith("<!DOCTYPE html>") || html.trimStart().startsWith("<!doctype html>")
+  );
+  try {
+    applyTier2ViewerAssetChecks(html, check, policy);
+  } catch (e) {
+    console.error(e instanceof Error ? e.message : String(e));
+    process.exit(1);
+  }
+  const ok = Object.values(checks).every((c) => c.pass);
+  console.log(JSON.stringify({ file: arg1, checks, ok }, null, 2));
+  process.exit(ok ? 0 : 1);
+}
+
+const resultDir = arg1;
 
 if (!resultDir || !expectTriggerStr || !expectedDiagram) {
   console.error(
-    "Usage: node deterministic.mjs <result-dir> <expect_trigger> <expected_diagram>"
+    "Usage: node deterministic.mjs <result-dir> <expect_trigger> <expected_diagram>\n       node deterministic.mjs <path-to.html>   # policy-aware Tier 1–2 sanity on one file"
   );
   process.exit(1);
 }
@@ -83,15 +178,13 @@ check(
     html.trimStart().startsWith("<!doctype html>")
 );
 
-// Tier 2: CDN dependencies
-check("cdn_react", html.includes("unpkg.com/react@18") || html.includes("react@18"));
-check(
-  "cdn_reactdom",
-  html.includes("unpkg.com/react-dom@18") || html.includes("react-dom@18")
-);
-check("cdn_tailwind", html.includes("tailwindcss.com") || html.includes("tailwindcss"));
-check("cdn_mermaid", html.includes("mermaid@11") || html.includes("mermaid@1"));
-check("cdn_shiki", html.includes("createHighlighter") && html.includes("shiki"));
+// Tier 2: viewer assets (policy-aware CDN vs vendor)
+try {
+  const policy = loadRepoPolicy();
+  applyTier2ViewerAssetChecks(html, check, policy);
+} catch (e) {
+  check("tier2_policy", false, e instanceof Error ? e.message : String(e));
+}
 
 // Tier 3: Dark mode
 check(
