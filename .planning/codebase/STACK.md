@@ -21,7 +21,7 @@
 
 **Package Manager:**
 - npm/npx-based tooling (`npx skills add ...` in `README.md`)
-- Lockfile: missing (no `package-lock.json`, `pnpm-lock.yaml`, or `yarn.lock` detected at repo root)
+- Lockfile: **`package-lock.json`** at repo root (vendor regeneration / reproducible installs for `vendor/walkthrough-viewer`)
 
 ## Frameworks
 
