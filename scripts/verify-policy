@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Primary verification surface (D-13): validate security/security-policy.json from repo root.
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+exec node "$ROOT/security/verify-policy.mjs"
