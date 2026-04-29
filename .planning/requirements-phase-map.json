@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "description": "Committed REQ→phase/status map; must match .planning/REQUIREMENTS.md traceability table.",
+  "traceability": [
+    { "id": "POL-01", "phase": "Phase 1", "status": "Done" },
+    { "id": "POL-02", "phase": "Phase 1", "status": "Done" },
+    { "id": "RUN-01", "phase": "Phase 2", "status": "Done" },
+    { "id": "RUN-02", "phase": "Phase 2", "status": "Done" },
+    { "id": "RUN-03", "phase": "Phase 2", "status": "Done" },
+    { "id": "DATA-01", "phase": "Phase 3", "status": "Done" },
+    { "id": "DATA-02", "phase": "Phase 3", "status": "Done" },
+    { "id": "DATA-03", "phase": "Phase 3", "status": "Done" },
+    { "id": "INTG-01", "phase": "Phase 4", "status": "Done" },
+    { "id": "INTG-02", "phase": "Phase 4", "status": "Done" },
+    { "id": "INTG-03", "phase": "Phase 4", "status": "Done" },
+    { "id": "POL-03", "phase": "Phase 5", "status": "Pending" },
+    { "id": "GOV-01", "phase": "Phase 5", "status": "Pending" },
+    { "id": "GOV-02", "phase": "Phase 5", "status": "Pending" },
+    { "id": "GOV-03", "phase": "Phase 5", "status": "Pending" }
+  ]
+}
