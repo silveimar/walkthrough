@@ -11,6 +11,9 @@
 
 import { readdirSync, readFileSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { assertEntrypointForCurrentModule } from "../security/policy-runtime.mjs";
+
+assertEntrypointForCurrentModule(import.meta.url);
 
 const [, , resultsDir, ...flags] = process.argv;
 const jsonOnly = flags.includes("--json");

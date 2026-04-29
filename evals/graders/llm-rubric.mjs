@@ -13,8 +13,14 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  assertBeforeLlmRubricExec,
+  assertEntrypointForCurrentModule,
+} from "../../security/policy-runtime.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+assertEntrypointForCurrentModule(import.meta.url);
 
 const [, , htmlPath, outputPath] = process.argv;
 
@@ -22,6 +28,8 @@ if (!htmlPath || !outputPath) {
   console.error("Usage: node llm-rubric.mjs <html-path> <output-path>");
   process.exit(1);
 }
+
+assertBeforeLlmRubricExec(process.env);
 
 const html = readFileSync(htmlPath, "utf8");
 const rubric = readFileSync(join(__dirname, "rubric.md"), "utf8");
