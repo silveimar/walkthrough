@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Runtime Enforcement Hardening** - Route execution through constrained, safe runtime paths with startup guardrails.
 - [x] **Phase 3: Data Redaction and Retention Controls** - Enforce safe handling, storage boundaries, and lifecycle cleanup for sensitive artifacts.
 - [x] **Phase 4: Artifact Integrity and Safe Publishing** - Add deterministic integrity evidence and explicit publish allow-scopes.
-- [ ] **Phase 5: Continuous Governance and Drift Detection** - Keep controls verifiable in local and CI workflows with ongoing drift checks.
+- [x] **Phase 5: Continuous Governance and Drift Detection** - Keep controls verifiable in local and CI workflows with ongoing drift checks.
 
 ## Phase Details
 
@@ -75,6 +75,11 @@ Plans:
   3. Recurring hardening checks detect drift between policy, documentation, and graders and fail on mismatch.
 **Plans**: 3 plans (`05-01`..`05-03`)
 
+Plans:
+- [x] `05-01-PLAN.md` — PR CI workflow (`ci.yml`) parity with local verify-policy, integrity, publish scan, shell/node syntax
+- [x] `05-02-PLAN.md` — Requirements trace map + `verify-requirements-trace.mjs` in CI
+- [x] `05-03-PLAN.md` — Policy drift verifier + CI wiring
+
 ## Progress
 
 **Execution Order:**
@@ -86,4 +91,4 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | 2. Runtime Enforcement Hardening | 3/3 | Complete | 2026-04-29 |
 | 3. Data Redaction and Retention Controls | 3/3 | Complete | 2026-04-29 |
 | 4. Artifact Integrity and Safe Publishing | 3/3 | Complete | 2026-04-29 |
-| 5. Continuous Governance and Drift Detection | 0/TBD | Not started | - |
+| 5. Continuous Governance and Drift Detection | 3/3 | Complete | 2026-04-29 |

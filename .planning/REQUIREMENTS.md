@@ -11,7 +11,7 @@ Requirements for the initial hardening release.
 
 - [x] **POL-01**: Maintainer can run generation/eval in a local-only mode that blocks unintended network egress by default.
 - [x] **POL-02**: Maintainer can enforce hardening policy from one machine-readable source used by scripts and docs.
-- [ ] **POL-03**: Maintainer can validate policy compliance in CI before merges.
+- [x] **POL-03**: Maintainer can validate policy compliance in CI before merges.
 
 ### Runtime Hardening & Safe Execution
 
@@ -33,9 +33,9 @@ Requirements for the initial hardening release.
 
 ### Verification, CI Gates, and Operational Controls
 
-- [ ] **GOV-01**: Maintainer can run deterministic security checks locally and in CI with consistent pass/fail criteria.
-- [ ] **GOV-02**: Maintainer can track requirement-to-phase completion status through automated traceability updates.
-- [ ] **GOV-03**: Maintainer can run recurring hardening checks to detect drift between policy, docs, and graders.
+- [x] **GOV-01**: Maintainer can run deterministic security checks locally and in CI with consistent pass/fail criteria.
+- [x] **GOV-02**: Maintainer can track requirement-to-phase completion status through automated traceability updates.
+- [x] **GOV-03**: Maintainer can run recurring hardening checks to detect drift between policy, docs, and graders.
 
 ## v2 Requirements
 
@@ -70,10 +70,10 @@ Deferred to future release.
 | INTG-01 | Phase 4 | Done |
 | INTG-02 | Phase 4 | Done |
 | INTG-03 | Phase 4 | Done |
-| POL-03 | Phase 5 | Pending |
-| GOV-01 | Phase 5 | Pending |
-| GOV-02 | Phase 5 | Pending |
-| GOV-03 | Phase 5 | Pending |
+| POL-03 | Phase 5 | Done |
+| GOV-01 | Phase 5 | Done |
+| GOV-02 | Phase 5 | Done |
+| GOV-03 | Phase 5 | Done |
 
 **Coverage:**
 - v1 requirements: 15 total
@@ -82,4 +82,4 @@ Deferred to future release.
 
 ---
 *Requirements defined: 2026-04-29*
-*Last updated: 2026-04-29 after Phase 1 completion*
+*Last updated: 2026-04-29 after Phase 5 completion*

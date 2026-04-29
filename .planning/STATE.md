@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-last_updated: "2026-04-29T16:53:02.706Z"
-last_activity: 2026-04-29 -- Phase 05 execution started
+status: milestone_complete
+last_updated: "2026-04-29T17:00:00.000Z"
+last_activity: 2026-04-29 — Phase 5 executed; v1.0 milestone complete
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 15
-  completed_plans: 12
-  percent: 80
+  completed_plans: 15
+  percent: 100
 ---
 
 # Project State
@@ -20,22 +20,22 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-29)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
-**Current focus:** Phase 05 — continuous-governance-and-drift-detection
+**Current focus:** Milestone v1.0 complete — all planned hardening phases delivered
 
 ## Current Position
 
-Phase: 05 (continuous-governance-and-drift-detection) — EXECUTING
-Plan: 1 of 3
-Status: Executing Phase 05
-Last activity: 2026-04-29 -- Phase 05 execution started
+Phase: all roadmap phases complete (1–5)
+Plan: —
+Status: Milestone complete
+Last activity: 2026-04-29 — Phase 5 governance CI, traceability, and policy drift checks merged
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 3
+- Total plans completed: 15
 - Average duration: -
 - Total execution time: -
 
@@ -43,12 +43,12 @@ Progress: [████████░░] 80%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 | 3 | - | - |
+| 1–5 | 15 | - | - |
 
 **Recent Trend:**
 
-- Last plans: 01-03 Policy CI/docs alignment
-- Trend: Stable
+- Last phase: Phase 5 — CI parity, REQ trace verifier, policy drift script
+- Trend: Milestone closed
 
 *Updated after each plan completion*
 
@@ -58,10 +58,11 @@ Progress: [████████░░] 80%
 
 - Canonical policy path `security/security-policy.json`; verification via `scripts/verify-policy` locally and in CI.
 - Eval egress requires explicit `--allow-egress` matching policy exception ids; LLM rubric requires `WALKTHROUGH_LLM_RUBRIC=1` and matching egress exception for `llm_rubric_claude` when enabled.
+- PR validation: `.github/workflows/ci.yml` — align branch protection required checks with this workflow.
 
 ### Pending Todos
 
-Plan Phase 2 when ready.
+None for v1.0 milestone scope.
 
 ### Blockers/Concerns
 
@@ -71,7 +72,7 @@ None.
 
 | Category | Item | Status | Deferred At |
 |----------|------|--------|-------------|
-| Requirement | POL-03 (CI validation before merges) — tracked under Phase 5 in roadmap | Open | — |
+| — | — | — | — |
 
 ---
 

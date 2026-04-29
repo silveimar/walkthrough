@@ -13,9 +13,9 @@
     { "id": "INTG-01", "phase": "Phase 4", "status": "Done" },
     { "id": "INTG-02", "phase": "Phase 4", "status": "Done" },
     { "id": "INTG-03", "phase": "Phase 4", "status": "Done" },
-    { "id": "POL-03", "phase": "Phase 5", "status": "Pending" },
-    { "id": "GOV-01", "phase": "Phase 5", "status": "Pending" },
-    { "id": "GOV-02", "phase": "Phase 5", "status": "Pending" },
-    { "id": "GOV-03", "phase": "Phase 5", "status": "Pending" }
+    { "id": "POL-03", "phase": "Phase 5", "status": "Done" },
+    { "id": "GOV-01", "phase": "Phase 5", "status": "Done" },
+    { "id": "GOV-02", "phase": "Phase 5", "status": "Done" },
+    { "id": "GOV-03", "phase": "Phase 5", "status": "Done" }
   ]
 }

@@ -15,12 +15,14 @@ Generate and evaluate walkthrough artifacts locally with strong protections for 
 - ✓ Skill-driven walkthrough generation from prompt triggers — existing
 - ✓ Local eval pipeline with deterministic and rubric grading — existing
 - ✓ Static example artifact and published documentation workflow — existing
+- ✓ Local-only protection model is explicit and enforceable across skill/eval docs and scripts (Phases 1–2; policy + runtime gates)
+- ✓ Analyzed content handling is hardened — retention, redaction, access boundaries (Phase 3)
+- ✓ Publish surfaces integrity-gated and scoped (Phase 4)
+- ✓ CI governance: deterministic checks on PRs, requirement traceability, policy drift detection (Phase 5)
 
 ### Active
 
-- [ ] Local-only protection model is explicit and enforceable across skill/eval docs and scripts
-- [ ] Analyzed content handling is hardened (retention, redaction, access boundaries)
-- [ ] Sensitive workflow surfaces are audited and secured with practical defaults
+- _(none — v1.0 milestone scope complete)_
 
 ### Out of Scope
 
@@ -66,4 +68,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-29 after initialization*
+*Last updated: 2026-04-29 after Phase 5 / milestone v1.0 completion*
