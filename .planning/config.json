@@ -17,15 +17,15 @@
     "plan_check": true,
     "verifier": true,
     "nyquist_validation": true,
-    "auto_advance": false,
+    "auto_advance": true,
     "node_repair": true,
     "node_repair_budget": 2,
-    "ui_phase": false,
-    "ui_safety_gate": false,
+    "ui_phase": true,
+    "ui_safety_gate": true,
     "ai_integration_phase": true,
-    "tdd_mode": false,
+    "tdd_mode": true,
     "text_mode": false,
-    "research_before_questions": false,
+    "research_before_questions": true,
     "discuss_mode": "discuss",
     "skip_discuss": false,
     "code_review": true,
@@ -40,7 +40,8 @@
     "security_enforcement": true,
     "security_asvs_level": 1,
     "security_block_on": "high",
-    "use_worktrees": true
+    "use_worktrees": true,
+    "ui_review": true
   },
   "hooks": {
     "context_warnings": true
@@ -51,5 +52,11 @@
   "claude_md_path": "./CLAUDE.md",
   "resolve_model_ids": "omit",
   "mode": "interactive",
-  "granularity": "standard"
+  "granularity": "standard",
+  "intel": {
+    "enabled": true
+  },
+  "graphify": {
+    "enabled": true
+  }
 }
