@@ -7,7 +7,7 @@
 
 ## Phases (v2.0)
 
-- [ ] **Phase 6: Offline vendoring & dual-mode HTML** — Reproducible vendor layout, policy-driven CDN vs vendor mode, eval temp workspace includes frozen assets with fail-closed checks.
+- [x] **Phase 6: Offline vendoring & dual-mode HTML** — Reproducible vendor layout, policy-driven CDN vs vendor mode, eval temp workspace includes frozen assets with fail-closed checks. (completed 2026-04-29)
 - [ ] **Phase 7: Cross-platform sandbox & path parity** — Documented platform matrix, normalized paths and temp workspace across macOS/Linux/Windows, CI smoke for shell/path failure modes.
 - [ ] **Phase 8: Signed provenance** — Manifest-first scope, local sign/verify, data-protection–aligned attestations, optional CI verification.
 
@@ -75,7 +75,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 6. Offline vendoring & dual-mode HTML | 3/3 | Complete | 2026-04-29 |
+| 6. Offline vendoring & dual-mode HTML | 3/3 | Complete    | 2026-04-29 |
 | 7. Cross-platform sandbox & path parity | 0/TBD | Not started | - |
 | 8. Signed provenance | 0/TBD | Not started | - |
 
