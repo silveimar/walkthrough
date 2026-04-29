@@ -59,27 +59,27 @@ Deferred to future release.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| POL-01 | Phase TBD | Pending |
-| POL-02 | Phase TBD | Pending |
-| POL-03 | Phase TBD | Pending |
-| RUN-01 | Phase TBD | Pending |
-| RUN-02 | Phase TBD | Pending |
-| RUN-03 | Phase TBD | Pending |
-| DATA-01 | Phase TBD | Pending |
-| DATA-02 | Phase TBD | Pending |
-| DATA-03 | Phase TBD | Pending |
-| INTG-01 | Phase TBD | Pending |
-| INTG-02 | Phase TBD | Pending |
-| INTG-03 | Phase TBD | Pending |
-| GOV-01 | Phase TBD | Pending |
-| GOV-02 | Phase TBD | Pending |
-| GOV-03 | Phase TBD | Pending |
+| POL-01 | Phase 1 | Pending |
+| POL-02 | Phase 1 | Pending |
+| RUN-01 | Phase 2 | Pending |
+| RUN-02 | Phase 2 | Pending |
+| RUN-03 | Phase 2 | Pending |
+| DATA-01 | Phase 3 | Pending |
+| DATA-02 | Phase 3 | Pending |
+| DATA-03 | Phase 3 | Pending |
+| INTG-01 | Phase 4 | Pending |
+| INTG-02 | Phase 4 | Pending |
+| INTG-03 | Phase 4 | Pending |
+| POL-03 | Phase 5 | Pending |
+| GOV-01 | Phase 5 | Pending |
+| GOV-02 | Phase 5 | Pending |
+| GOV-03 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 15 total
-- Mapped to phases: 0
-- Unmapped: 15 ⚠️
+- Mapped to phases: 15
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-29*
-*Last updated: 2026-04-29 after initial definition*
+*Last updated: 2026-04-29 after roadmap mapping*
