@@ -1,161 +1,146 @@
 # Project Research Summary
 
-**Project:** Walkthrough Skill Local Security Hardening
-**Domain:** Local-first security hardening for CLI walkthrough generation and evaluation
-**Researched:** 2026-04-29
-**Confidence:** HIGH
+**Project:** Walkthrough Skill Local Security Hardening  
+**Domain:** Brownfield security hardening — Claude Code walkthrough skill, local eval harness, policy-driven governance (v2.0 Advanced Local Hardening)  
+**Researched:** 2026-04-29  
+**Confidence:** MEDIUM
 
 ## Executive Summary
 
-This project is a local-first security hardening effort for a CLI-centric generation and evaluation workflow that handles potentially sensitive source and prompt data. Expert implementations in this space do not treat "local" as inherently trusted: they separate policy decisions from runtime execution, require redaction before persistence, and continuously enforce controls in CI so security does not rely on maintainer discipline.
+Walkthrough Skill Local Security Hardening v2.0 extends an already policy-governed repo (v1.0) with three vertical slices: **ADV-01** offline/vendored viewer assets, **ADV-02** signed provenance for artifacts and manifests, and **ADV-03** cross-platform sandbox and path parity. Experts treat this as a **supply-chain + local-trust** problem: reproducible installs (`npm ci` + lockfile), vendored UMD/static bundles for browser-facing deps, **precompiled Tailwind** (not Play CDN), and a manifest-first signing story (Cosign/Minisign/GPG as pluggable backends) rather than enterprise PKI by default.
 
-The recommended approach is to build an enforceable policy shell first, then harden data handling, runtime execution, and publishing surfaces in that order. Concretely: standardize on Node 24 + pnpm 11, enforce local security gates (gitleaks, semgrep, osv-scanner), add mandatory redaction and retention controls, and use deterministic metadata sidecars to make grading and provenance stable and auditable.
+The recommended approach is **declarative policy first** (`security/security-policy.json`), **runtime enforcement second** (`policy-runtime.mjs`), with **dual-mode HTML** (CDN vs vendor) controlled by a single policy flag, vendor trees under `vendor/walkthrough-runtime/`, and graders that branch on asset mode. Build order should favor **ADV-01 → ADV-03 → ADV-02**: stable layouts and hashes before attestations; harden subprocess/temp/path behavior before signing scripts that would otherwise churn.
 
-The biggest risks are policy drift (rules in docs but not in code), sensitive artifact retention, and accidental disclosure via broad publish paths or shell-injection-prone execution wrappers. Mitigation is clear: machine-readable policy contracts, fail-closed enforcement, dedicated publish directories with denylist checks, and deterministic security checks that gate every PR.
+Key risks are **supply-chain theater** (verification disconnected from what actually runs), **broken offline mirrors** (stale vendor, path skew, Windows ignored), and **signing UX** that drives bypass culture. Mitigations: map a **consumption graph** from eval shell through graders to browser-loaded bytes; treat vendor + lockfile + manifest as one rebuildable unit; fail closed on missing vendor or invalid sigs; document Git Bash/WSL and optional non-Docker sandbox backends; keep signing optional locally with clear errors and CI as the strict gate.
 
 ## Key Findings
 
 ### Recommended Stack
 
-The stack should optimize for secure defaults, reproducibility, and local auditability. Node 24 LTS and pnpm 11 provide a modern baseline with tighter dependency hygiene, while local scanners and SBOM tooling provide layered visibility across secrets, code risks, and vulnerable dependencies.
+v2.0 stack deltas assume v1.0 baseline (Node ≥18, Bash, policy-runtime, eval pipeline). Add **npm + `package-lock.json`** for reproducible vendor tooling; **React/ReactDOM UMD, Mermaid 11.x, Shiki (pinned)** from packages copied into vendor — Shiki may need **bundled ESM or mirrored graph** (not a single file). **Tailwind must be CLI-built CSS**, not the Play CDN JIT script. Support **SBOM** via `npm sbom` or `@cyclonedx/cyclonedx-npm`. **Signing:** Cosign/Sigstore for CI-visible attestations *or* **Minisign** for minimal local Ed25519; **GPG** when policy demands OpenPGP. **Sandbox:** document OS-native equivalents (bubblewrap/Linux, Seatbelt/macOS patterns, Windows Sandbox/WSL) behind a **thin wrapper** with shared argv/env contract — do not standardize on Docker alone.
 
 **Core technologies:**
-- Node.js 24 LTS: primary runtime for tooling and graders — stable LTS with current security patch cadence.
-- pnpm 11: package management and lockfile authority — stronger supply-chain defaults and workspace hygiene.
-- gitleaks + Semgrep CLI + OSV-Scanner: secret/SAST/dependency checks — practical local-first guardrail trio.
-- Syft + Grype: SBOM generation and vulnerability matching — auditable artifact inventory plus risk triage.
-- sops + age: secret-at-rest workflow — encrypted, reviewable config management without plaintext secrets.
-- cosign: artifact signing and verification — integrity/provenance control before distribution.
+
+- **npm + lockfile + `npm ci`** — reproducible dependency graph — enforcement primitive for “same tree as locked.”
+- **Vendored UMD + built CSS + Shiki bundle/mirror** — offline viewer — replaces mandatory CDN fetches; Tailwind offline = precompiled CSS only.
+- **Cosign and/or Minisign (+ optional GPG)** — artifact/manifest signing — pluggable; local-first Minisign vs CI Sigstore per team.
+- **SRI / hash manifests** — tamper detection — binds vendor drops to policy and ADV-02 inputs.
 
 ### Expected Features
 
-Research converges on secure-by-default workflow controls as MVP, not optional add-ons. The product must first prevent accidental leakage paths, then add quality-of-life differentiators for maintainers.
-
 **Must have (table stakes):**
-- Explicit local-only execution mode with deny-by-default egress.
-- Sensitive data redaction for prompts, logs, reports, and persisted outputs.
-- Retention controls with bounded lifecycle (TTL/purge, ephemeral defaults).
-- Secret detection preflight before publish/deploy, plus CI smoke enforcement.
-- Hardened process execution (`spawn`/`execFile` over shell string pipelines).
+
+- **ADV-01:** Documented offline prerequisites; pinned/vendored eval-critical assets; explicit failure when network required; reproducible vendor layout; optional tiered offline (eval-only vs full demo).
+- **ADV-02:** Clear scope of what is signed; verify steps runnable locally; key-management story; tamper-evident handling aligned with `evals/results/` governance.
+- **ADV-03:** Documented shells/runners; consistent path semantics; same policy interpretation per OS; bounded subprocess contract aligned with temp workspace rules.
 
 **Should have (competitive):**
-- Policy-as-code security profiles (`strict`/`balanced`/`dev`) with explicit control deltas.
-- Deterministic `metadata.json` sidecar for output contract stability and grader reliability.
-- Security UX guardrails for unsafe config detection and guided secure defaults.
 
-**Defer (v2+):**
-- Full offline vendoring mode for all runtime assets.
-- Full local provenance attestations beyond initial sidecar and checksum model.
-- Heavy enterprise integrations (SIEM/SOC) before local controls are mature.
+- Single-command vendor refresh; integrity manifests linking ADV-01 to ADV-02; optional CI verification job; platform flags in policy; optional devcontainer recipe.
+
+**Defer (v2.x / post–v2.0):**
+
+- Automated vendor refresh on schedule; policy-hash-bound signed attestations (audit-driven); native Windows runner without bash; full HTML offline parity for every CDN; hardware tokens / org PKI.
 
 ### Architecture Approach
 
-Adopt a three-plane model: **Control Plane** (policy engine/store), **Data Plane** (generation + evaluation runtimes), and **Evidence Plane** (sanitized logs + audit ledger). Every run passes through a policy enforcement layer that classifies data first, enforces least privilege and egress controls, and requires redaction before any write. This creates a fail-closed pipeline where local execution remains constrained, observable, and testable.
+v2.0 layers **vendor**, extended **policy schema**, **dual-mode graders**, and **optional post-grade attestation** on the existing policy-in-the-middle model. New tracked **`vendor/walkthrough-runtime/`** stays out of `skills/` and `evals/results/`; policy remains the integration hub. **`runtime.walkthroughAssetMode: "cdn" | "vendor"`** (or equivalent) keeps deterministic grading unambiguous.
 
 **Major components:**
-1. Policy Engine + Policy Store — evaluates allow/deny/redact decisions from versioned policy.
-2. Enforcement Layer — mandatory gateway for file, process, and network controls.
-3. Generation and Evaluation Runtimes — execute work only through enforcement contracts.
-4. Redaction Layer — mandatory sanitization before logs, artifacts, and reports.
-5. Encrypted Artifact Store + Retention Manager — controlled persistence and lifecycle.
-6. Tamper-evident Audit Ledger + Verification Gate — forensic trail and regression prevention.
+
+1. **`skills/walkthrough/*` + `html-patterns.md`** — Contract for CDN vs relative vendor URLs; dual-path templates.
+2. **`vendor/walkthrough-runtime/` + manifest** — Frozen assets and hashes for ADV-01 and signing inputs.
+3. **`security-policy.json` + schema + `policy-runtime.mjs`** — Vendor roots, asset mode, sandbox/parity hooks; single enforcement surface.
+4. **`evals/run.sh` + graders** — Copy vendor into temp workspace when required; deterministic grader branches on policy; optional manifest/sign hooks after grading.
 
 ### Critical Pitfalls
 
-1. **Local-first without enforcement** — treat policy as executable controls with CI fail gates, not documentation.
-2. **Unbounded sensitive artifact retention** — default to ephemeral storage and redact before persistence.
-3. **Shell command composition in security paths** — replace with `spawn`/`execFile` argument arrays.
-4. **Publishing from broad repository scope** — restrict deploy to dedicated output path with denylist/allowlist preflight.
-5. **Contract drift across docs/graders** — centralize security/output contract in one machine-readable source.
+1. **Supply-chain theater** — Verification must bind to artifacts at **consumption** (eval + browser), not CI-only; one policy source of truth; fail closed when vendor missing or sig invalid.
+2. **Broken offline mirrors** — Vendor + lockfile + manifest as one unit; fresh-clone CI; repo-root–anchored paths; no silent `curl` prefetch.
+3. **Signature UX / bypass culture** — Prefer progressive trust (optional strict local, CI verify); clear remediation messages; avoid permanent undocumented `--skip-verify`.
+4. **Windows path and shell assumptions** — Quote variables; Node for normalization; CI smoke on `windows-latest` / Git Bash; document WSL vs native scope.
+5. **Docker as universal sandbox** — Parity via **pluggable backends**; document non-Docker path on macOS; do not make ADV-01/02 depend on global Docker.
 
 ## Implications for Roadmap
 
-Based on research, suggested phase structure:
+Suggested phase structure follows dependency order from FEATURES and ARCHITECTURE: stable vendor layout and manifests before signing; stable harness paths before signing churning scripts.
 
-### Phase 1: Security Contract and Policy Foundation
-**Rationale:** Every later safeguard depends on explicit trust boundaries and machine-readable policy.
-**Delivers:** Policy schema (classification, retention, redaction, egress), boundary definitions, initial threat model.
-**Addresses:** Local-only execution baseline and contract-drift risk.
-**Avoids:** "Aspirational security" with no enforceable checks.
+### Phase 1: ADV-01 — Offline vendoring & dual-mode HTML
 
-### Phase 2: Enforcement Gateway and Runtime Hardening
-**Rationale:** Controls must mediate existing generation/eval flows before feature expansion.
-**Delivers:** Single policy-enforced entrypoint, deny-by-default egress, path/tool allowlists, shell-exec removal.
-**Uses:** Node 24, pnpm 11, semgrep and secret-scan gates.
-**Implements:** Enforcement Layer and least-privilege execution patterns.
+**Rationale:** Unlocks reproducible bytes and manifest inputs for ADV-02; ADV-03 workspace copies must include what the skill references on disk.  
+**Delivers:** `vendor/walkthrough-runtime/` (or agreed tree), lockfile + `npm ci` story, policy keys for vendor roots and asset mode, `html-patterns.md` + grader dual-path, `run.sh` vendor copy into temp workspace, explicit offline/degraded flags.  
+**Addresses:** FEATURES ADV-01 P1 table stakes and differentiators (manifests, single-command refresh as capacity allows).  
+**Avoids:** Pitfalls 2 (broken mirrors), Tailwind Play CDN mistaken for offline; anti-features: silent network fallback, vendor-everything sprawl.
 
-### Phase 3: Redaction and Retention Pipeline
-**Rationale:** Data leakage risk is highest at persistence and logging boundaries.
-**Delivers:** Classification-first handling, mandatory redaction stage, retention tiers, TTL/purge workflows.
-**Addresses:** Table-stake redaction and artifact lifecycle controls.
-**Avoids:** Sensitive artifact accumulation and log leakage.
+### Phase 2: ADV-03 — Cross-platform sandbox & path parity
 
-### Phase 4: Artifact Integrity and Controlled Publishing
-**Rationale:** Once storage is controlled, integrity and external-surface controls become reliable.
-**Delivers:** Deterministic `metadata.json`, checksums, dedicated publish directory, deploy preflight denylist/allowlist.
-**Uses:** Syft/Grype for artifact visibility and risk checks, cosign for signing path.
-**Implements:** Evidence-plane integrity patterns.
+**Rationale:** Harden `run.sh` (and optional thin Node prelude) for temp, `realpath`, Windows — before freezing attestations on scripts that still move weekly.  
+**Delivers:** Documented platform matrix; shared path helpers; policy/runtime asserts for parity; optional CI Windows smoke; sandbox **interface** doc (non-Docker defaults).  
+**Addresses:** FEATURES ADV-03 P1; pitfall 4 (Windows), 5 (Docker), 6 (subprocess boundary).  
+**Avoids:** Identical OS-level sandbox APIs everywhere; PowerShell rewrite unless roadmap explicitly demands it.
 
-### Phase 5: Continuous Verification and Operational Hardening
-**Rationale:** Security posture decays without automation, ownership, and recurring audits.
-**Delivers:** CI security contract suite, portability checks, recurring audit cadence, ownership matrix.
-**Addresses:** Regression prevention and long-term maintainability.
-**Avoids:** Silent control drift and environment-specific skipped checks.
+### Phase 3: ADV-02 — Signed provenance
 
-### Phase Ordering Rationale
+**Rationale:** Sign manifests that include HTML, vendor hashes, and policy digest — after ADV-01 manifest format and ADV-03 paths are stable.  
+**Delivers:** One primary signing path (recommendation: Minisign local and/or Cosign in CI), verify docs, optional CI verify job, integration with `report.mjs`/summary as needed; redaction-aware provenance JSON.  
+**Addresses:** FEATURES ADV-02 P1; pitfall 1 (bind verification to consumed artifacts), 3 (UX).  
+**Avoids:** Signing inside LLM; signing CDN URLs instead of content; attestation without manifest discipline (architecture anti-pattern 1).
 
-- Policy must precede implementation so enforcement and tests are generated from one source of truth.
-- Runtime hardening must land before adding higher-order features to prevent new leakage paths.
-- Redaction/retention should come before publish and scale-up so stored outputs are already controlled.
-- Verification gates should be in place before iterative expansion to keep the posture fail-closed.
+### Phase ordering rationale
+
+- **ADV-01 → ADV-03 → ADV-02** matches FEATURE dependency (manifests enable signing; stable paths enable vendor layout) and ARCHITECTURE “suggested build order.”  
+- **Parallelism:** Policy schema work for ADV-01 and ADV-03 can overlap if coordinated; **avoid** strict ADV-02 verify gates until ADV-01 manifest format is stable (per ARCHITECTURE).
 
 ### Research Flags
 
-Phases likely needing deeper research during planning:
-- **Phase 4 (Artifact Integrity and Controlled Publishing):** cosign adoption model, key management ergonomics, and right-sized provenance scope.
-- **Phase 5 (Continuous Verification and Operations):** cross-platform CI portability strategy and durable audit ownership model.
-- **Future offline vendoring phase:** dependency mirror/update strategy and maintenance burden modeling.
+Phases likely needing **`/gsd-research-phase`** during planning:
 
-Phases with standard patterns (skip research-phase):
-- **Phase 1 (Security Contract and Policy Foundation):** well-documented zero-trust/policy-engine patterns.
-- **Phase 2 (Enforcement Gateway and Runtime Hardening):** established secure process execution and deny-by-default controls.
-- **Phase 3 (Redaction and Retention Pipeline):** mature OWASP-backed logging/redaction/retention guidance.
+- **ADV-01 / Shiki:** ESM + WASM + themes — bundling vs mirror strategy; high integration complexity.
+- **ADV-02:** Org-specific choice among Cosign, Minisign, GPG; CI OIDC vs offline keys.
+- **ADV-03:** Windows runner strategy (Git Bash vs WSL scope) if maintainers require native Windows without bash.
+
+Phases with **standard patterns** (lighter research):
+
+- **Lockfile + `npm ci`** — npm docs and repo conventions.
+- **SRI / SHA-256 manifests** — OpenSSL or small Node scripts; well-trodden.
+- **Policy extend-and-validate** — Existing `verify-policy` / schema bump pattern from v1.0.
 
 ## Confidence Assessment
 
 | Area | Confidence | Notes |
 |------|------------|-------|
-| Stack | HIGH | Backed by official release/docs references for Node, pnpm, and security tooling versions. |
-| Features | HIGH | Grounded in OWASP/CISA guidance and reinforced by repository-specific concern inventory. |
-| Architecture | HIGH | Strong alignment with NIST zero-trust component model and clear local adaptation. |
-| Pitfalls | HIGH | Directly mapped to observed repo risks and common failure modes in local security workflows. |
+| Stack | MEDIUM | Brownfield deltas grounded in npm/vendor patterns; Cosign/Sandbox OS specifics need org/CI validation. |
+| Features | MEDIUM | Clear ADV boundaries; prioritization matrix is explicit P1/P2/P3. |
+| Architecture | MEDIUM–HIGH | Strong tie-in to existing `security/` and `evals/`; attestation toolchain choice is phase decision. |
+| Pitfalls | MEDIUM | Industry patterns; phase mapping assumes ADV-01/02/03 alignment with roadmap. |
 
-**Overall confidence:** HIGH
+**Overall confidence:** MEDIUM
 
 ### Gaps to Address
 
-- **Policy schema granularity:** finalize exact data classification taxonomy and retention classes during phase planning.
-- **Key management ergonomics:** choose practical local signing/encryption key lifecycle that maintainers can operate daily.
-- **Cross-platform enforcement behavior:** validate parity across macOS/Linux shell/runtime differences before strict gating.
-- **Provenance depth for MVP:** define minimum viable attestation fields to avoid over-scoping phase 4.
+- **Shiki offline graph:** Exact vendoring approach (bundle vs selective mirror) — spike during ADV-01 planning.
+- **Signing backend:** Lock Minisign vs Cosign (or both) per maintainer and CI — decision before ADV-02 execution.
+- **Windows scope:** Confirm “Git Bash + documented” vs future native runner — affects ADV-03 acceptance tests.
+- **npm sbom / CycloneDX:** Confirm CI Node/npm version for `npm sbom` behavior.
 
 ## Sources
 
-### Primary (HIGH confidence)
-- Node.js releases — runtime support policy and LTS cadence: https://nodejs.org/en/about/releases
-- pnpm v11 release notes — security/supply-chain defaults: https://github.com/pnpm/pnpm/releases/tag/v11.0.0
-- OWASP Logging Cheat Sheet — redaction and safe logging requirements: https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html
-- NIST SP 800-207 — zero-trust architecture model: https://nvlpubs.nist.gov/nistpubs/specialpublications/NIST.SP.800-207.pdf
-- OSV-Scanner release docs, Semgrep CLI docs, gitleaks/syft/grype/sops/age/cosign official releases (tool validation)
-- Project-local evidence: `.planning/PROJECT.md`, `.planning/codebase/CONCERNS.md`, `.planning/codebase/ARCHITECTURE.md`, `.planning/codebase/TESTING.md`
+### Aggregated from research files
 
-### Secondary (MEDIUM confidence)
-- OWASP ASVS logging controls interpretation for implementation detail mapping: https://github.com/OWASP/ASVS
-- CISA Secure by Design/Default guidance for secure-default posture and adoption strategy: https://www.cisa.gov/resources-tools/resources/secure-by-design-and-default
+- `.planning/research/STACK.md` — stack additions, alternatives, version compatibility.
+- `.planning/research/FEATURES.md` — ADV-01–03 behaviors, MVP, prioritization, dependencies.
+- `.planning/research/ARCHITECTURE.md` — component deltas, patterns, data flow, build order.
+- `.planning/research/PITFALLS.md` — critical pitfalls, checklist, phase mapping.
 
-### Tertiary (LOW confidence)
-- No low-confidence external source was required for core conclusions; deferred provenance/offline-mode specifics need additional implementation-stage validation.
+### Primary / secondary (as cited in STACK, FEATURES, ARCHITECTURE, PITFALLS)
+
+- Tailwind Play CDN behavior — tailwindcss.com docs (product).
+- Sigstore / Cosign — docs.sigstore.dev.
+- CycloneDX npm — GitHub CycloneDX/cyclonedx-node-npm.
+- Minisign — jedisct1.github.io/minisign.
+- Repository: `security/policy-runtime.mjs`, `security/security-policy.json`, `evals/run.sh`, `evals/graders/deterministic.mjs`, `skills/walkthrough/references/html-patterns.md`.
+- OWASP SCVS, Node `path` docs, npm `npm ci` behavior — pitfalls references.
 
 ---
-*Research completed: 2026-04-29*
+*Research completed: 2026-04-29*  
 *Ready for roadmap: yes*

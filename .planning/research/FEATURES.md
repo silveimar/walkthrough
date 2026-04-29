@@ -1,85 +1,188 @@
-# Feature Landscape
+# Feature Research
 
-**Domain:** Local-first security hardening for code/content walkthrough generation
-**Researched:** 2026-04-29
+**Domain:** Walkthrough Skill Local Security Hardening — v2.0 Advanced Local Hardening (brownfield: Claude Code skill + local eval harness)  
+**Researched:** 2026-04-29  
+**Confidence:** MEDIUM
 
-## Table Stakes
+## Expected maintainer behaviors (v2.0)
 
-Features maintainers now expect in any security-sensitive local analysis workflow. Missing these creates immediate trust and adoption risk.
+| Behavior | Success looks like |
+|----------|-------------------|
+| **Run eval offline** | `evals/run.sh` (and skill-adjacent flows) complete without mandatory network fetches for pinned tooling/assets; failures are explicit (“missing vendor bundle”) not opaque timeouts. |
+| **Verify artifact provenance** | Maintainer can check integrity/origin signals on walkthrough outputs or policy-relevant metadata using documented keys, manifests, and verification steps aligned with a **local trust model** (not enterprise PKI by default). |
+| **Cross-platform parity** | Same documented constraints and outcomes for subprocess/workspace isolation on macOS, Linux, and Windows dev machines; scripts fail consistently or succeed consistently—not divergent behavior per OS. |
 
-| Feature | Why Expected | Complexity | Notes |
+---
+
+## ADV-01 — Offline / vendored dependencies
+
+Reproducible, isolated operation: eval and skill workflows avoid mandatory CDN/runtime downloads where feasible.
+
+### Table stakes (users expect these)
+
+| Feature | Why expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| Explicit local-only execution mode (no default network egress) | Secure-by-default guidance favors safe defaults over optional hardening after setup | Med | Make local-only the default path; allow explicit opt-in for remote calls with visible warnings and audit marks |
-| Sensitive data redaction for prompts, logs, and reports | OWASP logging guidance explicitly warns against logging source code, tokens, secrets, and high-classification data | Med | Must redact before persistence and before console output; include deterministic redaction tests |
-| Retention controls and local artifact lifecycle (TTL/purge) | Security logs/artifacts become sensitive stores; retention must be bounded and policy-driven | Med | Add per-artifact retention policy, purge command, and defaults that do not retain raw sensitive payloads indefinitely |
-| Secret detection gate before publish/deploy | Existing repo concern shows risk of over-broad publish paths; preflight scanning is a baseline control | Low | Block GitHub Pages/deploy if denylisted patterns or secrets are detected in artifact set |
-| Tamper-evident run metadata for eval/generation | Local security workflows still need integrity evidence for "what ran, with what inputs" | Med | Store checksums, tool version, and command provenance per run in a local manifest |
-| Hardened process execution (no shell string composition for sensitive paths) | Concern already identified: shell pipeline execution increases injection surface | Low | Replace shell command strings with `spawn`/`execFile`; keep argument arrays explicit |
-| CI smoke gate for security contract regressions | Security hardening without continuous enforcement decays quickly | Low | Run subset evals plus security checks on PRs; fail closed on policy violations |
+| Documented offline prerequisites | Maintainers assume they can prepare once, then run air-gapped | LOW | Single doc: what must be vendored, where it lives, version pins |
+| Pinned or vendored eval-critical assets | Eval repeatability breaks if Shiki/Tailwind/CDN fetches differ day to day | MEDIUM | Align with existing deterministic grader expectations; separate “full fidelity” vs “offline stub” if needed |
+| Explicit failure when network required | Silent hangs undermine trust in local security posture | LOW | Detect missing bundles early; message names missing artifact |
+| Reproducible install path for vendored deps | “Works on my machine” defeats brownfield hardening | MEDIUM | Script or manifest listing hashes + extraction layout |
 
-## Differentiators
+### Differentiators (valued, not universal)
 
-Features that can make this repository meaningfully better than "secure enough" local tooling.
-
-| Feature | Value Proposition | Complexity | Notes |
+| Feature | Value proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| Policy-as-code security profiles (strict/balanced/dev) | Teams can adopt hardening without forked scripts and can progressively tighten controls | Med | Ship baseline profiles with explicit control deltas (network, retention, redaction strictness, publishing rules) |
-| Offline-first dependency mode with vendored or pinned runtime assets | Reduces CDN and supply-chain drift risk for long-lived walkthrough artifacts | High | Build on existing concern about unpinned CDNs; provide `--offline` generation path and pin verification |
-| Deterministic contract sidecar (`metadata.json`) for every generated walkthrough | Replaces brittle regex grading with machine-readable, versioned output contract | Med | Enables stable grading, provenance checks, and easier migrations |
-| Local provenance attestations for generated artifacts | Gives auditable trust chain even when work stays local | High | Align with SLSA-style provenance concepts (digest, inputs, builder identity) without forcing cloud build infra |
-| Security UX guardrails ("unsafe config" warnings and secure defaults wizard) | Cuts misconfiguration by making secure behavior the easiest path | Med | Inspired by secure-by-default guidance: use loosening guides, not hardening guides |
+| Single-command vendor refresh | Low friction keeps velocity; matches Core Value | MEDIUM | e.g. script that downloads permitted versions into `vendor/` with checksum verification |
+| Scope-tiered offline (eval-only vs full skill demo) | Lets teams prioritize harness without blocking all HTML CDN usage | MEDIUM | Clear matrix: what runs fully offline vs degraded mode |
+| Integrity manifests for vendor trees | Ties ADV-01 to ADV-02 story without forcing signatures on day one | MEDIUM | Hash manifest per vendor drop enables later signing |
 
-## Anti-Features
+### Anti-features (avoid)
 
-Features to explicitly avoid during this hardening initiative.
+| Feature | Why requested | Why problematic | Alternative |
+|---------|---------------|-----------------|-------------|
+| Vendor *everything* including browser UMD stacks | “100% offline” absolutism | Huge repo, legal review of vendored UMD, churn | Tier: vendor eval-critical first; document CDN for optional demo HTML |
+| Silent fallbacks to network | Convenience | Violates offline guarantee and security expectations | Fail closed or explicit `ALLOW_NETWORK=1` |
+| Duplicate package managers / lockfiles without policy | “Just add npm” | Conflicts v1.0 style (no root lockfile today) and adds supply-chain surface | One blessed vendor mechanism under `security/` or `scripts/` + policy entry |
 
-| Anti-Feature | Why Avoid | What to Do Instead |
-|--------------|-----------|-------------------|
-| Auto-uploading prompts/artifacts/logs to cloud services for "convenience" | Violates local-first security goal and increases exposure blast radius | Keep all storage local by default; require explicit per-run opt-in export |
-| "Log everything" debugging mode that captures raw analyzed code/content | Contradicts OWASP guidance and turns logs into high-risk data stores | Provide scoped debug logging with redacted fields and short TTL |
-| Security model dependent on manual checklist discipline only | Secure-by-default guidance rejects placing core burden on end users | Encode controls in defaults, CI gates, and policy checks |
-| Broad repository publishing from root path | Existing deployment concern shows accidental exposure risk | Publish from a dedicated, minimal output directory with denylist preflight |
-| One-shot enterprise controls (SIEM/SOC integrations) in MVP hardening phase | High integration cost with low immediate value for local maintainers | Start with local structured audit logs and clean export hooks |
+---
 
-## Feature Dependencies
+## ADV-02 — Signed provenance attestations
 
-```text
-Explicit local-only execution mode
-  -> Sensitive data redaction
-  -> Retention controls and local artifact lifecycle
-  -> Hardened process execution
+Integrity and origin signals for walkthrough outputs and/or policy-relevant metadata; aligned with **local** trust (maintainer keys, not implied enterprise CA).
 
-Sensitive data redaction
-  -> CI smoke gate for security contract regressions
-  -> Policy-as-code security profiles
+### Table stakes (users expect these)
 
-Secret detection gate before publish/deploy
-  -> Dedicated publish directory
-  -> Offline-first dependency mode
+| Feature | Why expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Clear definition of “what is signed” | Ambiguity → skipped verification | LOW | Artifacts, manifests, or summary JSON scopes |
+| Verify instructions runnable locally | Offline/air-gapped verification path | MEDIUM | Minimize cloud-only services |
+| Key management story for maintainers | Signing without a SaaS is non-obvious | MEDIUM | Document ed25519/minisign/cosign-local patterns; pick one |
+| Tamper-evident storage alongside eval results | Provenance useless if results tree is mutable | LOW | Align with `evals/results/` governance from v1.0 |
 
-Deterministic contract sidecar (metadata.json)
-  -> Tamper-evident run metadata
-  -> Local provenance attestations
+### Differentiators (valued, not universal)
+
+| Feature | Value proposition | Complexity | Notes |
+|---------|-------------------|------------|-------|
+| Detached signatures + sidecar metadata | Standard UX for security-conscious repos | MEDIUM | `.sig` or DSSE envelope next to artifact |
+| Binding signature to policy hash | Proves run complied with `security-policy.json` version | HIGH | Strong audit narrative for internal reviews |
+| Optional CI verification job | Catches regression without blocking local-only users | MEDIUM | Read-only check on PR |
+
+### Anti-features (avoid)
+
+| Feature | Why requested | Why problematic | Alternative |
+|---------|---------------|-----------------|------------- |
+| Full SLSA L4 / enterprise PKI | “Industry best practice” | Overkill for local-first; operational burden | Document ladder: optional CI provenance; local signing first |
+| Signing *inside* the LLM | Provenance of thought | Nonsense cryptographically | Sign **outputs** and **tool-generated manifests** only |
+| Implicit trust of CDN URLs in signature | Short sig chains | Breaks when URLs move | Sign content **after** vendor layout resolved (hash trees) |
+
+---
+
+## ADV-03 — Cross-platform sandbox parity
+
+Predictable subprocess/workspace constraints on macOS, Linux, and Windows.
+
+### Table stakes (users expect these)
+
+| Feature | Why expected | Complexity | Notes |
+|---------|--------------|------------|-------|
+| Documented supported shells and runners | Windows vs bash assumptions break scripts | LOW | `evals/run.sh` may stay bash if Git Bash/WSL documented |
+| Consistent path semantics | Mixed separators and temp dirs cause flaky eval | MEDIUM | Normalize via helper or Node orchestration where bash is limiting |
+| Same security policy interpretation per OS | Policy must not mean stricter on one OS accidentally | MEDIUM | Test matrix in CI or documented manual checklist |
+| Bounded subprocess behavior | Sandboxing story requires defined argv, cwd, env | HIGH | Align with existing temp workspace pattern in `evals/run.sh` |
+
+### Differentiators (valued, not universal)
+
+| Feature | Value proposition | Complexity | Notes |
+|---------|-------------------|------------|-------|
+| Optional devcontainer / Codespaces recipe | One parity surface for all hosts | MEDIUM | Not replacing native Windows support—complements |
+| Platform-specific capability flags in policy | Honest gaps (e.g. no `unshare` on macOS) | MEDIUM | `security-policy.json` extensions per OS |
+| Single Node-based orchestrator entry | Reduces bash-only divergence | HIGH | Large change—phase only if roadmap demands |
+
+### Anti-features (avoid)
+
+| Feature | Why requested | Why problematic | Alternative |
+|---------|---------------|-----------------|------------- |
+| “Real” OS-level sandbox on every platform uniformly | Security parity | macOS sandbox profiles ≠ Linux namespaces ≠ Windows Job Objects | Document **equivalent guarantees** (paths, network off) not identical APIs |
+| Rewriting entire harness in PowerShell | Windows parity | Duplication and drift | Git Bash/WSL + minimal shims, or Node driver |
+| Ignoring Windows because “maintainers use Mac” | Scope reduction | Conflicts stated v2.0 goal | Smoke path + CI job |
+
+---
+
+## Feature dependencies
+
+```
+ADV-01 (vendored/offline assets)
+    └──requires──> Manifests / hashes (integrity inputs)
+                       └──enables──> ADV-02 (sign those manifests + artifacts)
+
+ADV-03 (sandbox parity)
+    └──requires──> Stable artifact paths + subprocess contract (feeds ADV-01 layout expectations)
+
+ADV-02 (signing)
+    └──enhances──> ADV-01 (vendor tarball authenticity)
+    └──conflicts──> “Silent network fetch” anti-pattern from ADV-01
 ```
 
-## MVP Recommendation
+### Dependency notes
 
-Prioritize:
-1. Explicit local-only execution mode (default deny outbound network and remote sinks)
-2. Sensitive data redaction + retention controls (protect at-rest and generated artifacts)
-3. Secret/publish preflight gate + CI enforcement (prevent accidental disclosure regressions)
+- **ADV-01 → ADV-02:** Signing needs stable content identifiers; vendor manifests are natural sign targets.
+- **ADV-03 → ADV-01:** Offline bundles must land in predictable locations across OSes or verification and sandbox mounts break.
+- **ADV-02 vs implicit network:** Signature verification must not assume phone-home or key escrow.
 
-Then add one differentiator:
-4. Deterministic contract sidecar (`metadata.json`) to stabilize grading and security verification
+---
 
-Defer:
-- Local provenance attestations: valuable, but higher complexity and better after sidecar contract is stable.
-- Full offline vendoring mode: strategically important but operationally heavier than first-pass hardening controls.
+## MVP definition (milestone v2.0)
+
+### Launch with (v2.0 core)
+
+- [ ] **ADV-01 — Minimum viable offline path** — Documented vendor layout + eval completes without mandatory CDN for harness-critical pieces; explicit env/flags for degraded vs strict offline.
+- [ ] **ADV-02 — Minimum viable provenance** — One signing format (recommendation: minisign or Sigstore key locally) + verify docs + optional CI check.
+- [ ] **ADV-03 — Documented parity baseline** — Supported platforms matrix; `evals/run.sh` behavior contract; known gaps listed with mitigations (WSL/Git Bash).
+
+### Add after validation (v2.x)
+
+- [ ] Automated vendor refresh in CI on schedule — trigger: repeated drift incidents.
+- [ ] Policy-bound signed attestations linking policy hash — trigger: audit request.
+- [ ] Native Windows runner without bash — trigger: maintainer pool blocks on WSL.
+
+### Future consideration (post–v2.x)
+
+- [ ] Full HTML viewer offline parity (all CDNs vendored) — defer: cost/size vs benefit.
+- [ ] Hardware tokens / org PKI — defer: out of local-first scope.
+
+---
+
+## Feature prioritization matrix
+
+| Feature | User value | Implementation cost | Priority |
+|---------|------------|---------------------|----------|
+| ADV-01 vendor + offline eval path | HIGH | MEDIUM | P1 |
+| ADV-02 sign + verify docs | HIGH | MEDIUM | P1 |
+| ADV-03 parity docs + smoke matrix | HIGH | LOW–MEDIUM | P1 |
+| ADV-01 automated vendor refresh | MEDIUM | MEDIUM | P2 |
+| ADV-02 CI verification job | MEDIUM | LOW | P2 |
+| ADV-03 Node orchestrator | MEDIUM | HIGH | P3 |
+
+**Priority key:** P1 = must ship in v2.0; P2 = should ship if capacity; P3 = nice / defer.
+
+---
+
+## Ecosystem / analog feature analysis
+
+| Capability | Typical analog | Our approach |
+|------------|----------------|--------------|
+| Offline tooling | Go modules vendor, `pnpm fetch`, Bazel mirrors | Single-repo vendor drops + policy allowlist |
+| Provenance | SLSA, in-toto, Sigstore | Local-first signing; optional CI attestation later |
+| Sandbox parity | Docker, devcontainers, GitHub Actions `container:` | Document native paths first; optional container as parity accelerator |
+| Skill artifacts | Claude Code plugins | Keep skill contract in Markdown; hardening stays repo mechanics |
+
+---
 
 ## Sources
 
-- OWASP Logging Cheat Sheet (sensitive data exclusions, log protection): [https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) (HIGH)
-- OWASP ASVS v4 logging controls (no credentials/sensitive data logging, log integrity): [https://github.com/OWASP/ASVS/blob/master/4.0/en/0x15-V7-Error-Logging.md](https://github.com/OWASP/ASVS/blob/master/4.0/en/0x15-V7-Error-Logging.md) (HIGH)
-- CISA Secure by Design and Default guidance (secure defaults, reduced end-user hardening burden): [https://www.cisa.gov/resources-tools/resources/secure-by-design-and-default](https://www.cisa.gov/resources-tools/resources/secure-by-design-and-default) (HIGH)
-- SLSA Build requirements (provenance integrity/isolation concepts): [https://slsa.dev/spec/v1.2/build-requirements](https://slsa.dev/spec/v1.2/build-requirements) (HIGH)
-- Project-local evidence from current repo concerns and requirements: `.planning/PROJECT.md`, `.planning/codebase/CONCERNS.md` (HIGH for repo-specific risks)
+- `.planning/PROJECT.md` — v2.0 goals, ADV-01–03 definitions, constraints, out-of-scope (2026-04-29).
+- Repository context: architecture spec-driven skill (`skills/walkthrough/*`), eval harness (`evals/run.sh`, graders), v1.0 completed security/policy baseline.
+
+---
+
+*Feature research for: Walkthrough Skill Local Security Hardening v2.0 Advanced Local Hardening*  
+*Researched: 2026-04-29*
