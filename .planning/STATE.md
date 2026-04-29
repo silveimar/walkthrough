@@ -1,16 +1,15 @@
 ---
 gsd_state_version: 1.0
 milestone: v2.0
-milestone_name: Advanced Local Hardening
-status: ready
-last_updated: "2026-04-29T18:00:00.000Z"
-last_activity: 2026-04-29
+milestone_name: milestone
+status: planning
+last_updated: "2026-04-29T17:35:09.594Z"
+last_activity: 2026-04-29 — ROADMAP.md v2.0 written (Phases 6–8), requirements traceability filled
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
-  percent: 0
 ---
 
 # Project State
