@@ -17,6 +17,26 @@ Parity for **this repository** means **consistent interpretation of `security/se
 
 **Docker** is **optional** for core flows: `verify-policy`, `bash -n evals/run.sh`, and the Node checks in CI do not require a container.
 
+## Vendor assets & offline-capable eval (OFF-01 / OFF-03 / OFF-06)
+
+**Defaults:** In [`security/security-policy.json`](security/security-policy.json), `walkthroughViewerAssets.packages.*.assetSource` is typically **`cdn`** for a fresh clone. Eval does **not** copy `vendor/walkthrough-viewer/` into the temp workspace until you opt into **vendor** mode — there is no silent switch.
+
+**To exercise vendor bytes end-to-end:**
+
+1. Edit `security/security-policy.json`: set the packages you need to **`vendor`** (and keep `vendorRootRel` consistent). See [`skills/walkthrough/references/html-patterns.md`](skills/walkthrough/references/html-patterns.md) (“Dual mode”) for URL shapes.
+2. From repository root, reproducible install + regenerate the frozen tree:
+   ```bash
+   npm ci
+   node scripts/sync-walkthrough-vendor.mjs
+   ```
+3. Refresh provenance digests when policy or vendor files change (matches CI):
+   ```bash
+   node scripts/build-provenance-manifest.mjs
+   ```
+4. Run eval as usual (`bash evals/run.sh …`) with egress flags per policy. If vendor mode is required but the tree or manifest is wrong, `evals/run.sh` fails closed (no CDN fallback).
+
+For regeneration-only reference, see [`vendor/walkthrough-viewer/README.md`](vendor/walkthrough-viewer/README.md).
+
 ## Manual smoke (Windows / path sanity)
 
 Run these from a **clone of the repository root** (the same place CI uses). On Windows, use **Git Bash** or **WSL2** as above.

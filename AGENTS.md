@@ -29,7 +29,7 @@ This project hardens the existing walkthrough-skill repository for secure, local
 - Node.js >= 18 (explicit requirement in `README.md` and Node shebangs in `.mjs` scripts)
 - Bash shell runtime for eval execution (`evals/run.sh`)
 - npm/npx-based tooling (`npx skills add ...` in `README.md`)
-- Lockfile: missing (no `package-lock.json`, `pnpm-lock.yaml`, or `yarn.lock` detected at repo root)
+- Lockfile: **`package-lock.json`** at repo root (pins npm packages used to regenerate `vendor/walkthrough-viewer/` via `npm ci` + `scripts/sync-walkthrough-vendor.mjs`)
 ## Frameworks
 - Claude Code Skill format - Skill metadata/workflow in `skills/walkthrough/skill.md`
 - Static HTML app architecture (no bundler) - Browser-executed module script pattern in `skills/walkthrough/references/html-patterns.md`

@@ -121,6 +121,8 @@ Supported shells and manual smoke steps for **Git Bash**, **WSL2**, macOS, and L
 
 ## Testing
 
+**Vendor / offline-capable workflows:** The repo defaults to CDN-backed viewer assets in policy; switching to vendored assets, `npm ci`, sync, and provenance refresh are documented for maintainers in [`CONTRIBUTING.md`](CONTRIBUTING.md) → *Vendor assets & offline-capable eval*.
+
 The `evals/` directory contains an eval harness that runs the skill against a set of test prompts and grades the output.
 
 ### Prerequisites
