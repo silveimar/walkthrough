@@ -51,7 +51,7 @@
   "agent_skills": {},
   "claude_md_path": "./CLAUDE.md",
   "resolve_model_ids": "omit",
-  "mode": "interactive",
+  "mode": "yolo",
   "granularity": "standard",
   "intel": {
     "enabled": true
