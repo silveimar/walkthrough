@@ -27,9 +27,9 @@ Requirements for the initial hardening release.
 
 ### Artifact Integrity & Controlled Publishing
 
-- [ ] **INTG-01**: Maintainer can generate deterministic metadata sidecars for produced artifacts.
-- [ ] **INTG-02**: Maintainer can produce and verify integrity signals (hash/SBOM/vulnerability status) for release artifacts.
-- [ ] **INTG-03**: Maintainer can publish only explicitly approved files/scopes, with secret-leak checks as a hard gate.
+- [x] **INTG-01**: Maintainer can generate deterministic metadata sidecars for produced artifacts.
+- [x] **INTG-02**: Maintainer can produce and verify integrity signals (hash/SBOM/vulnerability status) for release artifacts.
+- [x] **INTG-03**: Maintainer can publish only explicitly approved files/scopes, with secret-leak checks as a hard gate.
 
 ### Verification, CI Gates, and Operational Controls
 
@@ -67,9 +67,9 @@ Deferred to future release.
 | DATA-01 | Phase 3 | Done |
 | DATA-02 | Phase 3 | Done |
 | DATA-03 | Phase 3 | Done |
-| INTG-01 | Phase 4 | Pending |
-| INTG-02 | Phase 4 | Pending |
-| INTG-03 | Phase 4 | Pending |
+| INTG-01 | Phase 4 | Done |
+| INTG-02 | Phase 4 | Done |
+| INTG-03 | Phase 4 | Done |
 | POL-03 | Phase 5 | Pending |
 | GOV-01 | Phase 5 | Pending |
 | GOV-02 | Phase 5 | Pending |

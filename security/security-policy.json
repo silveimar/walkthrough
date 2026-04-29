@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "localOnly": {
     "default": true
   },
@@ -30,7 +30,7 @@
     ]
   },
   "publish": {
-    "approvedPathRoots": ["."]
+    "approvedPathRoots": ["examples"]
   },
   "runtime": {
     "evalWorkspaceMustBeUnderSystemTemp": true,

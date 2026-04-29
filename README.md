@@ -16,7 +16,7 @@ Ask your agent to walk you through any part of your codebase and it produces a s
 
 The goal is fast onboarding: give a new developer a mental model of how something works in under 2 minutes. Not a code reference — a map.
 
-**[Live demo — walkthrough of the walkthrough skill itself](https://alexanderop.github.io/walkthrough/examples/walkthrough-how-it-works.html)**
+**[Live demo — walkthrough of the walkthrough skill itself](https://alexanderop.github.io/walkthrough/walkthrough-how-it-works.html)** (GitHub Pages publishes the `examples/` folder as the site root.)
 
 ![Generated walkthrough example](image.png)
 
@@ -102,6 +102,7 @@ No build step. Just open the HTML file in a browser.
 
 Authoritative hardening behavior is defined only in [`security/security-policy.json`](security/security-policy.json) (POL-02). Do not duplicate default egress or LLM rules elsewhere — reference keys there.
 
+- **Publish scope:** static deploy uploads only [`examples/`](examples/) (see `publish.approvedPathRoots` in policy). Integrity of the demo HTML is checked via sidecar JSON (`*.meta.json`) and `node scripts/verify-artifact-integrity.mjs` (also run in CI).
 - **Verify policy:** `bash scripts/verify-policy` (runs the same checks as CI before publish).
 - **Eval egress:** `evals/run.sh` requires `--allow-egress` values that match `egress.exceptionAllowlist[].id` for the channels you use (see policy). Example: `--allow-egress claude_eval_prompt`.
 - **LLM rubric network:** policy uses `llmRubric.optInEnvVar` (currently `WALKTHROUGH_LLM_RUBRIC`). Set it to `1` only when you intend to run the LLM rubric; include the matching egress exception id via `--allow-egress` (exported as `WALKTHROUGH_ALLOW_EGRESS`) for `llm_rubric_claude` when needed.

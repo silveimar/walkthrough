@@ -500,6 +500,21 @@ for (const [id, node] of Object.entries(NODES)) {
 ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
 ```
 
+## Artifact integrity sidecar (publishing)
+
+For outputs that are published or integrity-checked (e.g. under `examples/`):
+
+1. For each `walkthrough-{topic}.html`, maintain a sibling **`walkthrough-{topic}.meta.json`** sidecar (same basename).
+2. Sidecar JSON MUST include at minimum:
+   - `schemaVersion` (integer, currently `1`)
+   - `artifactBasename` — filename of the HTML file
+   - `artifactSha256` — SHA-256 hex of the raw HTML bytes (canonical file on disk)
+   - `policyVersion` — must equal `version` in `security/security-policy.json` at verify time
+   - `generatorId` — stable label for what produced the file (e.g. skill reference vs CI)
+   - `createdAt` — UTC ISO-8601 timestamp when the sidecar was last aligned with the HTML
+
+3. Run **`node scripts/verify-artifact-integrity.mjs`** before publish to confirm hashes and policy version match.
+
 ## Critical Rules
 
 1. **bindFunctions is mandatory** — after `innerHTML = svg`, call `bindFunctions?.(ref.current)` or clicks won't work
