@@ -13,7 +13,7 @@ This roadmap delivers a local-first hardening path where policy becomes enforcea
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Policy Contract Foundation** - Establish one machine-readable hardening policy that defines local-only and security contract behavior.
-- [ ] **Phase 2: Runtime Enforcement Hardening** - Route execution through constrained, safe runtime paths with startup guardrails.
+- [x] **Phase 2: Runtime Enforcement Hardening** - Route execution through constrained, safe runtime paths with startup guardrails.
 - [ ] **Phase 3: Data Redaction and Retention Controls** - Enforce safe handling, storage boundaries, and lifecycle cleanup for sensitive artifacts.
 - [ ] **Phase 4: Artifact Integrity and Safe Publishing** - Add deterministic integrity evidence and explicit publish allow-scopes.
 - [ ] **Phase 5: Continuous Governance and Drift Detection** - Keep controls verifiable in local and CI workflows with ongoing drift checks.
@@ -83,7 +83,7 @@ Phases execute in numeric order: 2 → 2.1 → 2.2 → 3 → 3.1 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Policy Contract Foundation | 3/3 | Complete | 2026-04-29 |
-| 2. Runtime Enforcement Hardening | 0/TBD | Not started | - |
+| 2. Runtime Enforcement Hardening | 3/3 | Complete | 2026-04-29 |
 | 3. Data Redaction and Retention Controls | 0/TBD | Not started | - |
 | 4. Artifact Integrity and Safe Publishing | 0/TBD | Not started | - |
 | 5. Continuous Governance and Drift Detection | 0/TBD | Not started | - |

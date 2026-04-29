@@ -15,9 +15,9 @@ Requirements for the initial hardening release.
 
 ### Runtime Hardening & Safe Execution
 
-- [ ] **RUN-01**: Maintainer can execute eval commands without shell-string interpolation for untrusted inputs.
-- [ ] **RUN-02**: Maintainer can run generation/eval in constrained execution contexts with explicit allowlists for file/process access.
-- [ ] **RUN-03**: Maintainer can detect and fail on insecure runtime configuration during startup checks.
+- [x] **RUN-01**: Maintainer can execute eval commands without shell-string interpolation for untrusted inputs.
+- [x] **RUN-02**: Maintainer can run generation/eval in constrained execution contexts with explicit allowlists for file/process access.
+- [x] **RUN-03**: Maintainer can detect and fail on insecure runtime configuration during startup checks.
 
 ### Data Protection (Redaction, Retention, Access)
 
@@ -61,9 +61,9 @@ Deferred to future release.
 |-------------|-------|--------|
 | POL-01 | Phase 1 | Done |
 | POL-02 | Phase 1 | Done |
-| RUN-01 | Phase 2 | Pending |
-| RUN-02 | Phase 2 | Pending |
-| RUN-03 | Phase 2 | Pending |
+| RUN-01 | Phase 2 | Done |
+| RUN-02 | Phase 2 | Done |
+| RUN-03 | Phase 2 | Done |
 | DATA-01 | Phase 3 | Pending |
 | DATA-02 | Phase 3 | Pending |
 | DATA-03 | Phase 3 | Pending |
