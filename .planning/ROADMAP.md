@@ -67,7 +67,7 @@
 4. Attestation and verification **respect data protection**: no signing or persisting of redacted secret material; behavior **aligns** with `evals/results/` handling from v1.0.
 5. An **optional CI verify** path exists (workflow job or documented required step) so teams can **require** manifest/signature checks on merge when the policy flag is enabled.
 
-**Plans**: TBD
+**Plans**: 08-01 (manifest docs + schema), 08-02 (build/verify scripts + gitignore), 08-03 (optional CI / docs)
 
 ---
 
@@ -77,7 +77,7 @@
 |-------|----------------|--------|-----------|
 | 6. Offline vendoring & dual-mode HTML | 3/3 | Complete    | 2026-04-29 |
 | 7. Cross-platform sandbox & path parity | 3/3 | Complete    | 2026-04-29 |
-| 8. Signed provenance | 0/TBD | Not started | - |
+| 8. Signed provenance | 0/3 | Planned (context + plans) | - |
 
 ## Phase artifact paths (v2.0)
 
