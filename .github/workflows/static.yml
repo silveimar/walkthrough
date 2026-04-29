@@ -31,13 +31,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify security policy
+        run: bash scripts/verify-policy
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Validate publish artifact path against policy
+        env:
+          PUBLISH_ARTIFACT_PATH: "."
+        run: |
+          node --input-type=module -e "
+          import { assertPublishArtifactPathAllowed } from './security/policy-runtime.mjs';
+          assertPublishArtifactPathAllowed(process.env.PUBLISH_ARTIFACT_PATH || '.');
+          console.error('publish path OK:', process.env.PUBLISH_ARTIFACT_PATH || '.');
+          "
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: "."
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
