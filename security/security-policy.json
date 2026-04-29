@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "localOnly": {
+    "default": true
+  },
+  "egress": {
+    "defaultPosture": "deny_all",
+    "exceptionAllowlist": [
+      {
+        "id": "claude_eval_prompt",
+        "channels": ["claude_cli"]
+      },
+      {
+        "id": "claude_llm_rubric",
+        "channels": ["llm_rubric_claude"]
+      }
+    ]
+  },
+  "llmRubric": {
+    "networkDefault": "off",
+    "optInEnvVar": "WALKTHROUGH_LLM_RUBRIC"
+  },
+  "entrypoints": {
+    "gatedRelPaths": [
+      "evals/run.sh",
+      "evals/graders/llm-rubric.mjs",
+      "evals/graders/deterministic.mjs",
+      "evals/report.mjs",
+      ".github/workflows/static.yml"
+    ]
+  },
+  "publish": {
+    "approvedPathRoots": ["."]
+  }
+}

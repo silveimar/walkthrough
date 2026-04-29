@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://walkthrough-skill.local/security-policy.schema.json",
+  "title": "Walkthrough skill security policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "localOnly", "egress", "llmRubric", "entrypoints", "publish"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Policy document schema version (D-01). Bump when required keys or semantics change."
+    },
+    "localOnly": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["default"],
+      "properties": {
+        "default": {
+          "type": "boolean",
+          "description": "localOnly.default — local-only mode default; must be true for maintainer-local posture (D-05 framing)."
+        }
+      }
+    },
+    "egress": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defaultPosture", "exceptionAllowlist"],
+      "properties": {
+        "defaultPosture": {
+          "type": "string",
+          "enum": ["deny_all"],
+          "description": "egress.defaultPosture — default egress posture; deny_all blocks network subprocesses unless exceptionAllowlist + explicit flags align (D-05, D-06)."
+        },
+        "exceptionAllowlist": {
+          "type": "array",
+          "description": "egress.exceptionAllowlist — ordered list of allowed egress exception ids; empty means no network egress (D-06). Each id may be referenced by per-run --allow-egress.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "channels"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Opaque id matched by CLI/env allow flags (D-06)."
+              },
+              "channels": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "enum": ["claude_cli", "llm_rubric_claude"]
+                },
+                "description": "Channels this exception unlocks: claude_cli (evals/run.sh), llm_rubric_claude (llm-rubric grader)."
+              }
+            }
+          }
+        }
+      }
+    },
+    "llmRubric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["networkDefault", "optInEnvVar"],
+      "properties": {
+        "networkDefault": {
+          "type": "string",
+          "enum": ["off"],
+          "description": "llmRubric.networkDefault — LLM/rubric network off unless opt-in (D-08)."
+        },
+        "optInEnvVar": {
+          "type": "string",
+          "minLength": 1,
+          "description": "llmRubric.optInEnvVar — env name; set to 1 to allow network rubric when policy permits (D-08)."
+        }
+      }
+    },
+    "entrypoints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gatedRelPaths"],
+      "properties": {
+        "gatedRelPaths": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "entrypoints.gatedRelPaths — repo-relative paths that MUST load policy before doing work (D-09, D-10)."
+        }
+      }
+    },
+    "publish": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approvedPathRoots"],
+      "properties": {
+        "approvedPathRoots": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "publish.approvedPathRoots — path prefixes (relative to repo root) allowed for static publish artifact roots; use '.' for repo root (D-12)."
+        }
+      }
+    }
+  }
+}
