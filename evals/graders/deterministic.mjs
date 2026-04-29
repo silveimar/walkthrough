@@ -14,9 +14,14 @@
 
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { assertEntrypointForCurrentModule } from "../../security/policy-runtime.mjs";
+import {
+  assertEntrypointForCurrentModule,
+  assertStrictRepoWorkingDirectory,
+} from "../../security/policy-runtime.mjs";
+import { redactDeep } from "../../security/redaction.mjs";
 
 assertEntrypointForCurrentModule(import.meta.url);
+assertStrictRepoWorkingDirectory();
 
 const [, , resultDir, expectTriggerStr, expectedDiagram] = process.argv;
 
@@ -58,8 +63,8 @@ if (!expectTrigger) {
     score: Object.values(checks).every((c) => c.pass) ? 1 : 0,
   };
 
-  writeFileSync(join(resultDir, "deterministic.json"), JSON.stringify(result, null, 2));
-  console.log(JSON.stringify(result, null, 2));
+  writeFileSync(join(resultDir, "deterministic.json"), JSON.stringify(redactDeep(result), null, 2));
+  console.log(JSON.stringify(redactDeep(result), null, 2));
   process.exit(0);
 }
 
@@ -242,5 +247,5 @@ const result = {
   score: total > 0 ? +(passed / total).toFixed(3) : 0,
 };
 
-writeFileSync(join(resultDir, "deterministic.json"), JSON.stringify(result, null, 2));
-console.log(JSON.stringify(result, null, 2));
+writeFileSync(join(resultDir, "deterministic.json"), JSON.stringify(redactDeep(result), null, 2));
+console.log(JSON.stringify(redactDeep(result), null, 2));

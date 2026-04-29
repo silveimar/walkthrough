@@ -47,6 +47,16 @@ if ! bash "$PROJECT_DIR/scripts/verify-policy" >&2; then
   exit 1
 fi
 
+# RUN-03: required tools
+if ! command -v node >/dev/null 2>&1; then
+  echo "Error: node is required (Node.js >= 18). See README.md."
+  exit 1
+fi
+if ! command -v claude >/dev/null 2>&1; then
+  echo "Error: claude CLI is required for eval generation. See README.md."
+  exit 1
+fi
+
 export WALKTHROUGH_ALLOW_EGRESS="${ALLOW_EGRESS:-}"
 (
   cd "$PROJECT_DIR" &&
@@ -125,6 +135,14 @@ while IFS=, read -r id expect_trigger expected_diagram prompt; do
   # Create temp working directory with a copy of the codebase
   # Only copy source files needed for exploration, NOT existing walkthrough outputs
   WORK_DIR=$(mktemp -d)
+  (
+    cd "$PROJECT_DIR" &&
+      VERIFY_WORK_DIR="$WORK_DIR" node --input-type=module -e "
+import { assertEvalWorkspaceDirAllowed } from './security/policy-runtime.mjs';
+assertEvalWorkspaceDirAllowed(process.env.VERIFY_WORK_DIR || '');
+"
+  ) || exit 1
+
   cp -R "$PROJECT_DIR/skills" "$WORK_DIR/"
   cp "$PROJECT_DIR/README.md" "$WORK_DIR/" 2>/dev/null || true
   # Install the walkthrough skill where Claude Code can discover it
@@ -182,7 +200,7 @@ RUNNER_EOF
 
   if [[ $EXIT_CODE -ne 0 ]]; then
     echo "  claude -p exited with code $EXIT_CODE"
-    tail -5 "$PROMPT_DIR/stderr.log"
+    tail -n 5 "$PROMPT_DIR/stderr.log" | node "$PROJECT_DIR/scripts/redact-stdin.mjs"
   fi
 
   # Copy only newly created walkthrough-*.html files (newer than our marker)

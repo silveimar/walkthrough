@@ -10,17 +10,20 @@
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
-import { execSync } from "node:child_process";
-import { dirname, join } from "node:path";
+import { spawnSync } from "node:child_process";
+import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   assertBeforeLlmRubricExec,
   assertEntrypointForCurrentModule,
+  assertStrictRepoWorkingDirectory,
 } from "../../security/policy-runtime.mjs";
+import { redactDeep, redactString } from "../../security/redaction.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 assertEntrypointForCurrentModule(import.meta.url);
+assertStrictRepoWorkingDirectory();
 
 const [, , htmlPath, outputPath] = process.argv;
 
@@ -138,20 +141,39 @@ Set overall.pass to true if overall score >= 3 and no individual dimension is be
 Respond ONLY with valid JSON matching the required schema.`;
 
 try {
-  // Write prompt and schema to temp files to avoid shell escaping issues
-  const tmpPromptPath = join(dirname(outputPath), ".llm-rubric-prompt.tmp");
-  const tmpSchemaPath = join(dirname(outputPath), ".llm-rubric-schema.tmp");
-  writeFileSync(tmpPromptPath, prompt, "utf8");
-  writeFileSync(tmpSchemaPath, jsonSchema, "utf8");
-
-  const result = execSync(
-    `cat "${tmpPromptPath}" | claude -p --model sonnet --output-format json --json-schema "$(cat "${tmpSchemaPath}")" --no-session-persistence --max-budget-usd 0.50`,
+  // Invoke Claude via argv array + stdin (no shell — RUN-01)
+  const r = spawnSync(
+    "claude",
+    [
+      "-p",
+      "--model",
+      "sonnet",
+      "--output-format",
+      "json",
+      "--json-schema",
+      jsonSchema,
+      "--no-session-persistence",
+      "--max-budget-usd",
+      "0.50",
+    ],
     {
+      input: prompt,
       encoding: "utf8",
       timeout: 120_000,
       maxBuffer: 10 * 1024 * 1024,
+      shell: false,
     }
   );
+
+  if (r.error) {
+    throw r.error;
+  }
+  if (r.status !== 0) {
+    const errText = r.stderr ? String(r.stderr) : "";
+    throw new Error(errText || `claude exited with status ${r.status}`);
+  }
+
+  const result = r.stdout;
 
   // Parse the claude output (--output-format json wraps in { result, ... })
   let grade;
@@ -164,26 +186,19 @@ try {
     grade = JSON.parse(result);
   }
 
-  writeFileSync(outputPath, JSON.stringify(grade, null, 2));
-  console.log(JSON.stringify(grade, null, 2));
-
-  // Clean up temp files
-  try {
-    const { unlinkSync } = await import("node:fs");
-    unlinkSync(tmpPromptPath);
-    unlinkSync(tmpSchemaPath);
-  } catch {}
+  writeFileSync(outputPath, JSON.stringify(redactDeep(grade), null, 2));
+  console.log(JSON.stringify(redactDeep(grade), null, 2));
 } catch (err) {
   const fallback = {
-    error: err.message,
+    error: redactString(err instanceof Error ? err.message : String(err)),
     readability: { score: 0, reasoning: "Grader failed" },
     node_descriptions: { score: 0, reasoning: "Grader failed" },
     code_snippets: { score: 0, reasoning: "Grader failed" },
     diagram_accuracy: { score: 0, reasoning: "Grader failed" },
     overall: { score: 0, pass: false },
   };
-  writeFileSync(outputPath, JSON.stringify(fallback, null, 2));
-  console.error("LLM grader failed:", err.message);
-  console.log(JSON.stringify(fallback, null, 2));
+  writeFileSync(outputPath, JSON.stringify(redactDeep(fallback), null, 2));
+  console.error("LLM grader failed:", redactString(err instanceof Error ? err.message : String(err)));
+  console.log(JSON.stringify(redactDeep(fallback), null, 2));
   process.exit(1);
 }

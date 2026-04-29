@@ -159,6 +159,17 @@ Each eval run:
 
 Results are saved to `evals/results/` (gitignored). A `latest` symlink always points to the most recent run.
 
+### Sensitive outputs, redaction, and retention
+
+- **Where outputs live:** Bulk eval artifacts belong under `evals/results/` (see `dataProtection.sensitiveOutputs.canonicalEvalResultsRelPath` in [`security/security-policy.json`](security/security-policy.json)). Treat these directories as **local-only sensitive** — they may contain paths, prompts, or stderr excerpts from your machine.
+- **Redaction:** persisted JSON from the graders and `evals/report.mjs` is passed through shared redaction helpers (`security/redaction.mjs`). Stderr tails printed by `evals/run.sh` on failure are redacted before display.
+- **Retention:** policy sets `dataProtection.retention.evalResultsMaxAgeDays` (default 30). Remove older timestamp directories with:
+
+```bash
+node scripts/cleanup-eval-results.mjs --dry-run   # preview deletions
+node scripts/cleanup-eval-results.mjs             # delete expired runs
+```
+
 ### Test prompts
 
 The prompts in `evals/prompts.csv` cover:

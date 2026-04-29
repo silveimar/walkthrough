@@ -2,8 +2,9 @@
  * Shared policy load and guards for eval entrypoints (POL-02, D-05–D-10).
  */
 
-import { readFileSync, existsSync } from "node:fs";
-import { dirname, join, normalize, relative } from "node:path";
+import { readFileSync, existsSync, realpathSync } from "node:fs";
+import os from "node:os";
+import { dirname, join, normalize, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validatePolicyDocument } from "./validate-policy.mjs";
 
@@ -193,6 +194,56 @@ export function describeBlockedEgress(err) {
 }
 
 /**
+ * RUN-02: Eval harness uses mktemp — ensure resolved dir stays under system temp when policy requires it.
+ * @param {string} absDir absolute path from mktemp -d
+ */
+export function assertEvalWorkspaceDirAllowed(absDir) {
+  const policy = loadRepoPolicy();
+  const rt = /** @type {{ evalWorkspaceMustBeUnderSystemTemp?: boolean }} */ (policy.runtime);
+  if (!rt?.evalWorkspaceMustBeUnderSystemTemp) return;
+
+  let resolved;
+  try {
+    resolved = realpathSync(absDir);
+  } catch (e) {
+    throw new Error(
+      `RUN-02: cannot resolve eval workspace dir: ${absDir} (${e instanceof Error ? e.message : String(e)})`
+    );
+  }
+
+  const tmpRoot = realpathSync(os.tmpdir());
+  const ok =
+    resolved === tmpRoot || resolved.startsWith(tmpRoot.endsWith(sep) ? tmpRoot : tmpRoot + sep);
+  if (!ok) {
+    throw new Error(
+      `RUN-02: eval workspace must be under system temp (${tmpRoot}); got ${resolved}`
+    );
+  }
+}
+
+/**
+ * RUN-03: Optional strict cwd — set WALKTHROUGH_STRICT_CWD=1 for CI-like misuse detection.
+ */
+export function assertStrictRepoWorkingDirectory() {
+  const v = process.env.WALKTHROUGH_STRICT_CWD;
+  if (v !== "1" && v !== "true") return;
+
+  const root = realpathSync(getRepoRoot());
+  let cwd;
+  try {
+    cwd = realpathSync(process.cwd());
+  } catch (e) {
+    throw new Error(`RUN-03: cannot resolve process.cwd(): ${e instanceof Error ? e.message : String(e)}`);
+  }
+
+  if (cwd !== root && !cwd.startsWith(root + sep)) {
+    throw new Error(
+      `RUN-03: with WALKTHROUGH_STRICT_CWD, cwd (${cwd}) must be repository root (${root})`
+    );
+  }
+}
+
+/**
  * Validate publish artifact directory is under publish.approvedPathRoots (D-12).
  * @param {string} artifactPath POSIX path relative to repo root, e.g. '.' or 'examples'
  */
@@ -211,5 +262,41 @@ export function assertPublishArtifactPathAllowed(artifactPath) {
     throw new Error(
       `Publish path not allowed by publish.approvedPathRoots (D-12): ${artifactPath}. Allowed roots: ${roots.join(", ")}`
     );
+  }
+}
+
+/**
+ * Absolute path to canonical eval results directory (DATA-03).
+ * @returns {string}
+ */
+export function getCanonicalEvalResultsAbsPath() {
+  const policy = loadRepoPolicy();
+  const rel =
+    /** @type {string | undefined} */ (
+      /** @type {{ dataProtection?: { sensitiveOutputs?: { canonicalEvalResultsRelPath?: string } } }} */ (
+        policy
+      ).dataProtection?.sensitiveOutputs?.canonicalEvalResultsRelPath
+    ) || "evals/results";
+  const norm = rel.split("\\").join("/").replace(/^\/+/, "");
+  return join(getRepoRoot(), ...norm.split("/").filter(Boolean));
+}
+
+/**
+ * Fail if absolute path is not under canonical eval results root (optional tooling gate).
+ * @param {string} absPath
+ */
+export function assertPathUnderCanonicalEvalResults(absPath) {
+  let resolved;
+  try {
+    resolved = realpathSync(absPath);
+  } catch (e) {
+    throw new Error(
+      `DATA-03: cannot resolve path: ${absPath} (${e instanceof Error ? e.message : String(e)})`
+    );
+  }
+  const base = realpathSync(getCanonicalEvalResultsAbsPath());
+  const ok = resolved === base || resolved.startsWith(base.endsWith(sep) ? base : base + sep);
+  if (!ok) {
+    throw new Error(`DATA-03: path must be under canonical eval results dir (${base}): ${resolved}`);
   }
 }

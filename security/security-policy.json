@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "localOnly": {
     "default": true
   },
@@ -31,5 +31,20 @@
   },
   "publish": {
     "approvedPathRoots": ["."]
+  },
+  "runtime": {
+    "evalWorkspaceMustBeUnderSystemTemp": true,
+    "allowedCliBinaries": ["claude", "node"]
+  },
+  "dataProtection": {
+    "redaction": {
+      "enabled": true
+    },
+    "retention": {
+      "evalResultsMaxAgeDays": 30
+    },
+    "sensitiveOutputs": {
+      "canonicalEvalResultsRelPath": "evals/results"
+    }
   }
 }

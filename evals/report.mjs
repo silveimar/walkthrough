@@ -10,10 +10,16 @@
  */
 
 import { readdirSync, readFileSync, existsSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
-import { assertEntrypointForCurrentModule } from "../security/policy-runtime.mjs";
+import { join, resolve } from "node:path";
+import {
+  assertEntrypointForCurrentModule,
+  assertPathUnderCanonicalEvalResults,
+  assertStrictRepoWorkingDirectory,
+} from "../security/policy-runtime.mjs";
+import { redactDeep } from "../security/redaction.mjs";
 
 assertEntrypointForCurrentModule(import.meta.url);
+assertStrictRepoWorkingDirectory();
 
 const [, , resultsDir, ...flags] = process.argv;
 const jsonOnly = flags.includes("--json");
@@ -21,6 +27,12 @@ const jsonOnly = flags.includes("--json");
 if (!resultsDir) {
   console.error("Usage: node report.mjs <results-timestamp-dir> [--json]");
   process.exit(1);
+}
+
+try {
+  assertPathUnderCanonicalEvalResults(resolve(resultsDir));
+} catch (e) {
+  console.error("Warning (DATA-03):", e instanceof Error ? e.message : e);
 }
 
 const promptDirs = readdirSync(resultsDir, { withFileTypes: true })
@@ -95,4 +107,4 @@ if (jsonOnly) {
 }
 
 // Write summary.json
-writeFileSync(join(resultsDir, "summary.json"), JSON.stringify(summary, null, 2));
+writeFileSync(join(resultsDir, "summary.json"), JSON.stringify(redactDeep(summary), null, 2));

@@ -101,6 +101,60 @@
           "description": "publish.approvedPathRoots — path prefixes (relative to repo root) allowed for static publish artifact roots; use '.' for repo root (D-12)."
         }
       }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "evalWorkspaceMustBeUnderSystemTemp": {
+          "type": "boolean",
+          "description": "When true, eval harness temp dirs (mktemp) must resolve under Node os.tmpdir() (RUN-02)."
+        },
+        "allowedCliBinaries": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Expected CLI tool names for orchestration (documentation; enforcement via run.sh prerequisite checks)."
+        }
+      }
+    },
+    "dataProtection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "redaction": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "description": "When false, skip redaction helpers (DATA-01)."
+            }
+          }
+        },
+        "retention": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "evalResultsMaxAgeDays": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3650,
+              "description": "Delete eval result timestamp dirs older than this many days (DATA-02)."
+            }
+          }
+        },
+        "sensitiveOutputs": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "canonicalEvalResultsRelPath": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Repo-relative root for bulk eval artifacts (DATA-03)."
+            }
+          }
+        }
+      }
     }
   }
 }

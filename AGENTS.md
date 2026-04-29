@@ -10,6 +10,7 @@ This project hardens the existing walkthrough-skill repository for secure, local
 ### Constraints
 
 - **Security**: Protect analyzed code/content at rest and in generated artifacts/logs — prevents accidental disclosure.
+- **Eval artifacts**: Canonical tree `evals/results/` per `security/security-policy.json` `dataProtection`; redaction on persisted JSON; TTL cleanup via `scripts/cleanup-eval-results.mjs`.
 - **Local-first**: Prefer execution and storage paths that stay on developer machines — minimize external data exposure.
 - **Compatibility**: Preserve current skill and eval behavior where possible — avoid breaking maintainers' workflow.
 - **Scope**: Focus on security/privacy hardening and project-quality improvements, not net-new product domains.
