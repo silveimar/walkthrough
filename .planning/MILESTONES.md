@@ -1,5 +1,26 @@
 # Milestones
 
+## v2.1 — Audit gap closure
+
+**Shipped:** 2026-04-29  
+**Scope:** 3 phases (9–11), 3 plans
+
+**Documentation:**
+
+- [Archived roadmap](milestones/v2.1-ROADMAP.md)
+- [Archived requirements](milestones/v2.1-REQUIREMENTS.md)
+- [Milestone audit](milestones/v2.1-MILESTONE-AUDIT.md)
+
+**Key accomplishments:**
+
+- Vendor/offline maintainer path: lockfile + **`npm ci`** narrative, default CDN vs vendor in **`CONTRIBUTING.md`**, **`AGENTS.md`** / stack blurbs, **`vendor/walkthrough-viewer/README.md`** alignment (**OFF-01**, **OFF-03**, **OFF-06**).
+- CI vs docs: **`CONTRIBUTING.md`** **CI automation scope (PLT-04)**; **`provenance/README.md`** matches **`.github/workflows/ci.yml`** provenance step (**ATT-05**).
+- Retro verification: **`.planning/milestones/v2.0-VERIFICATION.md`** maps **OFF-02**, **OFF-04**, **OFF-05**, **PLT-01–03**, **ATT-01–04** to code and phase artifacts (**Phase 11**).
+
+**Pre-close audit:** `/gsd-audit-milestone` — **passed** ([v2.1-MILESTONE-AUDIT.md](milestones/v2.1-MILESTONE-AUDIT.md)).
+
+---
+
 ## v2.0 — Advanced Local Hardening
 
 **Shipped:** 2026-04-29  

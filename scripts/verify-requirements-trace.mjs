@@ -18,7 +18,12 @@ function fail(msg) {
   process.exit(1);
 }
 
-if (!existsSync(reqPath)) fail(`missing ${reqPath}`);
+if (!existsSync(reqPath)) {
+  console.error(
+    "verify-requirements-trace: no .planning/REQUIREMENTS.md — skipped (run /gsd-new-milestone to create the next milestone requirements file)"
+  );
+  process.exit(0);
+}
 if (!existsSync(mapPath)) fail(`missing ${mapPath}`);
 
 let mapDoc;

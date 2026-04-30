@@ -1,5 +1,26 @@
 # Retrospective
 
+## Milestone: v2.1 — Audit gap closure
+
+**Shipped:** 2026-04-29  
+**Phases:** 3 (9–11) · **Plans:** 3
+
+### What shipped
+
+Documentation alignment for vendor install/offline path (**OFF-01**, **OFF-03**, **OFF-06**), CI automation scope and provenance README vs **`ci.yml`** (**PLT-04**, **ATT-05**), and a milestone-level **[v2.0-VERIFICATION.md](milestones/v2.0-VERIFICATION.md)** matrix for remaining **OFF/PLT/ATT** REQ evidence (**Phase 11**).
+
+### What worked
+
+- Formal `/gsd-audit-milestone` before close gave a clear **passed** gate and integration sign-off.
+- Consolidating retro verification in one file avoided duplicate per-phase `VERIFICATION.md` maintenance.
+
+### What to improve next
+
+- Optional Nyquist **`VALIDATION.md`** stubs remain deferred; run `/gsd-validate-phase` when dimension coverage matters.
+- Keep `requirements-phase-map.json` in sync with `.planning/REQUIREMENTS.md` whenever both exist (CI trace check).
+
+---
+
 ## Milestone: v2.0 — Advanced Local Hardening
 
 **Shipped:** 2026-04-29  

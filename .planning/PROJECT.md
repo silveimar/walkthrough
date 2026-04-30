@@ -12,8 +12,9 @@ Generate and evaluate walkthrough artifacts locally with strong protections for 
 
 - **Milestone v1.0** — shipped and archived (2026-04-29).
 - **Milestone v2.0** — shipped and archived (2026-04-29): offline-capable vendor layout and dual-mode HTML, cross-platform path/temp parity and CI smoke, manifest-first signed provenance with local verify and optional CI.
+- **Milestone v2.1** — shipped and archived (2026-04-29): v2.0 audit gap closure — maintainer docs aligned with lockfile/`npm ci`, CI vs documented platform signal (**PLT-04**), provenance README vs **`ci.yml`** (**ATT-05**), and retroactive **[v2.0 verification matrix](milestones/v2.0-VERIFICATION.md)** for remaining REQ-IDs.
 - Hardening remains **policy-driven** (`security/security-policy.json`), **verified** locally and in CI, with **governed** eval outputs and provenance aligned to data-protection rules.
-- **Current focus:** Maintenance and optional next milestone when scope expands (see `.planning/ROADMAP.md`).
+- **Current focus:** Maintenance; define the next milestone when scope expands (`/gsd-new-milestone`). There is no active `.planning/REQUIREMENTS.md` until then.
 
 ## Requirements
 
@@ -31,6 +32,10 @@ Generate and evaluate walkthrough artifacts locally with strong protections for 
 - ✓ **ADV-01** — Offline / vendored dependencies and dual-mode HTML with policy-controlled CDN vs vendor contract — Phases 6
 - ✓ **ADV-02** — Signed provenance: manifest-first scope, local sign/verify, optional CI verification — Phase 8
 - ✓ **ADV-03** — Cross-platform sandbox and path/temp parity across documented matrix — Phase 7
+
+### Validated (v2.1 gap closure)
+
+- ✓ **Audit remediation** — Docs and traceability for **OFF-01**, **OFF-03**, **OFF-06**, **PLT-04**, **ATT-05**, and retro evidence for remaining **OFF/PLT/ATT** REQ-IDs via `milestones/v2.0-VERIFICATION.md` — Phases 9–11
 
 ### Active (next milestone)
 
@@ -62,6 +67,7 @@ Generate and evaluate walkthrough artifacts locally with strong protections for 
 | Keep `.planning` in git | Preserve planning and audit history | ✓ Tracked through v1.0 and v2.0 |
 | Balanced planning profile (research, plan-check, verifier) | Rigor for security-sensitive work | ✓ Used across phases |
 | Manifest-first provenance + data protection alignment | Avoid signing or persisting sensitive eval material | ✓ v2.0 provenance scripts and CI path |
+| Milestone-equivalent verification vs per-phase VERIFICATION.md | Close audit process gap without blocking maintainers | ✓ v2.1 `v2.0-VERIFICATION.md` + archived requirements |
 
 ## Evolution
 
@@ -84,4 +90,4 @@ This document evolves at phase transitions and milestone boundaries.
 
 ---
 
-*Last updated: 2026-04-29 after v2.0 milestone (Advanced Local Hardening) shipped*
+*Last updated: 2026-04-30 after v2.1 milestone (Audit gap closure) shipped*

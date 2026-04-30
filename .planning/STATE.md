@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.1
 milestone_name: milestone
-status: Active — gap remediation from `v2.0-MILESTONE-AUDIT.md`
-last_updated: "2026-04-30T00:37:11.874Z"
-last_activity: 2026-04-29
+status: completed
+last_updated: "2026-04-30T00:51:24.438Z"
+last_activity: 2026-04-30
 progress:
   total_phases: 6
-  completed_phases: 5
-  total_plans: 11
-  completed_plans: 11
+  completed_phases: 6
+  total_plans: 12
+  completed_plans: 12
   percent: 100
 ---
 
@@ -17,18 +17,18 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-29)
+See: .planning/PROJECT.md (updated 2026-04-30)
 
 **Core value:** Generate and evaluate walkthrough artifacts locally with strong protections for repository and analyzed content, without degrading developer velocity.
 
-**Current focus:** v2.1 — **Phases 9–11 complete**; verification matrix at `.planning/milestones/v2.0-VERIFICATION.md`
+**Current focus:** v2.1 **shipped**; no active `.planning/REQUIREMENTS.md` until **`/gsd-new-milestone`**.
 
 ## Current Position
 
-**Milestone:** v2.1 Audit gap closure (opened 2026-04-29)
-**Phase / plan:** v2.1 gap closure **complete** (Phase 11 verification backfill shipped)
-**Status:** Active — gap remediation from `v2.0-MILESTONE-AUDIT.md`
-**Last activity:** 2026-04-29
+**Milestone:** v2.1 Audit gap closure — **archived** (2026-04-29 work, closed 2026-04-30)
+**Phase / plan:** —
+**Status:** Ready for next milestone planning
+**Last activity:** 2026-04-30
 
 ## Performance Metrics
 
@@ -77,4 +77,4 @@ None.
 
 ---
 
-*State updated: 2026-04-29*
+*State updated: 2026-04-30*
