@@ -49,6 +49,10 @@ Provenance binds **policy + frozen vendor contract**, matching **ATT-04**.
 
    This recomputes digests and, if `manifest.json.sig` and `minisign.pub` exist, runs **`minisign -V`**.
 
-## CI (optional)
+## CI
 
-Optional GitHub Actions verification is gated by the repository variable **`ENABLE_PROVENANCE_VERIFY`** (`true` to run). See [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+The repository **`.github/workflows/ci.yml`** workflow runs **`node scripts/verify-provenance.mjs` on every pull request and push to `main`** (job **`verify`**, runner **`ubuntu-latest`**). Digest checks for `provenance/manifest.json` are part of that job — there is **no** separate repository-variable gate for this step in the workflow file.
+
+CI **installs Minisign** so that if **`provenance/manifest.json.sig`** and **`provenance/minisign.pub`** are present, signature verification runs too; otherwise digest-only verification still passes when manifests match.
+
+For required checks and regenerating manifests before merge, see [`CONTRIBUTING.md`](../CONTRIBUTING.md) → *Provenance verify in CI (ATT-05)*.

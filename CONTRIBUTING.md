@@ -17,6 +17,12 @@ Parity for **this repository** means **consistent interpretation of `security/se
 
 **Docker** is **optional** for core flows: `verify-policy`, `bash -n evals/run.sh`, and the Node checks in CI do not require a container.
 
+## CI automation scope (PLT-04)
+
+GitHub Actions **`.github/workflows/ci.yml`** runs on **`ubuntu-latest`** only. Automated jobs exercise policy verification, path/workspace smoke (`scripts/test-path-workspace.mjs`), strict cwd + deterministic grader on example HTML, and provenance digest verification — all on Linux in CI.
+
+**Windows (Git Bash)** and **WSL2** parity for bash-driven flows is validated **manually** using the commands in **Manual smoke (Windows / path sanity)** below, not via a second CI OS row in this repository.
+
 ## Vendor assets & offline-capable eval (OFF-01 / OFF-03 / OFF-06)
 
 **Defaults:** In [`security/security-policy.json`](security/security-policy.json), `walkthroughViewerAssets.packages.*.assetSource` is typically **`cdn`** for a fresh clone. Eval does **not** copy `vendor/walkthrough-viewer/` into the temp workspace until you opt into **vendor** mode — there is no silent switch.
