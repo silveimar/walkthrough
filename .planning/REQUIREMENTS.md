@@ -25,9 +25,9 @@ Close gaps raised by the v2.0 milestone audit: vendor reproducibility (**OFF-03*
 
 Retroactive verification records for shipped v2.0 work (see audit **process** gap):
 
-- [ ] **OFF-02**, **OFF-04**, **OFF-05** — Evidence mapped in phase or milestone **VERIFICATION.md**.
-- [ ] **PLT-01**, **PLT-02**, **PLT-03** — Evidence mapped.
-- [ ] **ATT-01**, **ATT-02**, **ATT-03**, **ATT-04** — Evidence mapped.
+- [x] **OFF-02**, **OFF-04**, **OFF-05** — Evidence mapped in `.planning/milestones/v2.0-VERIFICATION.md`.
+- [x] **PLT-01**, **PLT-02**, **PLT-03** — Evidence mapped.
+- [x] **ATT-01**, **ATT-02**, **ATT-03**, **ATT-04** — Evidence mapped.
 
 _(Phases 9–10 REQ rows above close actionable gaps; Phase 11 closes documentation/evidence matrix for remaining REQ-IDs and satisfies audit process requirement.)_
 
@@ -40,16 +40,16 @@ _(Phases 9–10 REQ rows above close actionable gaps; Phase 11 closes documentat
 | OFF-06 | Phase 9 | Done |
 | PLT-04 | Phase 10 | Done |
 | ATT-05 | Phase 10 | Done |
-| OFF-02 | Phase 11 | Pending |
-| OFF-04 | Phase 11 | Pending |
-| OFF-05 | Phase 11 | Pending |
-| PLT-01 | Phase 11 | Pending |
-| PLT-02 | Phase 11 | Pending |
-| PLT-03 | Phase 11 | Pending |
-| ATT-01 | Phase 11 | Pending |
-| ATT-02 | Phase 11 | Pending |
-| ATT-03 | Phase 11 | Pending |
-| ATT-04 | Phase 11 | Pending |
+| OFF-02 | Phase 11 | Done |
+| OFF-04 | Phase 11 | Done |
+| OFF-05 | Phase 11 | Done |
+| PLT-01 | Phase 11 | Done |
+| PLT-02 | Phase 11 | Done |
+| PLT-03 | Phase 11 | Done |
+| ATT-01 | Phase 11 | Done |
+| ATT-02 | Phase 11 | Done |
+| ATT-03 | Phase 11 | Done |
+| ATT-04 | Phase 11 | Done |
 
 **Coverage:** 15 rows — all v2.0 REQ-IDs assigned to gap closure phases until verified.
 
